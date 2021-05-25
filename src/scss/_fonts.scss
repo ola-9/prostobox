@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Stolzl";
+  src: local("Stolzl Book"),
+    local("Stolzl-Book"),
+    url("../fonts/stolzl-book.woff2") format("woff2"),
+    url("../fonts/stolzl-book.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("Stolzl Book"),
+    local("Stolzl-Book"),
+    url("../fonts/stolzl-regular.woff2") format("woff2"),
+    url("../fonts/stolzl-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("Stolzl Medium"),
+    local("Stolzl-Medium"),
+    url("../fonts/stolzl-medium.woff2") format("woff2"),
+    url("../fonts/stolzl-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("Stolzl Bold"),
+    local("Stolzl-Bold"),
+    url("../fonts/stolzl-bold.woff2") format("woff2"),
+    url("../fonts/stolzl-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: local("Jost Bold"),
+    local("Jost-Bold"),
+    url("../fonts/jost-bold.woff2") format("woff2"),
+    url("../fonts/jost-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

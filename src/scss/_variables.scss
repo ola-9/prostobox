@@ -1,0 +1,44 @@
+$grid-gutter-width: 1.25rem;
+$container-padding-x: 0.9375rem;
+
+// $spacer: 1.25rem;
+// $spacers: (
+//   0: 0,
+//   1: $spacer / 4,
+//   2: $spacer / 2,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+// );
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// );
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px
+// );
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1240px,
+  xxl: 1600px
+);
+
+$container-max-widths: (
+  // sm: 100%,
+  // md: 720px,
+  xl: 1240px
+);
