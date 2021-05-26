@@ -1,0 +1,10 @@
+.logo {
+  display: block;
+  width: 112px;
+  height: 18px;
+
+  @include media-breakpoint-up(lg) {
+    width: 205px;
+    height: 30px;
+  }
+}

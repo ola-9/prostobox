@@ -1,0 +1,62 @@
+.main-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main-nav__list {
+  @include list-reset;
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    margin: 0 60px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: 0 95px;
+  }
+}
+
+.main-nav__user {
+  @include media-breakpoint-up(lg) {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.main-nav__item {
+  @include media-breakpoint-up(lg) {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-right: 30px;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 20px;
+    color: $black-1;
+
+    @include color-transition;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      color: $blue-dark;
+    }
+  }
+}

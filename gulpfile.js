@@ -9,6 +9,8 @@ const csso = require('gulp-csso');
 // const webp = require('gulp-webp');
 // const include = require('posthtml-include');
 const del = require('del');
+const rename = require("gulp-rename");
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -58,11 +60,20 @@ const reload = (done) => {
 
 exports.reload = reload;
 
+const sprite = () => {
+  return gulp.src("src/img/icons/**/*.svg")
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+}
+
+exports.sprite = sprite;
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
-  // gulp.watch('src/img/sprite/*.svg', gulp.series('sprite', 'reload'));
+  gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
   // gulp.watch(['src/js/modules/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
   gulp.watch('src/*.html', gulp.series('html', 'reload'));
 }
@@ -86,7 +97,7 @@ const copy = () => {
 exports.copy = copy;
 
 const build = gulp.series(
-  clean, copy, styles, html
+  clean, copy, styles, html, sprite
 );
 
 exports.build = build;

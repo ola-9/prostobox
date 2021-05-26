@@ -1,0 +1,63 @@
+.user-nav__login {
+  position: relative;
+  display: block;
+  padding: 20px;
+  padding-right: 60px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $white;
+  color: $grey-dark;
+  border-radius: 20px;
+
+  @include color-transition;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    display: block;
+    width: 76%;
+    height: 18px;
+    background-color: rgba($blue, 0.4);
+    border-radius: 20px;
+    filter: blur(40px);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover {
+    // color: $blue;
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.user-nav__login-icon {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $blue-light;
+
+  @include color-transition;
+}
+
+.user-nav__login:active .user-nav__login-icon {
+  color: $blue-dark;
+}
+
+// .user-nav__login:hover .user-nav__login-icon,
+// .user-nav__login:focus .user-nav__login-icon {
+//   color: $blue;
+// }

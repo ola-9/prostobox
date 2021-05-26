@@ -5,6 +5,7 @@
 // Variables
 
 @import "variables";
+@import "mixins";
 
 // Bootstrap
 
@@ -15,7 +16,6 @@
 @import "fonts";
 @import "scaffolding";
 
-// Effects
 
 // Typorgraphy
 
@@ -27,3 +27,10 @@
 // Vendor
 
 // Components
+
+@import "components/header";
+@import "components/logo";
+@import "components/nav-toggle";
+@import "components/main-nav";
+@import "components/user-nav";
+@import "components/button";

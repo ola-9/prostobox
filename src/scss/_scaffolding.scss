@@ -16,8 +16,10 @@ body {
   font-family: "Stolzl", "Arial", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 16px;
-  line-height: 27px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: $white-1;
+  color: $grey-dark;
 }
 
 img {
