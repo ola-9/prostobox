@@ -1,57 +1,104 @@
 .advantages {
-  padding: 70px;
+  // padding: 70px 0;
   overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    padding: 70px 0;
+  }
 }
 
 .advantages__wrapper {
   position: relative;
+  text-align: center;
+  padding-bottom: 370px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    text-align: left;
+  }
 
   &::before {
     content: "";
     display: block;
     position: absolute;
-    top: 40px;
-    right: 130px;
-    width: 1488px;
-    height: 520px;
-    background-image: url("../img/advantages-lines.svg");
+    bottom: 108px;
+    left: calc(50%);
+    transform: translateX(-50%);
+    width: 506px;
+    height: 177px;
+    background-image: url("../img/advantages-lines-mobile.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @include media-breakpoint-up(lg) {
+      top: 40px;
+      bottom: auto;
+      left: calc(50% - 230px);
+      transform: translateX(-50%);
+      width: 1488px;
+      height: 520px;
+      background-image: url("../img/advantages-lines.svg");
+    }
   }
 
   &::after {
     content: "";
     display: block;
     position: absolute;
-    top: -20px;
-    left: -44px;
-    width: 571px;
-    height: 601px;
-    background-image: url("../img/man-with-boxes-2.png");
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 272px;
+    height: 272px;
+    background-image: url("../img/man-with-boxes-2-mobile.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    @include media-breakpoint-up(lg) {
+      top: -20px;
+      left: calc(50% - 44px);
+      transform: translateX(-100%);
+      width: 571px;
+      height: 601px;
+      background-image: url("../img/man-with-boxes-2.png");
+    }
   }
 }
 
 .advantages__list {
   @include list-reset;
   position: relative;
-  padding-top: 140px;
+  padding: 70px 20px;
   padding-bottom: 40px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    padding-top: 140px;
+    padding-bottom: 40px;
+  }
 
   &::before {
     content: "";
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
     background-image: url("../img/loudspeaker.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 32px 27px;
 
     @include block-shadow;
+
+    @include media-breakpoint-up(lg) {
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-size: 64px 54px;
+    }
   }
 }
 
