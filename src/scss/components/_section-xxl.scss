@@ -1,0 +1,9 @@
+.section-xxl {
+  max-width: $xxl-width;
+  padding: 0 0.9375rem;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(md) {
+    padding: 0;
+  }
+}

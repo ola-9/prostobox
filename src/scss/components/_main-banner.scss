@@ -1,0 +1,102 @@
+.main-banner {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 502px;
+    height: 638px;
+    position: absolute;
+    top: 43px;
+    left: calc(50% + 2px);
+    background-image: url("../img/man-with-boxes-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 2437px;
+    height: 1281px;
+    position: absolute;
+    top: -308px;
+    left: calc(50% - 11px);
+    transform: translateX(-50%);
+    background-image: url("../img/main-banner-lines.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-banner__wrapper {
+  min-height: 712px;
+  padding: 40px 0;
+  background-color: $yellow;
+  border-radius: 40px;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 754px;
+    padding: 112px 0;
+  }
+}
+
+.main-banner__text {
+  position: relative;
+  padding: 0 12px;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.main-banner__lead {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.main-banner__desc {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+.main-banner__features {
+  list-style: none;
+  padding: 0;
+  transform: translateY(-20px);
+
+  @include media-breakpoint-up(lg) {
+    transform: translateY(-50%);
+  }
+}
+
+.main-banner__feature-item {
+  padding: 40px;
+  padding-bottom: 32px;
+  background-color: $white;
+  border-radius: 20px;
+}
+
+.main-banner__feature-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.main-banner__feature-price {
+  display: block;
+  font-size: 20px;
+  line-height: 36px;
+  color: $blue;
+}

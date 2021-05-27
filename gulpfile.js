@@ -74,6 +74,7 @@ exports.sprite = sprite;
 const watcher = () => {
   gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
+  gulp.watch('src/img/**', gulp.series('copy', 'reload'));
   // gulp.watch(['src/js/modules/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
   gulp.watch('src/*.html', gulp.series('html', 'reload'));
 }

@@ -13,3 +13,9 @@
 @mixin color-transition {
   transition: color 0.2s ease;
 }
+
+@mixin block-shadow {
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 0 24px 30px 0 rgba($black, 0.05);
+}

@@ -1,6 +1,8 @@
 $grid-gutter-width: 1.25rem;
 $container-padding-x: 0.9375rem;
 
+$xxl-width: 1600px;
+
 // $grid-breakpoints: (
 //   xs: 0,
 //   sm: 576px,
@@ -24,13 +26,13 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1240px,
-  xxl: 1600px
+  xxl: $xxl-width
 );
 
 $container-max-widths: (
   // sm: 100%,
   // md: 720px,
-  xl: 1240px
+  xl: 1240px,
 );
 
 

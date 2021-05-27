@@ -1,0 +1,50 @@
+.blue {
+  color: $blue;
+
+  &--white-bg {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      top: -2px;
+      bottom: -2px;
+      left: -8px;
+      right: -8px;
+      border: 7px solid transparent;
+      border-image: url("../img/white-border.svg") 14;
+
+      @include media-breakpoint-up(lg) {
+        top: -5px;
+        bottom: -5px;
+        left: -14px;
+        right: -14px;
+        border-width: 14px;
+      }
+    }
+
+    &::after {
+      left: -5px;
+      right: -5px;
+      border: 2px dashed rgba($white, 0.64);
+      border-radius: 4px;
+      background-color: rgba($white, 0.44);
+
+      @include media-breakpoint-up(lg) {
+        left: -8px;
+        right: -8px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

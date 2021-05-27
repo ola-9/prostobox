@@ -1,9 +1,9 @@
 .logo {
   display: block;
   width: 112px;
-  height: 18px;
+  height: 17px;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     width: 205px;
     height: 30px;
   }

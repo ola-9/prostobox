@@ -1,4 +1,44 @@
 .button {
   @include button-reset;
+  position: relative;
   display: inline-block;
+  min-width: 260px;
+  padding: 20px 35px 21px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: $white;
+  text-align: center;
+  background-color: $blue;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    display: block;
+    width: 90%;
+    height: 31px;
+    background-color: rgba($blue, 0.4);
+    border-radius: 20px;
+    filter: blur(44px);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    will-change: opacity;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    background-color: $blue-dark;
+  }
 }

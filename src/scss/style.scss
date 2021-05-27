@@ -1,5 +1,4 @@
 // Normalize
-// @import (less) "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/normalize.css/normalize";
 
 // Variables
@@ -19,6 +18,11 @@
 
 // Typorgraphy
 
+@import "typography/colors";
+@import "typography/heading-primary";
+@import "typography/heading-secondary";
+@import "typography/heading-tertiary";
+
 // Grid
 
 @import "grid";
@@ -34,3 +38,6 @@
 @import "components/main-nav";
 @import "components/user-nav";
 @import "components/button";
+@import "components/section-xxl";
+@import "components/main-banner";
+@import "components/advantages";
