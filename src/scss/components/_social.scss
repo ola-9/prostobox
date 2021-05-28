@@ -1,0 +1,12 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  padding: 0;
+  margin: 3px 0 0 0;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
