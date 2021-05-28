@@ -114,6 +114,72 @@
 
     </section>
 
+    <section class="calculator">
+      <div class="container">
+        <h2 class="heading-primary">Калькулятор</h2>
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-wrap">
+            <form class="calculator__form form" action="#">
+              <div class="calculator__field">
+                <label class="form__label">Страна доставки*</label>
+                <select class="form__input" id="country" required="">
+                  <option disabled selected>Выбрать страну</option>
+                  <option>Россия</option>
+                </select>
+              </div>
+              <div class="calculator__field">
+                  <label class="form__label">Город доставки*</label>
+                  <input class="form__input" type="text" id="city" value="">
+              </div>
+              <div class="calculator__field">
+                  <label class="form__label">Индекс</label>
+                  <input class="form__input" id="zip" type="text">
+              </div>
+
+              <div class="calculator__field">
+                <label class="form__label">Вес посылки*</label>
+                <input class="form__input" id="package-weight" class="weight-input centered" type="text" value="0.5">
+                <select>
+                    <option value="kg">кг</option>
+                    <option value="lb">фунты</option>
+                </select>
+              </div>
+
+              <div class="calculator__field">
+                <label class="form__label">Цена товара </label>
+                <input class="form__input" id="price" type="text">
+              </div>
+
+              <div class="calculator__field calculator__field--submit">
+                <button class="button">Рассчитать доставку</button>
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="col-lg-6">
+            <ul>
+              <li>Приём посылок - $0</li>
+              <li>Консолидация - $0</li>
+              <li>Упаковка стандартная - $0</li>
+              <li>Комиссия за пополнение баланса - $0</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h3>Подходящие тарифы:</h3>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="heading-primary">Простобокс – у нас все просто</h2>
+      </div>
+    </section>
+
 
   </main>
 

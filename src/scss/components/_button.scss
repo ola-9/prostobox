@@ -13,6 +13,7 @@
   border-radius: 20px;
   transition: background-color 0.2s ease;
   z-index: 1;
+  cursor: pointer;
 
   &::before {
     content: "";
