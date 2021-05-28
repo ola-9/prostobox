@@ -1,44 +1,65 @@
 .main-banner {
-  position: relative;
   overflow: hidden;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 502px;
-    height: 638px;
-    position: absolute;
-    top: 43px;
-    left: calc(50% + 2px);
-    background-image: url("../img/man-with-boxes-1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    width: 2437px;
-    height: 1281px;
-    position: absolute;
-    top: -308px;
-    left: calc(50% - 11px);
-    transform: translateX(-50%);
-    background-image: url("../img/main-banner-lines.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 }
 
 .main-banner__wrapper {
-  min-height: 712px;
+  position: relative;
   padding: 40px 0;
+  padding-bottom: 370px;
   background-color: $yellow;
   border-radius: 40px;
 
   @include media-breakpoint-up(lg) {
     min-height: 754px;
     padding: 112px 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 216px;
+    height: 275px;
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: 60px;
+    transform: translateX(-50%);
+    background-image: url("../img/man-with-boxes-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: 502px;
+      height: 638px;
+      top: 43px;
+      bottom: auto;
+      left: calc(50% + 2px);
+      transform: translateX(0);
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 674px;
+    height: 349px;
+    position: absolute;
+    left: calc(50% - 55px);
+    bottom: 20px;
+    transform: translateX(-50%);
+    background-image: url("../img/main-banner-lines-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: 2438px;
+      height: 1282px;
+      top: -308px;
+      bottom: auto;
+      left: calc(50% - 11px);
+      background-image: url("../img/main-banner-lines.svg");
+    }
   }
 }
 
@@ -77,15 +98,35 @@
   transform: translateY(-20px);
 
   @include media-breakpoint-up(lg) {
+    margin-top: 10px;
+    transform: translateY(-25%);
+  }
+
+  @include media-breakpoint-up(xl) {
     transform: translateY(-50%);
   }
 }
 
+.main-banner__feature {
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 0;
+  }
+}
+
 .main-banner__feature-item {
-  padding: 40px;
-  padding-bottom: 32px;
+  height: 100%;
+  padding: 20px 15px;
   background-color: $white;
   border-radius: 20px;
+
+  @include block-shadow;
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px;
+    padding-bottom: 32px;
+  }
 }
 
 .main-banner__feature-title {
@@ -96,7 +137,12 @@
 
 .main-banner__feature-price {
   display: block;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 14px;
+  line-height: 25px;
   color: $blue;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 36px;
+  }
 }

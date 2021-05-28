@@ -49,7 +49,7 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="main-banner__text">
-                  <b class="main-banner__lead heading-primary">Дешевая доставка из США от <span class="blue blue--white-bg">$3.99</span> от&nbsp;100 гр</b>
+                  <b class="main-banner__lead heading-primary">Дешевая доставка из США от&nbsp;<span class="blue blue--white-bg">$3.99</span> от&nbsp;100 гр</b>
                   <p class="main-banner__desc">Для продвинутых шопоголиков, ценящих время&nbsp;и&nbsp;разумную экономию</p>
                   <a class="button main-banner__cta" href="#">Зарегистрироваться</a>
                 </div>
@@ -57,34 +57,34 @@
             </div>
           </div>
         </div>
-        <div class="container">
-          <ul class="main-banner__features row">
-            <li class="col-xl-3 col-6">
-              <div class="main-banner__feature-item">
-                <b class="main-banner__feature-title heading-tertiary">Адрес в Делавэре</b>
-                <span class="main-banner__feature-price">Бесплатно</span>
-              </div>
-            </li>
-            <li class="col-xl-3 col-6">
-              <div class="main-banner__feature-item">
-                <b class="main-banner__feature-title heading-tertiary">Приёмка на складе</b>
-                <span class="main-banner__feature-price">Бесплатно</span>
-              </div>
-            </li>
-            <li class="col-xl-3 col-6">
-              <div class="main-banner__feature-item">
-                <b class="main-banner__feature-title heading-tertiary">Объединение посылок</b>
-                <span class="main-banner__feature-price">Бесплатно</span>
-              </div>
-            </li>
-            <li class="col-xl-3 col-6">
-              <div class="main-banner__feature-item">
-                <b class="main-banner__feature-title heading-tertiary">Пополнение счёта от $10</b>
-                <span class="main-banner__feature-price">Без комиссии</span>
-              </div>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div class="container">
+        <ul class="main-banner__features row">
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Адрес в&nbsp;Делавэре</b>
+              <span class="main-banner__feature-price">Бесплатно</span>
+            </div>
+          </li>
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Приёмка на&nbsp;складе</b>
+              <span class="main-banner__feature-price">Бесплатно</span>
+            </div>
+          </li>
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Объединение посылок</b>
+              <span class="main-banner__feature-price">Бесплатно</span>
+            </div>
+          </li>
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Пополнение счёта от&nbsp;$10</b>
+              <span class="main-banner__feature-price">Без комиссии</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -112,6 +112,72 @@
         </div>
       </div>
 
+    </section>
+
+    <section class="calculator">
+      <div class="container">
+        <h2 class="heading-primary">Калькулятор</h2>
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-wrap">
+            <form class="calculator__form form" action="#">
+              <div class="calculator__field">
+                <label class="form__label">Страна доставки*</label>
+                <select class="form__input" id="country" required="">
+                  <option disabled selected>Выбрать страну</option>
+                  <option>Россия</option>
+                </select>
+              </div>
+              <div class="calculator__field">
+                  <label class="form__label">Город доставки*</label>
+                  <input class="form__input" type="text" id="city" value="">
+              </div>
+              <div class="calculator__field">
+                  <label class="form__label">Индекс</label>
+                  <input class="form__input" id="zip" type="text">
+              </div>
+
+              <div class="calculator__field">
+                <label class="form__label">Вес посылки*</label>
+                <input class="form__input" id="package-weight" class="weight-input centered" type="text" value="0.5">
+                <select>
+                    <option value="kg">кг</option>
+                    <option value="lb">фунты</option>
+                </select>
+              </div>
+
+              <div class="calculator__field">
+                <label class="form__label">Цена товара </label>
+                <input class="form__input" id="price" type="text">
+              </div>
+
+              <div class="calculator__field calculator__field--submit">
+                <button class="button">Рассчитать доставку</button>
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="col-lg-6">
+            <ul>
+              <li>Приём посылок - $0</li>
+              <li>Консолидация - $0</li>
+              <li>Упаковка стандартная - $0</li>
+              <li>Комиссия за пополнение баланса - $0</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h3>Подходящие тарифы:</h3>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="heading-primary">Простобокс – у нас все просто</h2>
+      </div>
     </section>
 
 
