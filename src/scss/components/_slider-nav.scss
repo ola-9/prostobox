@@ -5,6 +5,7 @@
 }
 
 .slider-nav__btn {
+  // position: relative;
   @include button-reset;
   display: inline-block;
   width: 40px;
@@ -16,6 +17,7 @@
   transition: all 0.2s ease;
   background-position: center;
   background-repeat: no-repeat;
+  // z-index: 10;
   cursor: pointer;
 
   @include media-breakpoint-up(xl) {

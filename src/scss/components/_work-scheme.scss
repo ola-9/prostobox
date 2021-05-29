@@ -37,7 +37,6 @@
       position: absolute;
       bottom: 100%;
       right: 100%;
-      outline: 1px solid tomato;
       background-image: url("../img/work-scheme-lines.svg");
     }
   }
@@ -65,7 +64,7 @@
   display: inline-block;
   padding: 7px 9px;
   position: absolute;
-  top: -100px;
+  top: -140px;
   right: 130px;
   font-size: 12px;
   line-height: 16px;
@@ -75,4 +74,32 @@
   background-color: $white;
   border-radius: 5px;
   box-shadow: 0 4px 6px 0 rgba($black, 0.1);
+  z-index: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(100% + 10px);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--1 {
+    &::before {
+      background-image: url("../img/delivery-truck.svg");
+    }
+  }
+
+  &--2 {
+    top: -120px;
+
+    &::before {
+      background-image: url("../img/airplane.svg");
+    }
+  }
 }
