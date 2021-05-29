@@ -16,11 +16,14 @@
   color: $white;
   background-color: $black;
   border-radius: 10px;
+  margin: 0;
+  margin-bottom: 8px;
 
   @include media-breakpoint-up(lg) {
     padding: 20px;
     font-size: 30px;
     line-height: 39px;
+    margin-bottom: 22px;
   }
 }
 
@@ -29,6 +32,7 @@
   position: relative;
   display: flex;
   align-items: flex-start;
+  padding-top: 40px;
 
   @include media-breakpoint-up(xl) {
     padding-top: 60px;
