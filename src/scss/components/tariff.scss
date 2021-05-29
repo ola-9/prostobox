@@ -1,0 +1,138 @@
+.tariff {
+  position: relative;
+
+  @include block-shadow;
+  padding: 30px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 24px;
+  }
+
+  &--active {
+    background-color: $yellow;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  &--econom::before {
+    width: 134px;
+    height: 134px;
+    top: -60px;
+    right: -20px;
+    background-image: url("../img/tariffs/econom.png");
+  }
+}
+
+.tariff__wrapper {
+  position: relative;
+}
+
+.tariff__label {
+  display: block;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  color: $grey-medium;
+  margin-bottom: 1px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 29px;
+    margin-bottom: -3px;
+  }
+}
+
+.tariff__title {
+  display: block;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  color: $black-1;
+  letter-spacing: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 25px;
+  }
+}
+
+.tariff__time,
+.tariff__features-title {
+  display: block;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $black-1;
+  text-align: center;
+  letter-spacing: 0;
+  margin: 0;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 5px;
+  }
+}
+
+.tariff__features-title {
+  margin-bottom: 10px;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  }
+}
+
+.tariff__price {
+  display: block;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  color: $blue;
+  text-align: center;
+  letter-spacing: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+}
+
+.tariff__features {
+  @include list-reset;
+}
+
+.tariff__features-item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tariff__features-price {
+  display: block;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 27px;
+  font-weight: 700;
+  color: $blue;
+  text-align: center;
+  letter-spacing: 0;
+  margin: 0;
+}

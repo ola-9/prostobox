@@ -1,0 +1,76 @@
+.tariffs {
+  padding: 25px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 70px 0;
+  }
+}
+
+.tariffs__heading {
+  display: inline-block;
+  padding: 15px;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $white;
+  background-color: $black;
+  border-radius: 10px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 20px;
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+
+.tariffs__list {
+  @include list-reset;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 60px;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 250px;
+      height: 414px;
+      position: absolute;
+      left: 100%;
+      top: -20px;
+      background-image: linear-gradient(to right, transparent, rgba(251, 251, 251, 0.8) 30%, rgba(251, 251, 251, 1) 40%);
+    }
+
+    &::before {
+      left: auto;
+      right: 100%;
+      background-image: linear-gradient(to left, transparent, rgba(251, 251, 251, 0.8) 30%, rgba(251, 251, 251, 1) 40%);
+    }
+  }
+}
+
+.tariffs__item {
+  flex-shrink: 0;
+  width: 250px;
+  margin-right: 27px;
+
+  &:not(:first-of-type) {
+    display: none;
+
+    @include media-breakpoint-up(xl) {
+      display: block;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
