@@ -25,7 +25,7 @@
 }
 
 .navigation-item {
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     line-height: 22px;
   }
 }
