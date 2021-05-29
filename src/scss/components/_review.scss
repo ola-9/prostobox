@@ -1,0 +1,7 @@
+.review__wrapper {
+  max-width: 508px;
+  padding: 60px;
+  padding-right: 30px;
+
+  @include block-shadow;
+}

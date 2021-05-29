@@ -1,0 +1,22 @@
+.reviews {
+  margin-bottom: 100px;
+}
+
+.reviews__list {
+  @include list-reset;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
+}
+
+.reviews__item {
+  @include media-breakpoint-up(lg) {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
