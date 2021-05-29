@@ -1,0 +1,51 @@
+.slider-nav {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-nav__btn {
+  @include button-reset;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 5px solid $blue-light-1;
+  background-color: $blue;
+  border-radius: 50%;
+  box-shadow: 0 14px 14px 0 rgba($blue, 0.28);
+  transition: all 0.2s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @include media-breakpoint-up(xl) {
+    width: 60px;
+    height: 60px;
+    border-width: 8px;
+  }
+
+  &--prev {
+    background-image: url("../img/arrow-left.svg");
+
+    @include media-breakpoint-up(xl) {
+      margin-left: -10px;
+    }
+  }
+
+  &--next {
+    background-image: url("../img/arrow-right.svg");
+
+    @include media-breakpoint-up(xl) {
+      margin-right: -10px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 14px 14px 0 rgba($blue, 0.2);
+  }
+
+  &:active {
+    background-color: $blue-dark;
+    box-shadow: 0 14px 14px 0 rgba($blue, 0.1);
+  }
+}
