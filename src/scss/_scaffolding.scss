@@ -21,6 +21,11 @@ body {
   letter-spacing: 0.04em;
   background-color: $white-1;
   color: $grey-dark;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+  }
 }
 
 img {
