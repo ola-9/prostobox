@@ -16,6 +16,11 @@
   border: 1px solid $black;
   border-radius: 20px;
   outline: none;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    border-color: $blue;
+  }
 
   @include media-breakpoint-up(md) {
     height: 60px;

@@ -123,8 +123,8 @@
               <div class="calculator__field">
                 <label class="form__label">Страна доставки*</label>
                 <select class="form__input" id="country" required="">
-                  <option disabled selected>Выбрать страну</option>
-                  <option>Россия</option>
+                  <option value="" disabled selected>Выбрать страну</option>
+                  <option value="RU">Россия</option>
                 </select>
               </div>
               <div class="calculator__field">
@@ -139,7 +139,7 @@
               <div class="calculator__field calculator__field--weight">
                 <label class="form__label" for="package-weight">Вес посылки*</label>
                 <div class="calculator__weight">
-                  <input class="form__input" id="package-weight" class="weight-input centered" type="text" value="0.5">
+                  <input class="form__input weight-input" id="package-weight" type="text" value="0.5">
                 </div>
                 <div class="calculator__unit">
                   <select class="form__input">
@@ -190,11 +190,11 @@
         <div class="subscribe__wrapper row">
           <div class="col-lg-6 ms-lg-auto">
             <p class="subscribe__text heading-secondary">
-              <span class="blue">Подпишитесь</span> на новостную рассылку Простобокса <br> и получайте информацию <br> о новинках и акциях <br class="transfer"> в числе первых.
+              <span class="blue">Подпишитесь</span> на новостную рассылку Простобокса и&nbsp;получайте информацию о&nbsp;новинках и&nbsp;акциях в&nbsp;числе первых.
             </p>
             <form class="subscribe__form form" method="post" action="#">
                 <input class="form__input form__input--mobile" type="text" placeholder="Ваш e-mail">
-                <button class="subscribe-button button">Подписаться</button>
+                <button class="subscribe__button button">Подписаться</button>
             </form>
           </div>
         </div>

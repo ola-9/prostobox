@@ -1,10 +1,11 @@
 .subscribe {
   margin-bottom: 55px;
-  padding: 0 25px 0 20px;
+  padding: 0 22px;
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 167px;
     padding: 0;
+    padding-top: 120px;
+    margin-bottom: 167px;
   }
 }
 
@@ -17,6 +18,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
+}
+
+.subscribe__button {
+  min-width: auto;
 }
 
 .subscribe__wrapper {
@@ -33,33 +38,31 @@
     display: block;
     top: 56px;
     left: 58%;
-    transform: translateX(-49%);
+    transform: translateX(-50%);
     width: 260px;
-    height: 224px;
-    background-image: url("../img/mail.svg");
+    height: 243px;
+    background-image: url("../img/subscribe-email-mobile.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    z-index: -1;
 
     @include media-breakpoint-up(lg) {
       top: -133px;
       left: calc(50% - 44px);
       transform: translateX(-75%);
-      width: 745px;
-      height: 601px;
+      width: 742px;
+      height: 675px;
+      background-image: url("../img/subscribe-email.png");
     }
   }
 }
 
 .subscribe__text {
-  margin: 0 0 40px 8px;
+  margin: 0;
+  margin-bottom: 40px;
   text-align: center;
 
   @include media-breakpoint-up(lg) {
     text-align: start;
-    margin-left: 0;
-
-    & .transfer {
-      display: none;
-    }
   }
 }
