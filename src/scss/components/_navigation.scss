@@ -24,6 +24,12 @@
   }
 }
 
+.navigation-item {
+  @include media-breakpoint-up(lg) {
+    line-height: 22px;
+  }
+}
+
 .navigation-item:not(:last-child) {
   margin-bottom: 2px;
 
