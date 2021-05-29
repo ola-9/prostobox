@@ -1,0 +1,62 @@
+.recommendation {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 103px;
+  }
+}
+
+.recommendation__content {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 355px 15px 55px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 330px;
+    height: 424px;
+    background-image: url("../img/clothes-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include media-breakpoint-up(lg) {
+      top: 1px;
+      right: calc(50% + 59px);
+      transform: translateX(100%);
+      width: 657px;
+      height: 621px;
+      background-image: url("../img/clothes.png");
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    text-align: start;
+    padding: 60px 55% 64px 60px;
+  }
+
+  @include block-shadow;
+}
+
+.recommendation__heading {
+  margin: 0 0 20px 0;
+
+  @include media-breakpoint-up(lg){
+    margin: 0 0 19px 0;
+  }
+
+}
+.recommendation__text {
+  margin: 0 0 40px 0;
+  font-size: 20px;
+  line-height: 26px;
+
+  @include media-breakpoint-up(lg){
+    margin: 0 0 39px 0;
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
