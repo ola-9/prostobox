@@ -50,4 +50,12 @@
     background-color: $blue-dark;
     box-shadow: 0 14px 14px 0 rgba($blue, 0.1);
   }
+
+  &--disabled {
+    background-color: $blue-light;
+
+    &:hover {
+      box-shadow: 0 14px 14px 0 rgba($blue, 0.28);
+    }
+  }
 }

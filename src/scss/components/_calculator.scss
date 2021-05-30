@@ -1,6 +1,8 @@
 .calculator {
+  overflow: hidden;
+
   @include media-breakpoint-up(lg) {
-    padding: 100px;
+    padding: 100px 0;
   }
 }
 

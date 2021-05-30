@@ -108,9 +108,15 @@
 }
 
 .advantages__item {
-  // display: none;
+  @include media-breakpoint-up(lg) {
+    padding-right: 20px;
+  }
+}
 
-  &--active {
+.no-js .advantages__item {
+  display: none;
+
+  &:first-of-type {
     display: block;
   }
 }

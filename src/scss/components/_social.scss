@@ -20,4 +20,10 @@
   &:active svg {
     fill: $blue-dark;
   }
+
+  &--white {
+    svg {
+      fill: $white;
+    }
+  }
 }

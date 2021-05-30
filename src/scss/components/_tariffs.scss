@@ -6,6 +6,32 @@
   }
 }
 
+.tariffs__wrapper {
+  position: relative;
+  overflow: visible;
+
+  @include media-breakpoint-up(xl) {
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 50vw;
+      height: calc(100% + 80px);
+      position: absolute;
+      left: 100%;
+      top: -20px;
+      background-image: linear-gradient(to right, transparent, rgba(251, 251, 251, 1) 88px);
+      z-index: 10;
+    }
+
+    &::before {
+      left: auto;
+      right: 100%;
+      background-image: linear-gradient(to left, transparent, rgba(251, 251, 251, 1) 88px);
+    }
+  }
+}
+
 .tariffs__heading {
   display: inline-block;
   padding: 15px;
@@ -36,24 +62,6 @@
 
   @include media-breakpoint-up(xl) {
     padding-top: 60px;
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      width: 250px;
-      height: 414px;
-      position: absolute;
-      left: 100%;
-      top: -20px;
-      background-image: linear-gradient(to right, transparent, rgba(251, 251, 251, 0.8) 30%, rgba(251, 251, 251, 1) 40%);
-    }
-
-    &::before {
-      left: auto;
-      right: 100%;
-      background-image: linear-gradient(to left, transparent, rgba(251, 251, 251, 0.8) 30%, rgba(251, 251, 251, 1) 40%);
-    }
   }
 }
 
@@ -62,7 +70,7 @@
   width: 250px;
   margin-right: 27px;
 
-  &:not(:first-of-type) {
+  &:not(:first-of-type) & .no-js {
     display: none;
 
     @include media-breakpoint-up(xl) {
