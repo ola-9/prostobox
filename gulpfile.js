@@ -6,11 +6,13 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const sync = require('browser-sync').create();
 const csso = require('gulp-csso');
+const terser = require('gulp-terser');
+const concat = require('gulp-concat');
 // const webp = require('gulp-webp');
 // const include = require('posthtml-include');
 const del = require('del');
-const rename = require("gulp-rename");
-const svgstore = require("gulp-svgstore");
+const rename = require('gulp-rename');
+const svgstore = require('gulp-svgstore');
 
 // Styles
 
@@ -29,6 +31,16 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+const scripts = () => {
+  return gulp.src('src/js/**/*.js')
+    .pipe(concat('script.js'))
+    .pipe(terser())
+    .pipe(rename('script.min.js'))
+    .pipe(gulp.dest('build/js'));
+}
+
+exports.scripts = scripts;
 
 const html = () => {
   return gulp.src('src/*.html')
@@ -61,10 +73,10 @@ const reload = (done) => {
 exports.reload = reload;
 
 const sprite = () => {
-  return gulp.src("src/img/icons/**/*.svg")
+  return gulp.src('src/img/icons/**/*.svg')
     .pipe(svgstore({inlineSvg: true}))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
 }
 
 exports.sprite = sprite;
@@ -75,7 +87,7 @@ const watcher = () => {
   gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
   gulp.watch('src/img/**', gulp.series('copy', 'reload'));
-  // gulp.watch(['src/js/modules/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
+  gulp.watch(['src/js/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
   gulp.watch('src/*.html', gulp.series('html', 'reload'));
 }
 
@@ -98,7 +110,7 @@ const copy = () => {
 exports.copy = copy;
 
 const build = gulp.series(
-  clean, copy, styles, html, sprite
+  clean, copy, styles, scripts, html, sprite
 );
 
 exports.build = build;
