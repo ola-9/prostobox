@@ -59,16 +59,27 @@
 }
 
 .nav-toggle--opened {
+  box-shadow: 0 1px 4px 0 rgba($black, 0.25);
+
+  &::before {
+    display: none;
+  }
+
   .nav-toggle__line {
     background-color: transparent;
 
-    &::before {
+    &::before,
+    &::after {
       top: 0;
+      right: -2px;
+      width: 23px;
+    }
+
+    &::before {
       transform: rotate(45deg);
     }
 
     &::after {
-      top: 0;
       transform: rotate(-45deg);
     }
   }

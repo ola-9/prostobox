@@ -18,6 +18,16 @@
   outline: none;
   transition: border-color 0.2s ease;
 
+  &::placeholder {
+    color: rgba(#bfbfbf, 1);
+    line-height: 32px;
+    opacity: 1;
+
+    @include media-breakpoint-up(md) {
+      line-height: 36px;
+    }
+  }
+
   &:focus {
     border-color: $blue;
   }
@@ -36,5 +46,15 @@
 
   @include media-breakpoint-up(lg) {
     text-align: start;
+  }
+}
+
+.form__select {
+  &:invalid {
+    color: rgba(#bfbfbf, 1);
+  }
+
+  option:disabled {
+    color: rgba(#bfbfbf, 1);
   }
 }
