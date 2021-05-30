@@ -1,15 +1,42 @@
 .user-nav__login {
   position: relative;
   display: block;
-  padding: 20px;
-  padding-right: 60px;
+  padding: 10px;
+  padding-right: 35px;
   font-size: 14px;
   line-height: 20px;
-  background-color: $white;
-  color: $grey-dark;
+  background-color: $blue;
+  color: $white;
   border-radius: 20px;
 
   @include color-transition;
+
+  transition-property: color, background-color;
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    background-color: $blue-dark;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 20px;
+    padding-right: 60px;
+    color: $grey-dark;
+    background-color: $white;
+
+    &:active {
+      background-color: $white;
+    }
+  }
 
   &::before {
     content: "";
@@ -27,36 +54,39 @@
     opacity: 1;
     transition: opacity 0.2s ease;
   }
+}
 
-  &:hover {
-    &::before {
-      opacity: 0;
-    }
-  }
+.user-nav__login-icon-mobile {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 
-  &:active {
-    &::before {
-      display: none;
-    }
+  @include media-breakpoint-up(lg) {
+    display: none;
   }
 }
 
 .user-nav__login-icon {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: $blue-light;
+  display: none;
 
   @include color-transition;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    width: 31px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $blue-light;
+  }
 }
 
 .user-nav__login:active .user-nav__login-icon {
   color: $blue-dark;
 }
-
-// .user-nav__login:hover .user-nav__login-icon,
-// .user-nav__login:focus .user-nav__login-icon {
-//   color: $blue;
-// }

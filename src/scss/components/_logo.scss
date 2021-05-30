@@ -3,6 +3,10 @@
   width: 112px;
   height: 17px;
 
+  img {
+    display: block;
+  }
+
   @include media-breakpoint-up(xl) {
     width: 205px;
     height: 30px;

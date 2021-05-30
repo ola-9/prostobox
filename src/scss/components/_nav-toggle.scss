@@ -6,6 +6,7 @@
   height: 40px;
   border-radius: 10px;
   background-color: $white;
+  cursor: pointer;
 
   @include media-breakpoint-up(lg) {
     display: none;
@@ -44,6 +45,8 @@
     content: "";
     width: 21px;
     right: 0;
+    transition: all 0.2s linear;
+    will-change: top;
   }
 
   &::before {
@@ -52,5 +55,21 @@
 
   &::after {
     top: 7px;
+  }
+}
+
+.nav-toggle--opened {
+  .nav-toggle__line {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
   }
 }
