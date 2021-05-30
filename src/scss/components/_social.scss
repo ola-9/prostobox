@@ -6,6 +6,18 @@
   margin: 0;
 }
 
-.social__item:not(:last-child) {
-  margin-right: 10px;
+.social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  @include color-transition;
+
+  &:hover svg {
+    fill: $blue;
+  }
+
+  &:active svg {
+    fill: $blue-dark;
+  }
 }
