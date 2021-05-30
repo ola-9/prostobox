@@ -50,7 +50,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 0;
-    margin-right: 92px;
+    margin-right: 94px;
   }
 }
 
@@ -76,8 +76,8 @@
   margin-bottom: 10px;
 
   @include media-breakpoint-up(lg) {
-    margin-right: 33px;
-    margin-bottom: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
     margin-top: 0;
   }
 }

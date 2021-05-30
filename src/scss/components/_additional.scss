@@ -2,6 +2,10 @@
   padding: 0 15px;
   margin-bottom: 60px;
   overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 150px;
+  }
 }
 
 .additional__wrapper {
@@ -93,11 +97,11 @@
   }
 }
 
-.additional__item--shild::before {
-  background-image: url("../img/shild-mobile.png");
+.additional__item--shield::before {
+  background-image: url("../img/shield-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/shild.png");
+    background-image: url("../img/shield.png");
   }
 }
 
@@ -143,7 +147,6 @@
     background-image: url("../img/line-mobile.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    z-index: 2;
 
     @include media-breakpoint-up(lg) {
       top: -99px;
@@ -174,7 +177,7 @@
   }
 }
 
-.service__button-wrapper {
+.additional__button-wrapper {
   text-align: center;
 
   @include media-breakpoint-up(lg) {
