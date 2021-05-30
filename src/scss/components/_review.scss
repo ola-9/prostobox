@@ -1,7 +1,97 @@
 .review__wrapper {
+  position: relative;
   max-width: 508px;
   padding: 60px;
-  padding-right: 30px;
+  padding-right: 35px;
 
   @include block-shadow;
+}
+
+.review__label {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+  font-size: 18px;
+  line-height: 32px;
+  color: #555555;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.review__date {
+  margin-bottom: 24px;
+
+  &::before {
+    background-image: url("../img/clock-icon.svg");
+  }
+}
+
+.review__city {
+  margin-bottom: 14px;
+
+  &::before {
+    background-image: url("../img/location-icon.svg");
+  }
+}
+
+.review__order {
+  &::before {
+    background-image: url("../img/parcel-icon.svg");
+  }
+}
+
+.review__name {
+  display: block;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0;
+  color: $black-1;
+  margin-bottom: 10px;
+}
+
+.review__wrapper-top {
+  display: flex;
+}
+
+.review__info {
+  width: 60%;
+  flex-shrink: 0;
+}
+
+.review__gallery {
+  flex-shrink: 0;
+  width: 250px;
+
+  img {
+    display: block;
+  }
+}
+
+.review__content {
+  padding-top: 39px;
+
+  p {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.review__stars {
+  height: 40px;
+  margin-bottom: 21px;
 }

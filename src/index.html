@@ -13,6 +13,20 @@
 </head>
 <body>
 
+  <style>
+/*
+    html {
+      background-image: url("img/index.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
+    body {
+      opacity: 0.5;
+    } */
+
+  </style>
+
   <header class="header">
     <div class="container">
       <nav class="main-nav">
@@ -230,7 +244,6 @@
                 <li>Комиссия за пополнение баланса - <b class="blue">$0</b></li>
               </ul>
             </div>
-
           </div>
         </div>
 
@@ -253,42 +266,6 @@
                     </li>
                   </ul>
                 </div>
-              </li>
-              <li class="tariffs__item tariff tariff--one swiper-slide">
-                <span class="tariff__label">Тариф</span>
-                <h3 class="tariff__title">По одной</h3>
-                <span class="tariff__time">7 - 14 дней</span>
-                <b class="tariff__price">$9,99</b>
-                <ul class="tariff__features">
-                  <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                </ul>
-              </li>
-              <li class="tariffs__item tariff tariff--one swiper-slide">
-                <span class="tariff__label">Тариф</span>
-                <h3 class="tariff__title">По одной</h3>
-                <span class="tariff__time">7 - 14 дней</span>
-                <b class="tariff__price">$9,99</b>
-                <ul class="tariff__features">
-                  <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                </ul>
-              </li>
-              <li class="tariffs__item tariff tariff--one swiper-slide">
-                <span class="tariff__label">Тариф</span>
-                <h3 class="tariff__title">По одной</h3>
-                <span class="tariff__time">7 - 14 дней</span>
-                <b class="tariff__price">$9,99</b>
-                <ul class="tariff__features">
-                  <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                </ul>
               </li>
               <li class="tariffs__item tariff tariff--one swiper-slide">
                 <span class="tariff__label">Тариф</span>
@@ -343,17 +320,17 @@
                 </ul>
               </li>
             </ul>
+            <div class="tariffs__slider-nav">
+              <ul class="slider-nav">
+                <li class="slider-nav__item">
+                  <button class="slider-nav__btn slider-nav__btn--prev"></button>
+                </li>
+                <li class="slider-nav__item">
+                  <button class="slider-nav__btn slider-nav__btn--next"></button>
+                </li>
+              </ul>
+            </div>
           </div>
-
-
-          <ul class="slider-nav">
-            <li class="slider-nav__item">
-              <button class="slider-nav__btn slider-nav__btn--prev"></button>
-            </li>
-            <li class="slider-nav__item">
-              <button class="slider-nav__btn slider-nav__btn--next"></button>
-            </li>
-          </ul>
         </div>
       </div>
 
@@ -361,7 +338,7 @@
 
     <section class="work-scheme">
       <div class="container">
-        <h2 class="heading-primary">Простобокс – у нас все просто</h2>
+        <h2 class="work-scheme__heading heading-primary">Простобокс – у нас все просто</h2>
         <ul class="work-scheme__list row">
           <li class="work-scheme__item col-xl-4">
             <div class="work-scheme__wrapper">
@@ -403,21 +380,25 @@
             </div>
             <div class="promo-slider__text">
               <h3 class="promo-slider__title">iPhone из США</h3>
-              <p class="promo-slider__desc">Как купить новый iPhone 12 из Америки с доставкой в&nbsp;Россию. Мы подготовили подробную инструкцию по покупке с официального сайта Apple, а также рассказали где еще можну купить яблочную продукцию.</p>
+              <p class="promo-slider__desc">Как купить новый iPhone 12 из Америки с доставкой в&nbsp;Россию. Мы подготовили подробную инструкцию по&nbsp;покупке с официального сайта Apple, а также рассказали где еще можну купить яблочную продукцию.</p>
             </div>
           </div>
 
         </div>
 
-        <ul class="slider-nav promo-slider__nav">
-          <li class="slider-nav__item">
-            <button class="slider-nav__btn slider-nav__btn--prev"></button>
-          </li>
-          <li class="slider-nav__item">
-            <button class="slider-nav__btn slider-nav__btn--next"></button>
-          </li>
-        </ul>
-        <div class="nav-dots">
+        <div class="promo-slider__nav">
+          <ul class="slider-nav ">
+            <li class="slider-nav__item">
+              <button class="slider-nav__btn slider-nav__btn--prev"></button>
+            </li>
+            <li class="slider-nav__item">
+              <button class="slider-nav__btn slider-nav__btn--next"></button>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="promo-slider__dots nav-dots">
           <button class="nav-dots__btn nav-dots__btn--active"></button>
           <button class="nav-dots__btn"></button>
         </div>
@@ -447,46 +428,87 @@
 
     <section class="reviews">
 
-      <div class="container">
-        <h2 class="heading-primary">Отзывы</h2>
+      <div class="container reviews__container">
+        <h2 class="reviews__heading heading-primary">Отзывы</h2>
 
-        <ul class="reviews__list">
-          <li class="reviews__item review">
-            <div class="review__wrapper">
-              <time class="review__date" datetime="2021-04-26">26.04.2021</time>
-              <b class="review__name">Name</b>
-              <div class="review__stars"></div>
-              <span>Москва</span>
-              <span>PCT000000443175</span>
-              <div class="review__gallery">
-                <img src="img/reviews/1.png" alt="">
+        <div class="reviews__wrapper swiper-container swiper-reviews">
+          <ul class="reviews__list swiper-wrapper">
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Москва</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <div class="review__gallery">
+                    <img src="img/reviews/1.png" alt="">
+                  </div>
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
               </div>
-              <div class="review__content">
-                <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
-              </div>
-            </div>
 
-          </li>
+            </li>
 
-          <li class="reviews__item review">
-            <div class="review__wrapper">
-              <time class="review__date" datetime="2021-04-26">26.04.2021</time>
-              <b class="review__name">Name</b>
-              <div class="review__stars"></div>
-              <span>Владивосток</span>
-              <span>PCT000000443175</span>
-              <div class="review__gallery">
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Владивосток</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <div class="review__gallery">
+                  </div>
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
               </div>
-              <div class="review__content">
-                <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
-              </div>
-            </div>
 
-          </li>
-        </ul>
+            </li>
+
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Москва</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <div class="review__gallery">
+                    <img src="img/reviews/1.png" alt="">
+                  </div>
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
         <div class="reviews__links">
           <a class="button" href="#">Больше отзывов</a>
-          <a class="reviews__map-link" href="#">Отзывы соседей на карте</a>
+          <a class="reviews__map-link" href="#">
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite.svg#globe"></use>
+            </svg>
+            Отзывы соседей на карте</a>
         </div>
       </div>
 
@@ -694,6 +716,35 @@
         nextEl: ".tariffs .slider-nav__btn--next",
         prevEl: ".tariffs .slider-nav__btn--prev",
       },
+    });
+
+    var swiperReviews = new Swiper(".swiper-reviews", {
+      roundLengths: true,
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1.295,
+        //   spaceBetween: 20,
+        //   centeredSlides: true,
+        // },
+        // 768: {
+        //   slidesPerView: 2.4,
+        //   spaceBetween: 20,
+        //   centeredSlides: false,
+        // },
+        // 992: {
+        //   slidesPerView: 3.42,
+        //   spaceBetween: 20
+        // },
+        1240: {
+          slidesPerView: 2.132,
+          spaceBetween: 102,
+        }
+      },
+      // navigation: {
+      //   disabledClass: "slider-nav__btn--disabled",
+      //   nextEl: ".tariffs .slider-nav__btn--next",
+      //   prevEl: ".tariffs .slider-nav__btn--prev",
+      // },
     });
   </script>
 </body>

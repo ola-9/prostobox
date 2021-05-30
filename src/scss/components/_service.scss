@@ -1,5 +1,6 @@
 .service {
-  margin-bottom: 66px;
+  padding-bottom: 10px;
+  margin-bottom: 142px;
 }
 
 .service__wrapper {
@@ -65,7 +66,7 @@
   padding-left: 49px;
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding-left: 23px;
   }
 

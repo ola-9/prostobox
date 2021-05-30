@@ -28,18 +28,10 @@
 
   &--prev {
     background-image: url("../img/arrow-left.svg");
-
-    @include media-breakpoint-up(xl) {
-      margin-left: -10px;
-    }
   }
 
   &--next {
     background-image: url("../img/arrow-right.svg");
-
-    @include media-breakpoint-up(xl) {
-      margin-right: -10px;
-    }
   }
 
   &:hover {

@@ -1,6 +1,14 @@
 .work-scheme {
   overflow: hidden;
-  margin-bottom: 150px;
+  padding-bottom: 45px;
+  margin-bottom: 100px;
+}
+
+.work-scheme__heading {
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+    margin-bottom: 45px;
+  }
 }
 
 .work-scheme__list {
@@ -8,7 +16,6 @@
   padding: 0;
   padding-top: 200px;
 }
-
 
 .work-scheme__item {
   position: relative;
@@ -20,8 +27,8 @@
     height: 38px;
     border: 2px solid #c1c1c1;
     position: absolute;
-    top: -80px;
-    left: -18px;
+    top: -38px;
+    left: 0;
     border-radius: 50%;
     background-image: radial-gradient($white, $white 9px, $grey-dark 10px, $grey-dark 14px, #c1c1c1 15px);
     box-shadow: 0 14px 14px 0 rgba(#808080, 0.32);
@@ -35,26 +42,34 @@
       width: 1388px;
       height: 135px;
       position: absolute;
-      bottom: 100%;
-      right: 100%;
+      top: -90px;
+      right: calc(100% - 25px);
       background-image: url("../img/work-scheme-lines.svg");
     }
   }
 }
 
+.work-scheme__title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 .work-scheme__text {
   font-size: 14px;
   line-height: 25px;
+  margin: 0;
 
   @include media-breakpoint-up(lg) {
     font-size: 16px;
-    line-height: 27px;
+    line-height: 29px;
   }
 }
 
 
 .work-scheme__wrapper {
   @include media-breakpoint-up(xl) {
+    padding-top: 30px;
+    padding-bottom: 60px;
     padding-right: 20%;
   }
 }
@@ -64,8 +79,8 @@
   display: inline-block;
   padding: 7px 9px;
   position: absolute;
-  top: -140px;
-  right: 130px;
+  top: -100px;
+  right: 139px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -96,9 +111,11 @@
   }
 
   &--2 {
-    top: -120px;
+    top: -63px;
+    right: 130px;
 
     &::before {
+      bottom: calc(100% + 19px);
       background-image: url("../img/airplane.svg");
     }
   }

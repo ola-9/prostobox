@@ -3,7 +3,8 @@
   overflow: hidden;
 
   @include media-breakpoint-up(lg) {
-    padding: 70px 0;
+    // padding: 70px 0;
+    padding-bottom: 64px;
   }
 }
 
@@ -31,9 +32,9 @@
     background-position: center;
 
     @include media-breakpoint-up(lg) {
-      top: 40px;
+      top: 38px;
       bottom: auto;
-      left: calc(50% - 230px);
+      left: calc(50% - 269px);
       transform: translateX(-50%);
       width: 1488px;
       height: 520px;
@@ -55,8 +56,8 @@
     background-position: center;
 
     @include media-breakpoint-up(lg) {
-      top: -20px;
-      left: calc(50% - 44px);
+      top: -34px;
+      left: calc(50% - 97px);
       transform: translateX(-100%);
       width: 571px;
       height: 601px;

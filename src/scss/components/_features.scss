@@ -1,8 +1,11 @@
 .features {
   text-align: center;
+  overflow: hidden;
 
   @include media-breakpoint-up(lg) {
     text-align: left;
+    padding-bottom: 65px;
+    margin-bottom: 60px;
   }
 }
 
@@ -26,8 +29,33 @@
 
 
   @include media-breakpoint-up(lg) {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 1237px;
+      height: 902px;
+      position: absolute;
+      bottom: -62px;
+      right: -247px;
+      background-repeat: no-repeat;
+      background-image: url("../img/features-lines.svg");
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 628px;
+      height: 541px;
+      position: absolute;
+      bottom: -138px;
+      right: -227px;
+      background-repeat: no-repeat;
+      background-image: url("../img/features-truck.png");
+    }
   }
 }
 
@@ -45,7 +73,7 @@
   &::before {
     font-family: "Jost", "Arial", sans-serif;
     counter-increment: features;
-    content: counter(features) ".";
+    content: "0" counter(features) ".";
     display: block;
     width: 50px;
     height: 50px;

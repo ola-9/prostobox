@@ -6,6 +6,8 @@
 @import "variables";
 @import "mixins";
 
+// Vendor
+
 // Bootstrap
 
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
@@ -27,8 +29,6 @@
 
 @import "grid";
 
-
-// Vendor
 
 // Components
 
@@ -58,3 +58,4 @@
 @import "components/features";
 @import "components/reviews";
 @import "components/review";
+@import "components/rating-stars";
