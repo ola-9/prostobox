@@ -18,6 +18,7 @@
     background-image: url("../img/service-mobile.png");
     background-repeat: no-repeat;
     background-size: 100%;
+
     @include media-breakpoint-up(lg) {
       top: 341px;
       left: calc(50% - 69px);

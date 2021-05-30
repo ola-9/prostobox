@@ -1,0 +1,229 @@
+.additional {
+  padding: 0 15px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.additional__wrapper {
+  background-color: $grey-dark;
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px 0 45px 0;
+
+  @include media-breakpoint-up(lg) {
+    text-align: start;
+    padding: 101px 0 116px 0;
+  }
+}
+
+.additional__item,
+.additional__list,
+.additional__heading,
+.additional__wrapper,
+.additional__tertiary {
+  color: $white;
+}
+
+.additional__heading {
+  margin: 0 0 140px 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 100px;
+    width: 605px;
+  }
+}
+
+.additional__tertiary {
+  margin: 0 0 10px 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 20px;
+  }
+}
+
+.additional__list {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 100px;
+    column-gap: 20px;
+    margin-bottom: 76px;
+  }
+}
+
+.additional__item {
+  position: relative;
+  margin-top: 120px;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 120px;
+    padding-right: 50px;
+    margin: 0;
+  }
+}
+
+.additional__item--cap::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -102px;
+  right: 50%;
+  transform: translateX(47%);
+  width: 94px;
+  height: 94px;
+  background-image: url("../img/cap-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include media-breakpoint-up(lg) {
+    top: -24px;
+    right: 93%;
+    width: 133px;
+    height: 144px;
+    background-image: url("../img/cap.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.additional__item--shild::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -102px;
+  right: 50%;
+  transform: translateX(47%);
+  width: 94px;
+  height: 94px;
+  background-image: url("../img/shild-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include media-breakpoint-up(lg) {
+    top: -24px;
+    right: 93%;
+    width: 133px;
+    height: 144px;
+    background-image: url("../img/shild.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.additional__item--rocket::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -102px;
+  right: 50%;
+  transform: translateX(47%);
+  width: 94px;
+  height: 94px;
+  background-image: url("../img/rocket-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include media-breakpoint-up(lg) {
+    top: -24px;
+    right: 93%;
+
+    width: 133px;
+    height: 144px;
+    background-image: url("../img/rocket.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.additional__item--message::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -102px;
+  right: 50%;
+  transform: translateX(47%);
+  width: 94px;
+  height: 94px;
+  background-image: url("../img/message-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include media-breakpoint-up(lg) {
+    top: -24px;
+    right: 93%;
+    width: 133px;
+    height: 144px;
+    background-image: url("../img/message.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.additional__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 25px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+.additional__content {
+  position: relative;
+  padding: 0 5px 0 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -20px;
+    right: 50%;
+    transform: translateX(52%);
+    width: 480px;
+    height: 1100px;
+    background-image: url("../img/line-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+      top: -99px;
+      right: 57%;
+      transform: translateX(52%);
+      width: 2120px;
+      height: 1125px;
+      background-image: url("../img/line.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 15px 0 20px;
+  }
+}
+
+.additional__text-special {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  line-height: 25px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 500;
+  }
+}
+
+.service__button-wrapper {
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 24px;
+  }
+}

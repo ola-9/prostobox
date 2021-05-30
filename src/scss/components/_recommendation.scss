@@ -14,7 +14,7 @@
     content: "";
     position: absolute;
     display: block;
-    top: 0px;
+    top: 0;
     right: 50%;
     transform: translateX(50%);
     width: 330px;
@@ -33,7 +33,7 @@
     }
   }
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     text-align: start;
     padding: 60px 55% 64px 60px;
   }
@@ -44,17 +44,17 @@
 .recommendation__heading {
   margin: 0 0 20px 0;
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     margin: 0 0 19px 0;
   }
-
 }
+
 .recommendation__text {
   margin: 0 0 40px 0;
   font-size: 20px;
   line-height: 26px;
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     margin: 0 0 39px 0;
     font-size: 30px;
     line-height: 39px;
