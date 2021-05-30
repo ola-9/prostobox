@@ -58,6 +58,26 @@
   position: relative;
   margin-top: 120px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -102px;
+    right: 50%;
+    transform: translateX(47%);
+    width: 94px;
+    height: 94px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include media-breakpoint-up(lg) {
+      top: -24px;
+      right: 93%;
+      width: 133px;
+      height: 144px;
+    }
+  }
+
   @include media-breakpoint-up(lg) {
     padding-left: 120px;
     padding-right: 50px;
@@ -66,99 +86,34 @@
 }
 
 .additional__item--cap::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -102px;
-  right: 50%;
-  transform: translateX(47%);
-  width: 94px;
-  height: 94px;
   background-image: url("../img/cap-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
 
   @include media-breakpoint-up(lg) {
-    top: -24px;
-    right: 93%;
-    width: 133px;
-    height: 144px;
     background-image: url("../img/cap.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 }
 
 .additional__item--shild::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -102px;
-  right: 50%;
-  transform: translateX(47%);
-  width: 94px;
-  height: 94px;
   background-image: url("../img/shild-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
 
   @include media-breakpoint-up(lg) {
-    top: -24px;
-    right: 93%;
-    width: 133px;
-    height: 144px;
     background-image: url("../img/shild.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 }
 
 .additional__item--rocket::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -102px;
-  right: 50%;
-  transform: translateX(47%);
-  width: 94px;
-  height: 94px;
   background-image: url("../img/rocket-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
 
   @include media-breakpoint-up(lg) {
-    top: -24px;
-    right: 93%;
-
-    width: 133px;
-    height: 144px;
     background-image: url("../img/rocket.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 }
 
 .additional__item--message::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -102px;
-  right: 50%;
-  transform: translateX(47%);
-  width: 94px;
-  height: 94px;
   background-image: url("../img/message-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
 
   @include media-breakpoint-up(lg) {
-    top: -24px;
-    right: 93%;
-    width: 133px;
-    height: 144px;
     background-image: url("../img/message.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 }
 
