@@ -6,8 +6,8 @@
 
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
   <title>Prostobox.com</title>
 </head>
@@ -149,20 +149,23 @@
       <div class="container">
         <div class="advantages__wrapper row">
           <div class="col-lg-6 ms-lg-auto">
-            <ul class="advantages__list">
-              <li class="advantages__item advantages__item--active">
-                <p class="advantages__text heading-secondary"><span class="blue">Доставляем</span> даже самые <span class="blue">маленькие посылки</span> без&nbsp;переплаты за вес и&nbsp;округлений до&nbsp;полукилограмма.</p>
-              </li>
-              <li class="advantages__item">
-                <p class="advantages__text heading-secondary">Отправляем <span class="blue">крупногабаритные консолидированные посылки</span> за разумные деньги.</p>
-              </li>
-              <li class="advantages__item">
-                <p class="advantages__text heading-secondary"><span class="blue">Принимаем оплату таможенной пошлины</span>, чтобы не тратить ваше время и не держать посылку на границе лишние дни.</p>
-              </li>
-              <li class="advantages__item">
-                <p class="advantages__text heading-secondary">Можем отправить вашу посылку <span class="blue">без ИНН, скана паспорта и подробных деклараций</span> через Почту России.</p>
-              </li>
-            </ul>
+            <div class="advantages__container swiper-container swiper-advantages">
+              <ul class="advantages__list swiper-wrapper">
+                <li class="advantages__item advantages__item--active swiper-slide">
+                  <p class="advantages__text heading-secondary"><span class="blue">Доставляем</span> даже самые <span class="blue">маленькие посылки</span> без&nbsp;переплаты за вес и&nbsp;округлений до&nbsp;полукилограмма.</p>
+                </li>
+                <li class="advantages__item swiper-slide">
+                  <p class="advantages__text heading-secondary">Отправляем <span class="blue">крупногабаритные консолидированные посылки</span> за разумные деньги.</p>
+                </li>
+                <li class="advantages__item swiper-slide">
+                  <p class="advantages__text heading-secondary"><span class="blue">Принимаем оплату таможенной пошлины</span>, чтобы не тратить ваше время и не держать посылку на границе лишние дни.</p>
+                </li>
+                <li class="advantages__item swiper-slide">
+                  <p class="advantages__text heading-secondary">Можем отправить вашу посылку <span class="blue">без ИНН, скана паспорта и подробных деклараций</span> через Почту России.</p>
+                </li>
+              </ul>
+            </div>
+
             <a class="button" href="#">Получить адрес</a>
           </div>
 
@@ -616,6 +619,16 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.min.js"></script>
+
+  <script>
+    var swiperAdvantages = new Swiper(".swiper-advantages", {
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+    });
+  </script>
 </body>
 </html>
