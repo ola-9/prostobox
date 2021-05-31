@@ -14,7 +14,7 @@
 <body>
 
   <style>
-/*
+
     html {
       background-image: url("img/index.png");
       background-position: center top;
@@ -23,7 +23,7 @@
 
     body {
       opacity: 0.5;
-    } */
+    }
 
   </style>
 
@@ -340,7 +340,7 @@
       <div class="container">
         <h2 class="work-scheme__heading heading-primary">Простобокс – у нас все просто</h2>
         <ul class="work-scheme__list row">
-          <li class="work-scheme__item col-xl-4">
+          <li class="work-scheme__item col-lg-4">
             <div class="work-scheme__wrapper">
               <h3 class="work-scheme__title heading-tertiary">Заказываете</h3>
               <p class="work-scheme__text">вещи в интернет-магазинах США, как будто вы там живете</p>
@@ -349,7 +349,7 @@
               <span>1 - 2 дня</span>
             </div>
           </li>
-          <li class="work-scheme__item col-xl-4">
+          <li class="work-scheme__item col-lg-4">
             <div class="work-scheme__wrapper">
               <h3 class="work-scheme__title heading-tertiary">Оформляете</h3>
               <p class="work-scheme__text">и оплатить доставку посылки на&nbsp;ваш Российский адрес</p>
@@ -358,50 +358,63 @@
               <span>5 - 10 дней</span>
             </div>
           </li>
-          <li class="work-scheme__item work-scheme__item--lines col-xl-4">
+          <li class="work-scheme__item work-scheme__item--lines col-lg-4">
             <div class="work-scheme__wrapper">
               <h3 class="work-scheme__title heading-tertiary">Получаете</h3>
               <p class="work-scheme__text">заказ через 5-10 дней после отправки со склада из США</p>
             </div>
-            <a class="button" href="#">Зарегистрироваться</a>
           </li>
         </ul>
-
+        <div class="row">
+          <div class="work-scheme__button col-lg-4 ms-lg-auto">
+            <a class="button" href="#">Зарегистрироваться</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="promo-slider">
-      <div class="container promo-slider__container">
-        <div class="promo-slider__wrapper">
+      <div class="container">
+        <div class="promo-slider__main-wrapper">
+          <div class="promo-slider__container swiper-container swiper-promo-slider">
+            <div class="promo-slider__wrapper swiper-wrapper">
 
-          <div class="promo-slider__item">
-            <div class="promo-slider__img">
-              <img src="img/slides/iphone.png" alt="iPhone">
-            </div>
-            <div class="promo-slider__text">
-              <h3 class="promo-slider__title">iPhone из США</h3>
-              <p class="promo-slider__desc">Как купить новый iPhone 12 из Америки с доставкой в&nbsp;Россию. Мы подготовили подробную инструкцию по&nbsp;покупке с официального сайта Apple, а также рассказали где еще можну купить яблочную продукцию.</p>
+              <div class="promo-slider__item swiper-slide">
+                <div class="promo-slider__img">
+                  <img src="img/slides/iphone.png" alt="iPhone">
+                </div>
+                <div class="promo-slider__text">
+                  <h3 class="promo-slider__title">iPhone из США</h3>
+                  <p class="promo-slider__desc">Как купить новый iPhone 12 из Америки с доставкой в&nbsp;Россию. Мы подготовили подробную инструкцию по&nbsp;покупке с официального сайта Apple, а также рассказали где еще можну купить яблочную продукцию. </p>
+                </div>
+              </div>
+
+              <!-- <div class="promo-slider__item swiper-slide">
+                <div class="promo-slider__img">
+                  <img src="img/slides/ptostobot.png" alt="iPhone">
+                </div>
+                <div class="promo-slider__text">
+                  <h3 class="promo-slider__title">ПростоБот от Простобокс</h3>
+                  <p class="promo-slider__desc">Телеграм Бот Простобокса – это возможность делать большую часть операций в личном кабинете не заходя на сайт, быть в курсе актуальных распродаж и скидок, а также общаться с поддержкой при необходимости.</p>
+                </div>
+              </div> -->
+
             </div>
           </div>
+          <div class="promo-slider__nav">
+            <ul class="slider-nav">
+              <li class="slider-nav__item">
+                <button class="slider-nav__btn slider-nav__btn--prev"></button>
+              </li>
+              <li class="slider-nav__item">
+                <button class="slider-nav__btn slider-nav__btn--next"></button>
+              </li>
+            </ul>
+          </div>
 
+          <div class="promo-slider__dots nav-dots"></div>
         </div>
 
-        <div class="promo-slider__nav">
-          <ul class="slider-nav ">
-            <li class="slider-nav__item">
-              <button class="slider-nav__btn slider-nav__btn--prev"></button>
-            </li>
-            <li class="slider-nav__item">
-              <button class="slider-nav__btn slider-nav__btn--next"></button>
-            </li>
-          </ul>
-        </div>
-
-
-        <div class="promo-slider__dots nav-dots">
-          <button class="nav-dots__btn nav-dots__btn--active"></button>
-          <button class="nav-dots__btn"></button>
-        </div>
       </div>
     </section>
 
@@ -679,73 +692,5 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.min.js"></script>
-
-  <script>
-    var swiperAdvantages = new Swiper(".swiper-advantages", {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-    });
-
-    var swiperTariffs = new Swiper(".swiper-tariffs", {
-      roundLengths: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 1.295,
-          spaceBetween: 20,
-          centeredSlides: true,
-        },
-        768: {
-          slidesPerView: 2.4,
-          spaceBetween: 20,
-          centeredSlides: false,
-        },
-        992: {
-          slidesPerView: 3.42,
-          spaceBetween: 20
-        },
-        1240: {
-          slidesPerView: 4.42,
-          spaceBetween: 27,
-        }
-      },
-      navigation: {
-        disabledClass: "slider-nav__btn--disabled",
-        nextEl: ".tariffs .slider-nav__btn--next",
-        prevEl: ".tariffs .slider-nav__btn--prev",
-      },
-    });
-
-    var swiperReviews = new Swiper(".swiper-reviews", {
-      roundLengths: true,
-      breakpoints: {
-        // 320: {
-        //   slidesPerView: 1.295,
-        //   spaceBetween: 20,
-        //   centeredSlides: true,
-        // },
-        // 768: {
-        //   slidesPerView: 2.4,
-        //   spaceBetween: 20,
-        //   centeredSlides: false,
-        // },
-        // 992: {
-        //   slidesPerView: 3.42,
-        //   spaceBetween: 20
-        // },
-        1240: {
-          slidesPerView: 2.132,
-          spaceBetween: 102,
-        }
-      },
-      // navigation: {
-      //   disabledClass: "slider-nav__btn--disabled",
-      //   nextEl: ".tariffs .slider-nav__btn--next",
-      //   prevEl: ".tariffs .slider-nav__btn--prev",
-      // },
-    });
-  </script>
 </body>
 </html>

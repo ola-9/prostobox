@@ -1,0 +1,30 @@
+.nav-dots {
+  display: flex;
+  align-items: center;
+}
+
+.nav-dots__btn {
+  @include button-reset;
+
+  display: inline-block;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+  background-color: rgba($black-1, 0.16);
+
+  cursor: pointer;
+
+  margin-right: 10px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--active {
+    width: 15px;
+    height: 15px;
+    background-color: rgba($black-1, 1);
+  }
+}
