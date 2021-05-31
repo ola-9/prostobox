@@ -109,8 +109,21 @@ const copy = () => {
 
 exports.copy = copy;
 
+const docs = () => {
+  return gulp.src('build/**',
+  {
+    base: 'build'
+  }).pipe(gulp.dest('docs'));
+}
+
+exports.docs = docs;
+
 const build = gulp.series(
   clean, copy, styles, scripts, html, sprite
+);
+
+const deploy = gulp.series(
+  clean, copy, styles, scripts, html, sprite, docs
 );
 
 exports.build = build;

@@ -1,33 +1,54 @@
 .review__wrapper {
+  text-align: left;
   position: relative;
-  max-width: 508px;
-  padding: 60px;
-  padding-right: 35px;
+  padding: 30px;
 
   @include block-shadow;
+
+  @include media-breakpoint-up(md) {
+    max-width: 508px;
+    padding: 60px;
+    padding-right: 35px;
+  }
 }
 
 .review__label {
   position: relative;
   display: block;
   padding-left: 40px;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 25px;
   color: #555555;
 
   &::before {
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     left: 0;
     top: 0;
+    background-size: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: 40px;
+    font-size: 18px;
+    line-height: 32px;
+
+    &::before {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
 .review__date {
-  margin-bottom: 24px;
+  margin-bottom: 6px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 24px;
+  }
 
   &::before {
     background-image: url("../img/clock-icon.svg");
@@ -35,7 +56,11 @@
 }
 
 .review__city {
-  margin-bottom: 14px;
+  margin-bottom: 6px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 14px;
+  }
 
   &::before {
     background-image: url("../img/location-icon.svg");
@@ -51,37 +76,107 @@
 .review__name {
   display: block;
   font-family: "Jost", "Arial", sans-serif;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 30px;
+  line-height: 39px;
   letter-spacing: 0;
   color: $black-1;
   margin-bottom: 10px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+    line-height: 52px;
+  }
 }
 
 .review__wrapper-top {
-  display: flex;
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
 }
 
 .review__info {
-  width: 60%;
-  flex-shrink: 0;
+  @include media-breakpoint-up(md) {
+    width: 60%;
+    padding-right: 20px;
+    flex-shrink: 0;
+  }
 }
 
 .review__gallery {
-  flex-shrink: 0;
-  width: 250px;
+  position: relative;
+  height: 126px;
+  margin-top: 35px;
+
+  overflow: visible;
+  z-index: 11;
+
+  @include media-breakpoint-up(lg) {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    margin-top: 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba($black, 0.25);
+  }
+}
+
+.review__gallery-wrapper {
+  position: relative;
+  // overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 126px;
+    height: 126px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // z-index: -1;
+    border-radius: 20px;
+    background-color: rgba($blue, 0.28);
+  }
+
+  @include media-breakpoint-up(lg) {
+    &::before {
+      width: 170px;
+      height: 170px;
+      top: 50%;
+      right: -16px;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
 
   img {
     display: block;
+    height: 100%;
+    border-radius: 20px;
+
+    @include media-breakpoint-up(lg) {
+      &:not(:first-of-type) {
+        width: 170px;
+        height: 170px;
+        position: absolute;
+        top: 50%;
+        right: -16px;
+        transform: translateY(-50%);
+        z-index: -2;
+        border-radius: 20px;
+      }
+    }
   }
 }
 
 .review__content {
-  padding-top: 39px;
+  padding-top: 20px;
 
   p {
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 25px;
     margin: 0;
     margin-bottom: 32px;
 
@@ -89,9 +184,61 @@
       margin-bottom: 0;
     }
   }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 39px;
+
+    p {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
 }
 
 .review__stars {
-  height: 40px;
   margin-bottom: 21px;
+}
+
+.review__gallery-nav {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -22px;
+  right: -22px;
+
+  justify-content: space-between;
+  z-index: 11;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
+}
+
+.review__gallery-btn {
+  @include button-reset;
+
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $black;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: $white;
+  }
+
+  &--disabled {
+    background-color: $white;
+
+    svg {
+      fill: #c1c1c1;
+    }
+  }
 }

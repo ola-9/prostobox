@@ -1,7 +1,11 @@
 .work-scheme {
   overflow: hidden;
   padding-bottom: 65px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 100px;
+  }
 }
 
 .work-scheme__heading {
@@ -36,7 +40,7 @@
   padding-bottom: 108px;
 
   &:nth-of-type(2) {
-    padding-bottom: 148px;
+    padding-bottom: 154px;
     margin-left: 30px;
   }
 
@@ -52,7 +56,7 @@
     height: 18px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -8px;
     border-radius: 50%;
     background-image: radial-gradient($white, $white 4px, $grey-dark 5px, $grey-dark 7px, #c1c1c1 8px);
     z-index: 1;
@@ -83,8 +87,8 @@
       width: 81px;
       height: 696px;
       position: absolute;
-      left: -25px;
-      bottom: 100%;
+      left: -30px;
+      bottom: calc(100% - 5px);
       background-repeat: no-repeat;
       background-size: 100%;
       background-image: url("../img/work-scheme-lines-mobile.svg");
@@ -128,7 +132,7 @@
 
 .work-scheme__wrapper {
   max-width: 300px;
-  padding-left: 30px;
+  padding-left: 20px;
   padding-bottom: 40px;
 
   @include media-breakpoint-up(lg) {
@@ -146,7 +150,7 @@
   padding: 7px 9px;
   position: absolute;
   bottom: 40px;
-  left: 40px;
+  left: 32px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -165,7 +169,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: calc(100% + 10px);
+    bottom: 100%;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -177,7 +181,7 @@
   }
 
   &--2 {
-    left: 0;
+    left: -13px;
     bottom: 70px;
 
     &::before {

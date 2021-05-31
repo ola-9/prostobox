@@ -50,6 +50,21 @@
 }
 
 .form__select {
+  padding-right: 45px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &--p-sm {
+    padding-left: 5px;
+    text-align-last: center;
+    // direction: rtl;
+  }
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l11 7.5L23 1' stroke='%231467FF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+
   &:invalid {
     color: rgba(#bfbfbf, 1);
   }

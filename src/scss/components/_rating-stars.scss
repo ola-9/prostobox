@@ -1,22 +1,47 @@
 .rating-stars {
-  height: 40px;
-  max-width: 40px;
+  height: 20px;
+  max-width: 20px;
   background-image: url("../img/rating-star-icon.svg");
-  background-repeat: repeat-x;
+  background-repeat: space;
+  background-size: 20px 20px;
+
+  @include media-breakpoint-up(md) {
+    height: 40px;
+    max-width: 40px;
+    background-size: 40px 40px;
+  }
 }
 
 .rating-stars--2 {
-  max-width: 80px;
+  max-width: 44px;
 }
 
 .rating-stars--3 {
-  max-width: 120px;
+  max-width: 69px;
 }
 
 .rating-stars--4 {
-  max-width: 160px;
+  max-width: 94px;
 }
 
 .rating-stars--5 {
-  max-width: 200px;
+  max-width: 119px;
+}
+
+@include media-breakpoint-up(md) {
+  .rating-stars--2 {
+    max-width: 80px;
+  }
+
+  .rating-stars--3 {
+    max-width: 120px;
+  }
+
+  .rating-stars--4 {
+    max-width: 160px;
+  }
+
+  .rating-stars--5 {
+    max-width: 200px;
+  }
 }

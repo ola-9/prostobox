@@ -23,7 +23,7 @@
     display: block;
     position: absolute;
     bottom: 108px;
-    left: calc(50%);
+    left: calc(50% + 10px);
     transform: translateX(-50%);
     width: 506px;
     height: 177px;
@@ -47,7 +47,7 @@
     display: block;
     position: absolute;
     bottom: 60px;
-    left: 50%;
+    left: calc(50% - 10px);
     transform: translateX(-50%);
     width: 272px;
     height: 272px;
@@ -68,6 +68,11 @@
 
 .advantages__container {
   position: relative;
+  max-width: 460px;
+
+  @include media-breakpoint-up(lg) {
+    max-width: none;
+  }
 
   &::before {
     content: "";
@@ -98,7 +103,7 @@
 .advantages__list {
   @include list-reset;
 
-  padding: 70px 20px;
+  padding-top: 78px;
   padding-bottom: 40px;
 
   @include media-breakpoint-up(lg) {
@@ -109,7 +114,10 @@
 }
 
 .advantages__item {
+  padding: 0 20px;
+
   @include media-breakpoint-up(lg) {
+    padding-left: 0;
     padding-right: 20px;
   }
 }

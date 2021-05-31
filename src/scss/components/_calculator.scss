@@ -92,7 +92,8 @@
 
   li {
     position: relative;
-    margin-bottom: 20px;
+    line-height: 29px;
+    margin-bottom: 10px;
 
     &:last-child {
       margin: 0;
@@ -115,6 +116,7 @@
     position: relative;
     padding-top: 40px;
     padding-right: 40%;
+    margin-bottom: 20px;
 
     &::before {
       content: "";
@@ -189,7 +191,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 15px;
+  bottom: 0;
 
   @include media-breakpoint-up(md) {
     position: relative;

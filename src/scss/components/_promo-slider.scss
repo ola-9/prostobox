@@ -1,5 +1,9 @@
 .promo-slider {
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 150px;
+  }
 }
 
 .promo-slider__main-wrapper {
@@ -31,11 +35,13 @@
   background-color: $blue-light-1;
   border: 2px dashed #808181;
   border-radius: 40px;
+  text-align: center;
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
     min-height: 497px;
     padding: 14px 10px;
+    text-align: left;
   }
 }
 

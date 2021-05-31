@@ -1,15 +1,18 @@
 .tariffs {
-  padding: 25px 0;
+  padding-top: 40px;
+  text-align: center;
 
   @include media-breakpoint-up(lg) {
     padding: 70px 0;
     padding-bottom: 60px;
+    text-align: left;
   }
 }
 
 .tariffs__wrapper {
   position: relative;
   overflow: visible;
+  text-align: left;
 
   @include media-breakpoint-up(xl) {
     &::before,
@@ -21,14 +24,14 @@
       position: absolute;
       left: 100%;
       top: -20px;
-      background-image: linear-gradient(to right, transparent, rgba(251, 251, 251, 1) 88px);
+      background-image: linear-gradient(to right, rgba(251, 251, 251, 0), rgba(251, 251, 251, 1) 88px);
       z-index: 10;
     }
 
     &::before {
       left: auto;
       right: 100%;
-      background-image: linear-gradient(to left, transparent, rgba(251, 251, 251, 1) 88px);
+      background-image: linear-gradient(to left, rgba(251, 251, 251, 0), rgba(251, 251, 251, 1) 88px);
     }
   }
 }

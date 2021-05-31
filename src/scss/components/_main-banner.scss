@@ -21,7 +21,7 @@
     height: 275px;
     position: absolute;
     left: calc(50% - 10px);
-    bottom: 60px;
+    bottom: 38px;
     transform: translateX(-50%);
     background-image: url("../img/man-with-boxes-1.png");
     background-position: center;
@@ -45,7 +45,7 @@
     height: 349px;
     position: absolute;
     left: calc(50% - 55px);
-    bottom: 20px;
+    bottom: -6px;
     transform: translateX(-50%);
     background-image: url("../img/main-banner-lines-mobile.svg");
     background-position: center;
@@ -133,7 +133,11 @@
 .main-banner__feature-title {
   display: block;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 20px;
+  }
 }
 
 .main-banner__feature-price {

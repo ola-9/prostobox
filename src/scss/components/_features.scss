@@ -1,4 +1,5 @@
 .features {
+  padding-bottom: 384px;
   text-align: center;
   overflow: hidden;
 
@@ -25,13 +26,30 @@
 
 .features__list {
   @include list-reset;
-  counter-reset: features;
 
+  position: relative;
+
+  counter-reset: features;
+  margin-bottom: 42px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 293px;
+    height: 252px;
+    position: absolute;
+    bottom: -425px;
+    right: calc(50% + 5px);
+    transform: translateX(50%);
+    background-repeat: no-repeat;
+    background-image: url("../img/features-truck.png");
+    background-size: 100%;
+  }
 
   @include media-breakpoint-up(lg) {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 0;
 
     &::before {
       content: "";
@@ -41,18 +59,17 @@
       position: absolute;
       bottom: -62px;
       right: -247px;
+      transform: none;
       background-repeat: no-repeat;
       background-image: url("../img/features-lines.svg");
     }
 
     &::after {
-      content: "";
-      display: block;
       width: 628px;
       height: 541px;
-      position: absolute;
       bottom: -138px;
       right: -227px;
+      transform: none;
       background-repeat: no-repeat;
       background-image: url("../img/features-truck.png");
     }
@@ -61,14 +78,22 @@
 
 .features__item {
   position: relative;
-  max-width: 260px;
+  max-width: 225px;
   padding-top: 60px;
   font-size: 16px;
   line-height: 29px;
   font-weight: 500;
   color: $black-1;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+
+  &:first-of-type {
+    margin-bottom: 27px;
+  }
+
+  &:last-of-type {
+    max-width: 260px;
+  }
 
   &::before {
     font-family: "Jost", "Arial", sans-serif;
@@ -102,6 +127,14 @@
     margin-bottom: 100px;
     font-size: 20px;
     line-height: 36px;
+
+    &:first-of-type {
+      margin-bottom: 100px;
+    }
+
+    &:last-of-type {
+      max-width: none;
+    }
 
     &:last-child {
       width: 100%;
