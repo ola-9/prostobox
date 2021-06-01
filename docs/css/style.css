@@ -5279,6 +5279,18 @@ a {
   position: relative;
   counter-reset: features;
   margin-bottom: 42px; }
+  .features__list::before {
+    content: "";
+    display: block;
+    width: 506px;
+    height: 265px;
+    position: absolute;
+    bottom: -392px;
+    right: calc(50% - 90px);
+    transform: translateX(50%);
+    background-repeat: no-repeat;
+    background-image: url("../img/features-lines-mobile.svg");
+    z-index: -1; }
   .features__list::after {
     content: "";
     display: block;
@@ -5290,18 +5302,16 @@ a {
     transform: translateX(50%);
     background-repeat: no-repeat;
     background-image: url("../img/features-truck.png");
-    background-size: 100%; }
+    background-size: 100%;
+    z-index: -1; }
   @media (min-width: 992px) {
     .features__list {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 0; }
       .features__list::before {
-        content: "";
-        display: block;
         width: 1237px;
         height: 902px;
-        position: absolute;
         bottom: -62px;
         right: -247px;
         transform: none;
@@ -5364,8 +5374,7 @@ a {
       .features__item:first-of-type {
         margin-bottom: 100px; }
       .features__item:last-of-type {
-        max-width: none; }
-      .features__item:last-child {
+        max-width: none;
         width: 100%;
         padding-right: 45%; }
       .features__item::before {
@@ -5381,7 +5390,7 @@ a {
   @media (min-width: 1240px) {
     .features__item {
       width: 33.3334%; }
-      .features__item:last-child {
+      .features__item:last-of-type {
         width: 50%;
         padding-right: 20px; } }
 

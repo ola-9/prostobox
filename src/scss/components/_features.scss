@@ -28,9 +28,22 @@
   @include list-reset;
 
   position: relative;
-
   counter-reset: features;
   margin-bottom: 42px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 506px;
+    height: 265px;
+    position: absolute;
+    bottom: -392px;
+    right: calc(50% - 90px);
+    transform: translateX(50%);
+    background-repeat: no-repeat;
+    background-image: url("../img/features-lines-mobile.svg");
+    z-index: -1;
+  }
 
   &::after {
     content: "";
@@ -44,6 +57,7 @@
     background-repeat: no-repeat;
     background-image: url("../img/features-truck.png");
     background-size: 100%;
+    z-index: -1;
   }
 
   @include media-breakpoint-up(lg) {
@@ -52,11 +66,8 @@
     margin-bottom: 0;
 
     &::before {
-      content: "";
-      display: block;
       width: 1237px;
       height: 902px;
-      position: absolute;
       bottom: -62px;
       right: -247px;
       transform: none;
@@ -134,9 +145,6 @@
 
     &:last-of-type {
       max-width: none;
-    }
-
-    &:last-child {
       width: 100%;
       padding-right: 45%;
     }
@@ -157,7 +165,7 @@
   @include media-breakpoint-up(xl) {
     width: 33.3334%;
 
-    &:last-child {
+    &:last-of-type {
       width: 50%;
       padding-right: 20px;
     }
