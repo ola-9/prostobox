@@ -1,5 +1,5 @@
 (function() {
-  'use strict;'
+  'use strict';
 
   const swiperAdvantages = new Swiper(".swiper-advantages", {
     loop: true,

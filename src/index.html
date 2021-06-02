@@ -12,20 +12,6 @@
   <title>Prostobox.com</title>
 </head>
 <body>
-
-  <style>
-    /* html {
-      background-image: url("img/index-mobile.png");
-      background-position: center top;
-      background-repeat: no-repeat;
-
-    }
-
-    body {
-      opacity: 0.5;
-    } */
-  </style>
-
   <header class="header">
     <div class="container">
       <nav class="main-nav">
@@ -240,7 +226,13 @@
                 <li>Приём посылок - <b class="blue">$0</b></li>
                 <li>Консолидация - <b class="blue">$0</b></li>
                 <li>Упаковка стандартная - <b class="blue">$0</b></li>
-                <li>Комиссия за пополнение баланса - <b class="blue">$0</b></li>
+                <li>Комиссия за пополнение баланса - <b class="blue">$0</b>
+                  <button class="calculator__features-qm question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
@@ -260,7 +252,9 @@
                   <b class="tariff__price">$3,99</b>
                   <ul class="tariff__features">
                     <li class="tariff__features-item">
-                      <span class="tariff__features-title">Страховка от утери</span>
+                      <div class="tariff__features-title-wrapper">
+                        <span class="tariff__features-title">Страховка от утери</span>
+                      </div>
                       <b class="tariff__features-price">...</b>
                     </li>
                   </ul>
@@ -273,7 +267,14 @@
                 <b class="tariff__price">$9,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -285,11 +286,25 @@
                 <b class="tariff__price">$14,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Таможенная пошлина</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -301,7 +316,9 @@
                 <b class="tariff__price">$22,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -313,7 +330,14 @@
                 <b class="tariff__price">$15,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -388,7 +412,7 @@
                 </div>
               </div>
 
-              <!-- <div class="promo-slider__item swiper-slide">
+              <div class="promo-slider__item swiper-slide">
                 <div class="promo-slider__img">
                   <img src="img/slides/ptostobot.png" alt="iPhone">
                 </div>
@@ -396,7 +420,7 @@
                   <h3 class="promo-slider__title">ПростоБот от Простобокс</h3>
                   <p class="promo-slider__desc">Телеграм Бот Простобокса – это возможность делать большую часть операций в личном кабинете не заходя на сайт, быть в курсе актуальных распродаж и скидок, а также общаться с поддержкой при необходимости.</p>
                 </div>
-              </div> -->
+              </div>
 
             </div>
           </div>
@@ -738,6 +762,12 @@
   </footer>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="js/script.min.js"></script>
+
+  <script>
+    tippy('[data-tippy-content]');
+  </script>
 </body>
 </html>

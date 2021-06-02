@@ -51,19 +51,21 @@
     content: "";
     position: absolute;
     display: block;
-    top: -102px;
+    top: -86px;
     right: 50%;
     transform: translateX(47%);
-    width: 94px;
-    height: 94px;
+    width: 80px;
+    height: 93px;
     background-repeat: no-repeat;
     background-size: 100%;
 
     @include media-breakpoint-up(lg) {
-      top: -24px;
-      right: 93%;
-      width: 133px;
-      height: 144px;
+      top: -15px;
+      right: auto;
+      left: -20px;
+      transform: none;
+      width: 143px;
+      height: 162px;
     }
   }
 
@@ -75,34 +77,34 @@
 }
 
 .additional__item--cap::before {
-  background-image: url("../img/cap-mobile.png");
+  background-image: url("../img/additional/propeller-cap-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/cap.png");
+    background-image: url("../img/additional/propeller-cap.png");
   }
 }
 
 .additional__item--shield::before {
-  background-image: url("../img/shield-mobile.png");
+  background-image: url("../img/additional/box-shield-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/shield.png");
+    background-image: url("../img/additional/box-shield.png");
   }
 }
 
 .additional__item--rocket::before {
-  background-image: url("../img/rocket-mobile.png");
+  background-image: url("../img/additional/rocket-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/rocket.png");
+    background-image: url("../img/additional/rocket.png");
   }
 }
 
 .additional__item--message::before {
-  background-image: url("../img/message-mobile.png");
+  background-image: url("../img/additional/message-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/message.png");
+    background-image: url("../img/additional/message.png");
   }
 }
 

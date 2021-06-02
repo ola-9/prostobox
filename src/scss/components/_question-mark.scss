@@ -1,0 +1,27 @@
+.question-mark {
+  @include button-reset;
+  @include color-transition;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  border-radius: 50%;
+  color: inherit;
+  cursor: pointer;
+
+  box-shadow: 0 4px 4px 0 rgba($black, 0.25);
+
+  svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+}

@@ -38,15 +38,15 @@
   }
 
   &--one::before {
-    width: 83px;
-    height: 84px;
+    width: 63px;
+    height: 63px;
     background-image: url("../img/tariffs/one.png");
 
     @include media-breakpoint-up(lg) {
-      width: 111px;
-      height: 113px;
-      top: -40px;
-      right: -6px;
+      width: 84px;
+      height: 84px;
+      top: -32px;
+      right: 7px;
     }
   }
 
@@ -77,16 +77,16 @@
   }
 
   &--parcel::before {
-    width: 112px;
-    height: 109px;
+    width: 74px;
+    height: 89px;
     top: -30px;
     background-image: url("../img/tariffs/parcel.png");
 
     @include media-breakpoint-up(lg) {
-      width: 150px;
-      height: 146px;
-      top: -62px;
-      right: -14px;
+      width: 99px;
+      height: 119px;
+      top: -54px;
+      right: 0;
     }
   }
 }
@@ -147,12 +147,19 @@
   }
 }
 
-.tariff__features-title {
+.tariff__features-title-wrapper {
+  line-height: 21px;
+  text-align: center;
   margin-bottom: 10px;
 
   @include media-breakpoint-up(lg) {
-    margin: 0;
+    margin-bottom: 5px;
   }
+}
+
+.tariff__features-title {
+  display: inline-block;
+  margin: 0;
 }
 
 .tariff__price {

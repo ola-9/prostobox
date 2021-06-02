@@ -12,7 +12,6 @@
   <title>Prostobox.com</title>
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <nav class="main-nav">
@@ -99,7 +98,7 @@
   </header>
 
   <main>
-    <section class="main-banner">
+    <section class="main-banner section">
       <div class="section-xxl">
         <div class="main-banner__wrapper">
           <div class="container">
@@ -145,7 +144,7 @@
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages section section--pb mb-lg-6">
       <div class="container">
         <div class="advantages__wrapper row">
           <div class="col-lg-6 ms-lg-auto">
@@ -174,7 +173,7 @@
 
     </section>
 
-    <section class="calculator">
+    <section class="calculator section section--pb-m section--pb">
       <div class="container">
         <h2 class="calculator__heading heading-primary">Калькулятор</h2>
         <div class="row calculator__wrapper">
@@ -227,7 +226,13 @@
                 <li>Приём посылок - <b class="blue">$0</b></li>
                 <li>Консолидация - <b class="blue">$0</b></li>
                 <li>Упаковка стандартная - <b class="blue">$0</b></li>
-                <li>Комиссия за пополнение баланса - <b class="blue">$0</b></li>
+                <li>Комиссия за пополнение баланса - <b class="blue">$0</b>
+                  <button class="calculator__features-qm question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
@@ -247,7 +252,9 @@
                   <b class="tariff__price">$3,99</b>
                   <ul class="tariff__features">
                     <li class="tariff__features-item">
-                      <span class="tariff__features-title">Страховка от утери</span>
+                      <div class="tariff__features-title-wrapper">
+                        <span class="tariff__features-title">Страховка от утери</span>
+                      </div>
                       <b class="tariff__features-price">...</b>
                     </li>
                   </ul>
@@ -260,7 +267,14 @@
                 <b class="tariff__price">$9,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -272,11 +286,25 @@
                 <b class="tariff__price">$14,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Таможенная пошлина</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -288,7 +316,9 @@
                 <b class="tariff__price">$22,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -300,7 +330,14 @@
                 <b class="tariff__price">$15,99</b>
                 <ul class="tariff__features">
                   <li class="tariff__features-item">
-                    <span class="tariff__features-title">Страховка от утери</span>
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <b class="tariff__features-price">$5</b>
                   </li>
                 </ul>
@@ -322,7 +359,7 @@
 
     </section>
 
-    <section class="work-scheme">
+    <section class="work-scheme section section--pb-m section--pb mb-lg-6">
       <div class="container">
         <h2 class="work-scheme__heading heading-primary">Простобокс – у&nbsp;нас&nbsp;все просто</h2>
         <ul class="work-scheme__list row">
@@ -359,7 +396,7 @@
       </div>
     </section>
 
-    <section class="promo-slider">
+    <section class="promo-slider section section--pb mb-6 mb-lg-5">
       <div class="container">
         <div class="promo-slider__main-wrapper">
           <div class="promo-slider__container swiper-container swiper-promo-slider">
@@ -404,28 +441,29 @@
       </div>
     </section>
 
-    <section class="features">
+    <section class="features section section--pb mb-lg-6">
       <div class="container">
-        <h2 class="features__heading heading-primary">Самое важное о&nbsp;Простобоксе</h2>
-        <p class="features__heading-2 heading-secondary"><span class="blue">Двойная выгода</span> – платите&nbsp;меньше<br> не только за товары, но&nbsp;и&nbsp;за&nbsp;доставку</p>
-        <ul class="features__list">
-          <li class="features__item">Склад в <span class="blue">100% безналоговом</span> Делавэре</li>
-          <li class="features__item"><span class="blue">Бесплатный приём</span> входящих посылок на&nbsp;складе</li>
-          <li class="features__item"><span class="blue">Пополнение</span> счёта от&nbsp;$10 <span class="blue">без комиссии</span> эквайринга</li>
-          <li class="features__item"><span class="blue">Бесплатное объединение</span> входящих посылок</li>
-          <li class="features__item"><span class="blue">Бесплатная</span> стандартная <span class="blue">упаковка</span> посылок</li>
-          <li class="features__item"><span class="blue">Склад без соседей</span>: посылки точно привезут нам</li>
-          <li class="features__item"><span class="blue">24/7&nbsp;работает служба&nbsp;поддержки</span> Простобокса</li>
-          <li class="features__item"><span class="blue">45 дней</span> входящие посылки <span class="blue">хранятся бесплатно</span></li>
-          <li class="features__item"><span class="blue">Выплачиваем $2</span> за каждую посылку, отправленную по реферальной программе</li>
-        </ul>
+        <div class="features__wrapper">
+          <h2 class="features__heading heading-primary">Самое важное о&nbsp;Простобоксе</h2>
+          <p class="features__heading-2 heading-secondary"><span class="blue">Двойная выгода</span> – платите&nbsp;меньше<br> не только за товары, но&nbsp;и&nbsp;за&nbsp;доставку</p>
+          <ul class="features__list">
+            <li class="features__item">Склад в <span class="blue">100% безналоговом</span> Делавэре</li>
+            <li class="features__item"><span class="blue">Бесплатный приём</span> входящих посылок на&nbsp;складе</li>
+            <li class="features__item"><span class="blue">Пополнение</span> счёта от&nbsp;$10 <span class="blue">без комиссии</span> эквайринга</li>
+            <li class="features__item"><span class="blue">Бесплатное объединение</span> входящих посылок</li>
+            <li class="features__item"><span class="blue">Бесплатная</span> стандартная <span class="blue">упаковка</span> посылок</li>
+            <li class="features__item"><span class="blue">Склад без соседей</span>: посылки точно привезут нам</li>
+            <li class="features__item"><span class="blue">24/7&nbsp;работает служба&nbsp;поддержки</span> Простобокса</li>
+            <li class="features__item"><span class="blue">45 дней</span> входящие посылки <span class="blue">хранятся бесплатно</span></li>
+            <li class="features__item"><span class="blue">Выплачиваем $2</span> за каждую посылку, отправленную по реферальной программе</li>
+          </ul>
 
-        <a class="button" href="#">Зарегистрироваться</a>
+          <a class="button" href="#">Зарегистрироваться</a>
+        </div>
       </div>
-
     </section>
 
-    <section class="reviews">
+    <section class="reviews section section--pb-m section--pb mb-lg-6">
 
       <div class="container reviews__container">
         <h2 class="reviews__heading heading-primary">Отзывы</h2>
@@ -554,7 +592,7 @@
 
     </section>
 
-    <section class="additional">
+    <section class="additional section section--pb mb-5">
       <div class="additional__wrapper section-xxl">
         <div class="additional__content">
           <div class="container">
@@ -587,7 +625,7 @@
       </div>
     </section>
 
-    <section class="service">
+    <section class="service section section--pb-m section--pb mb-lg-6">
       <div class="container">
         <div class="service__wrapper row">
           <h2 class="service__heading heading-primary">Посмотрите как мы работаем</h2>
@@ -613,7 +651,7 @@
       </div>
     </section>
 
-    <section class="recommendation">
+    <section class="recommendation section section--pb">
       <div class="container">
         <div class="recommendation__content">
           <h2 class="recommendation__heading heading-primary">Подскажем где и&nbsp;что покупать</h2>
@@ -623,7 +661,7 @@
       </div>
     </section>
 
-    <section class="subscribe">
+    <section class="subscribe section section--pb-m section--p mb-lg-5">
       <div class="container">
         <div class="subscribe__wrapper row">
           <div class="col-lg-6 ms-lg-auto">
@@ -724,6 +762,12 @@
   </footer>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="js/script.min.js"></script>
+
+  <script>
+    tippy('[data-tippy-content]');
+  </script>
 </body>
 </html>
