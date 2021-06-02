@@ -1,11 +1,3 @@
-.promo-slider {
-  margin-bottom: 50px;
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 150px;
-  }
-}
-
 .promo-slider__main-wrapper {
   position: relative;
 }
@@ -69,8 +61,7 @@
 }
 
 .promo-slider__text {
-  padding: 0 10px;
-  padding-bottom: 30px;
+  padding: 0 15px;
 
   @include media-breakpoint-up(md) {
     width: 50%;

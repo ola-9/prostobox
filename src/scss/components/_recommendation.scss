@@ -1,9 +1,3 @@
-.recommendation {
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 103px;
-  }
-}
-
 .recommendation__content {
   overflow: hidden;
   position: relative;

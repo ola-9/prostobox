@@ -1,9 +1,5 @@
 .calculator {
   overflow: hidden;
-
-  @include media-breakpoint-up(lg) {
-    padding: 100px 0;
-  }
 }
 
 .calculator__heading {
@@ -40,7 +36,7 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
@@ -148,6 +144,7 @@
   @include media-breakpoint-up(xl) {
     padding-top: 100px;
     padding-right: 0;
+    margin: 0;
 
     &::before {
       top: -116px;
@@ -164,6 +161,9 @@
     }
 
     li {
+      line-height: 36px;
+      margin-bottom: 20px;
+
       &::before {
         top: 15px;
       }
@@ -186,7 +186,7 @@
 }
 
 .calculator__submit {
-  width: calc(100% - 44px);
+  width: calc(100% - 64px);
   min-width: auto;
   position: absolute;
   left: 50%;

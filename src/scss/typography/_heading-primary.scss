@@ -6,6 +6,11 @@
   letter-spacing: 0;
   color: $black-1;
 
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
   @include media-breakpoint-up(lg) {
     font-size: 60px;
     line-height: 78px;

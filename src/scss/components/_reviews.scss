@@ -1,13 +1,9 @@
 .reviews {
   text-align: center;
   overflow: hidden;
-  margin-bottom: 70px;
 
   @include media-breakpoint-up(xl) {
     text-align: left;
-    padding-top: 40px;
-    padding-bottom: 65px;
-    margin-bottom: 100px;
   }
 }
 
@@ -130,9 +126,11 @@
 
 .reviews__slider-nav {
   position: relative;
+  padding: 0 20px;
   margin-top: 20px;
 
   @include media-breakpoint-up(md) {
+    padding: 0;
     position: absolute;
     left: 0;
     right: 0;

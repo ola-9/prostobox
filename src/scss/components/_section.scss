@@ -1,0 +1,11 @@
+.section {
+  &--pb-m {
+    padding-bottom: 70px;
+  }
+
+  &--pb {
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 100px;
+    }
+  }
+}

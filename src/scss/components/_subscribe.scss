@@ -1,22 +1,13 @@
-.subscribe {
-  margin-bottom: 55px;
-  padding: 0 22px;
-
-  @include media-breakpoint-up(lg) {
-    padding: 0;
-    padding-top: 120px;
-    margin-bottom: 167px;
-  }
-}
-
 .subscribe__form {
   display: grid;
   gap: 20px;
+  padding: 0 20px;
 
   @include media-breakpoint-up(lg) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+    padding: 0;
   }
 }
 
@@ -29,7 +20,8 @@
   padding-top: 293px;
 
   @include media-breakpoint-up(lg) {
-    padding: 0;
+    padding-top: 120px;
+    padding-bottom: 20px;
   }
 
   &::before {
@@ -47,7 +39,7 @@
     z-index: -1;
 
     @include media-breakpoint-up(lg) {
-      top: -133px;
+      top: -10px;
       left: calc(50% - 44px);
       transform: translateX(-75%);
       width: 742px;
@@ -58,11 +50,13 @@
 }
 
 .subscribe__text {
+  padding: 0 20px;
   margin: 0;
   margin-bottom: 40px;
   text-align: center;
 
   @include media-breakpoint-up(lg) {
+    padding: 0;
     text-align: start;
   }
 }

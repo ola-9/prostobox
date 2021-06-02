@@ -1,12 +1,17 @@
 .features {
-  padding-bottom: 384px;
   text-align: center;
   overflow: hidden;
 
   @include media-breakpoint-up(lg) {
     text-align: left;
-    padding-bottom: 65px;
-    margin-bottom: 60px;
+  }
+}
+
+.features__wrapper {
+  padding-bottom: 384px;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 0;
   }
 }
 
@@ -78,8 +83,8 @@
     &::after {
       width: 628px;
       height: 541px;
-      bottom: -138px;
-      right: -227px;
+      bottom: -134px;
+      right: -230px;
       transform: none;
       background-repeat: no-repeat;
       background-image: url("../img/features-truck.png");
@@ -97,10 +102,6 @@
   color: $black-1;
   margin: 0 auto;
   margin-bottom: 21px;
-
-  &:first-of-type {
-    margin-bottom: 27px;
-  }
 
   &:last-of-type {
     max-width: 260px;
@@ -138,10 +139,6 @@
     margin-bottom: 100px;
     font-size: 20px;
     line-height: 36px;
-
-    &:first-of-type {
-      margin-bottom: 100px;
-    }
 
     &:last-of-type {
       max-width: none;

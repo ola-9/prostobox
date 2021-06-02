@@ -1,11 +1,5 @@
 .work-scheme {
   overflow: hidden;
-  padding-bottom: 65px;
-  margin-bottom: 10px;
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 100px;
-  }
 }
 
 .work-scheme__heading {
@@ -195,6 +189,12 @@
     right: 139px;
     left: auto;
     bottom: auto;
+
+    &--1 {
+      &::before {
+        bottom: calc(100% + 10px);
+      }
+    }
 
     &--2 {
       top: -63px;

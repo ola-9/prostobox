@@ -1,10 +1,5 @@
 .additional {
-  margin-bottom: 60px;
   overflow: hidden;
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 150px;
-  }
 }
 
 .additional__item,
