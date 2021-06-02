@@ -38,12 +38,31 @@
       top: -20px;
       background-image: linear-gradient(to right, rgba(251, 251, 251, 0), rgba(251, 251, 251, 1) 180px);
       z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      transition-property: visibility, opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
     }
 
     &::before {
       left: auto;
       right: 100%;
       background-image: linear-gradient(to left, rgba(251, 251, 251, 0), rgba(251, 251, 251, 1) 180px);
+    }
+
+    &--start {
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    &--end {
+      &::after {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
 }

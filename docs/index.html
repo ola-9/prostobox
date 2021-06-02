@@ -7,7 +7,7 @@
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
   <title>Prostobox.com</title>
 </head>
@@ -484,8 +484,8 @@
                   </div>
                   <div class="review__gallery">
                     <div class="review__gallery-wrapper">
-                      <img src="img/reviews/1.png" alt="">
-                      <img src="img/reviews/1.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide--current" src="img/reviews/1.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide" src="img/reviews/2.png" alt="">
                     </div>
                     <div class="review__gallery-nav">
                       <button class="review__gallery-btn review__gallery-btn--prev">
@@ -544,8 +544,44 @@
                   </div>
                   <div class="review__gallery">
                     <div class="review__gallery-wrapper">
-                      <img src="img/reviews/2.png" alt="">
-                      <img src="img/reviews/2.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide--current" src="img/reviews/2.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide" src="img/reviews/1.png" alt="">
+                    </div>
+                    <div class="review__gallery-nav">
+                      <button class="review__gallery-btn review__gallery-btn--prev">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                      </button>
+                      <button class="review__gallery-btn review__gallery-btn--next">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Москва</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <div class="review__gallery">
+                    <div class="review__gallery-wrapper">
+                      <img class="review__gallery-slide review__gallery-slide--current" src="img/reviews/2.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide" src="img/reviews/1.png" alt="">
                     </div>
                     <div class="review__gallery-nav">
                       <button class="review__gallery-btn review__gallery-btn--prev">

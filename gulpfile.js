@@ -19,18 +19,28 @@ const svgstore = require('gulp-svgstore');
 const styles = () => {
   return gulp.src('src/scss/style.scss')
     .pipe(plumber())
-    .pipe(sourcemap.init())
     .pipe(sass())
-    // .pipe(postcss([
-    //   autoprefixer()
-    // ]))
-    // .pipe(csso())
-    .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+const stylesMin = () => {
+  return gulp.src('src/scss/style.scss')
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(sync.stream());
+}
+
+exports.stylesMin = stylesMin;
 
 const scripts = () => {
   return gulp.src('src/js/**/*.js')
@@ -84,7 +94,7 @@ exports.sprite = sprite;
 // Watcher
 
 const watcher = () => {
-  gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
+  gulp.watch('src/scss/**/*.scss', gulp.series('stylesMin'));
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
   gulp.watch('src/img/**', gulp.series('copy', 'reload'));
   gulp.watch(['src/js/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
@@ -93,6 +103,12 @@ const watcher = () => {
 
 const clean = () => {
   return del('build');
+}
+
+exports.clean = clean;
+
+const cleanDocs = () => {
+  return del('docs');
 }
 
 exports.clean = clean;
@@ -119,14 +135,16 @@ const docs = () => {
 exports.docs = docs;
 
 const build = gulp.series(
-  clean, copy, styles, scripts, html, sprite
-);
-
-const deploy = gulp.series(
-  clean, copy, styles, scripts, html, sprite, docs
+  clean, copy, styles, stylesMin, scripts, html, sprite
 );
 
 exports.build = build;
+
+const deploy = gulp.series(
+  build, cleanDocs, docs
+);
+
+exports.deploy = deploy;
 
 exports.default = gulp.series(
   build, server, watcher

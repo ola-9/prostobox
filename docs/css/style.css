@@ -5692,11 +5692,22 @@ a {
       left: 100%;
       top: -20px;
       background-image: linear-gradient(to right, rgba(251, 251, 251, 0), #fbfbfb 180px);
-      z-index: 10; }
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      transition-property: visibility, opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease; }
     .reviews__wrapper::before {
       left: auto;
       right: 100%;
-      background-image: linear-gradient(to left, rgba(251, 251, 251, 0), #fbfbfb 180px); } }
+      background-image: linear-gradient(to left, rgba(251, 251, 251, 0), #fbfbfb 180px); }
+    .reviews__wrapper--start::before {
+      opacity: 0;
+      visibility: hidden; }
+    .reviews__wrapper--end::after {
+      opacity: 0;
+      visibility: hidden; } }
 
 .reviews__heading {
   margin: 0;
@@ -5883,6 +5894,7 @@ a {
   position: relative;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   height: 100%; }
   .review__gallery-wrapper::before {
     content: "";
@@ -5902,20 +5914,25 @@ a {
       right: -16px;
       transform: translateY(-50%);
       z-index: -1; } }
-  .review__gallery-wrapper img {
-    display: block;
-    height: 100%;
-    border-radius: 20px; }
-    @media (min-width: 992px) {
-      .review__gallery-wrapper img:not(:first-of-type) {
-        width: 170px;
-        height: 170px;
-        position: absolute;
-        top: 50%;
-        right: -16px;
-        transform: translateY(-50%);
-        z-index: -2;
-        border-radius: 20px; } }
+
+.review__gallery-slide {
+  display: block;
+  height: 100%;
+  border-radius: 20px; }
+  @media (min-width: 992px) {
+    .review__gallery-slide {
+      width: 100%;
+      object-fit: cover; } }
+  @media (min-width: 992px) {
+    .review__gallery-slide:not(.review__gallery-slide--current) {
+      width: 170px;
+      height: 170px;
+      position: absolute;
+      top: 50%;
+      right: -16px;
+      transform: translateY(-50%);
+      z-index: -2;
+      border-radius: 20px; } }
 
 .review__content {
   padding-top: 20px; }
@@ -5944,10 +5961,12 @@ a {
   left: -22px;
   right: -22px;
   justify-content: space-between;
-  z-index: 11; }
+  z-index: 111; }
   @media (min-width: 992px) {
     .review__gallery-nav {
       display: flex; } }
+  .review__gallery-nav--hidden {
+    display: none; }
 
 .review__gallery-btn {
   padding: 0;
@@ -6004,5 +6023,3 @@ a {
     max-width: 160px; }
   .rating-stars--5 {
     max-width: 200px; } }
-
-/*# sourceMappingURL=style.css.map */
