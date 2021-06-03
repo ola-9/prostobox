@@ -89,13 +89,13 @@
 }
 
 .review__wrapper-top {
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     display: flex;
   }
 }
 
 .review__info {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(xl) {
     width: 60%;
     padding-right: 20px;
     flex-shrink: 0;
@@ -110,7 +110,7 @@
   overflow: visible;
   z-index: 11;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     flex-shrink: 0;
     width: 250px;
     height: 250px;
@@ -124,25 +124,25 @@
   position: relative;
   // overflow: visible;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   height: 100%;
 
   &::before {
     content: "";
-    display: block;
+    display: none;
     width: 126px;
     height: 126px;
     position: absolute;
     top: 0;
     right: 0;
-    // z-index: -1;
     border-radius: 20px;
     background-color: rgba($blue, 0.28);
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     &::before {
+      display: block;
       width: 170px;
       height: 170px;
       top: 50%;
@@ -154,16 +154,21 @@
 }
 
 .review__gallery-slide {
-  display: block;
+  display: none;
   height: 100%;
   border-radius: 20px;
 
-  @include media-breakpoint-up(lg) {
+  &:nth-child(-n + 2) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: block;
     width: 100%;
     object-fit: cover;
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     &:not(.review__gallery-slide--current) {
       width: 170px;
       height: 170px;
@@ -216,7 +221,7 @@
   justify-content: space-between;
   z-index: 111;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     display: flex;
   }
 
