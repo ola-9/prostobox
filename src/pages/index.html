@@ -1,0 +1,625 @@
+{% extends "layout.html" %}
+
+{% set siteName = "Prostobox.com" %}
+
+{% block main %}
+
+  <main>
+    <section class="main-banner section">
+      <div class="section-xxl">
+        <div class="main-banner__wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="main-banner__text">
+                  <b class="main-banner__lead heading-primary">Дешевая доставка<br> из США от&nbsp;<span class="blue blue--white-bg">$3.99</span> от&nbsp;100 гр</b>
+                  <p class="main-banner__desc">Для продвинутых шопоголиков, ценящих время&nbsp;и&nbsp;разумную экономию</p>
+                  <a class="button main-banner__cta" href="#">Зарегистрироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="main-banner__features row">
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Адрес в&nbsp;Делавэре</b>
+              <span class="main-banner__feature-price">Бесплатно</span>
+            </div>
+          </li>
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Приёмка на&nbsp;складе</b>
+              <span class="main-banner__feature-price">Бесплатно</span>
+            </div>
+          </li>
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Объединение посылок</b>
+              <span class="main-banner__feature-price">Бесплатно</span>
+            </div>
+          </li>
+          <li class="main-banner__feature col-xl-3 col-6">
+            <div class="main-banner__feature-item">
+              <b class="main-banner__feature-title heading-tertiary">Пополнение счёта от&nbsp;$10</b>
+              <span class="main-banner__feature-price">Без комиссии</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="advantages section section--pb mb-lg-6">
+      <div class="container">
+        <div class="advantages__wrapper row">
+          <div class="col-lg-6 ms-lg-auto">
+            <div class="advantages__container swiper-container swiper-advantages">
+              <ul class="advantages__list swiper-wrapper">
+                <li class="advantages__item swiper-slide">
+                  <p class="advantages__text heading-secondary"><span class="blue">Доставляем</span> даже самые <span class="blue">маленькие посылки</span> без&nbsp;переплаты за вес и&nbsp;округлений до&nbsp;полукилограмма.</p>
+                </li>
+                <li class="advantages__item swiper-slide">
+                  <p class="advantages__text heading-secondary">Отправляем <span class="blue">крупногабаритные консолидированные посылки</span> за разумные деньги.</p>
+                </li>
+                <li class="advantages__item swiper-slide">
+                  <p class="advantages__text heading-secondary"><span class="blue">Принимаем оплату таможенной пошлины</span>, чтобы не тратить ваше время и не держать посылку на границе лишние дни.</p>
+                </li>
+                <li class="advantages__item swiper-slide">
+                  <p class="advantages__text heading-secondary">Можем отправить вашу посылку <span class="blue">без ИНН, скана паспорта и подробных деклараций</span> через Почту России.</p>
+                </li>
+              </ul>
+            </div>
+
+            <a class="button" href="#">Получить адрес</a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="calculator section section--pb-m section--pb">
+      <div class="container">
+        <h2 class="calculator__heading heading-primary">Калькулятор</h2>
+        <div class="row calculator__wrapper">
+          <div class="col-xl-6 d-flex flex-wrap">
+            <form class="calculator__form form" action="#">
+              <div class="calculator__field">
+                <label class="form__label">Страна доставки*</label>
+                <select class="form__select form__input" id="country" required autocomplete="off">
+                  <option value="" disabled selected>Страна</option>
+                  <option value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="calculator__field">
+                  <label class="form__label">Город доставки*</label>
+                  <input class="form__input" type="text" id="city" value="" placeholder="Город">
+              </div>
+              <div class="calculator__field">
+                  <label class="form__label">Индекс</label>
+                  <input class="form__input" id="zip" type="text">
+              </div>
+
+              <div class="calculator__field calculator__field--weight">
+                <label class="form__label" for="package-weight">Вес посылки*</label>
+                <div class="calculator__weight">
+                  <input class="form__input weight-input" id="package-weight" type="text" value="0.5">
+                </div>
+                <div class="calculator__unit">
+                  <select class="form__select form__select--p-sm form__input">
+                    <option value="kg">Кг</option>
+                    <option value="lb">фунты</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calculator__field">
+                <label class="form__label">Цена товара </label>
+                <input class="form__input" id="price" type="text">
+              </div>
+
+              <div class="calculator__field calculator__field--submit">
+                <button class="calculator__submit button">Рассчитать доставку</button>
+              </div>
+
+            </form>
+
+          </div>
+          <div class="col-xl-6">
+            <div class="calculator__features-wrapper">
+              <ul class="calculator__features">
+                <li>Приём посылок - <b class="blue">$0</b></li>
+                <li>Консолидация - <b class="blue">$0</b></li>
+                <li>Упаковка стандартная - <b class="blue">$0</b></li>
+                <li>Комиссия за пополнение баланса - <b class="blue">$0</b>
+                  <button class="calculator__features-qm question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="calculator__tariffs tariffs">
+
+          <h3 class="tariffs__heading">Подходящие тарифы:</h3>
+
+          <div class="tariffs__wrapper swiper-container swiper-tariffs">
+            <ul class="tariffs__list swiper-wrapper">
+              <li class="tariffs__item tariff tariff--active tariff--econom swiper-slide">
+                <div class="tariff__wrapper">
+                  <span class="tariff__label">Тариф</span>
+                  <h3 class="tariff__title">Для экономных</h3>
+                  <span class="tariff__time">5 - 10 дней</span>
+                  <b class="tariff__price">$3,99</b>
+                  <ul class="tariff__features">
+                    <li class="tariff__features-item">
+                      <div class="tariff__features-title-wrapper">
+                        <span class="tariff__features-title">Страховка от утери</span>
+                      </div>
+                      <b class="tariff__features-price">...</b>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="tariffs__item tariff tariff--one swiper-slide">
+                <span class="tariff__label">Тариф</span>
+                <h3 class="tariff__title">По одной</h3>
+                <span class="tariff__time">7 - 14 дней</span>
+                <b class="tariff__price">$9,99</b>
+                <ul class="tariff__features">
+                  <li class="tariff__features-item">
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <b class="tariff__features-price">$5</b>
+                  </li>
+                </ul>
+              </li>
+              <li class="tariffs__item tariff tariff--combination swiper-slide">
+                <span class="tariff__label">Тариф</span>
+                <h3 class="tariff__title">С объединением</h3>
+                <span class="tariff__time">7 - 14 дней</span>
+                <b class="tariff__price">$14,99</b>
+                <ul class="tariff__features">
+                  <li class="tariff__features-item">
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <b class="tariff__features-price">$5</b>
+                  </li>
+                  <li class="tariff__features-item">
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <b class="tariff__features-price">$5</b>
+                  </li>
+                </ul>
+              </li>
+              <li class="tariffs__item tariff tariff--post swiper-slide">
+                <span class="tariff__label">Тариф</span>
+                <h3 class="tariff__title">Через почту</h3>
+                <span class="tariff__time">20 - 30 дней</span>
+                <b class="tariff__price">$22,99</b>
+                <ul class="tariff__features">
+                  <li class="tariff__features-item">
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                    </div>
+                    <b class="tariff__features-price">$5</b>
+                  </li>
+                </ul>
+              </li>
+              <li class="tariffs__item tariff tariff--parcel swiper-slide">
+                <span class="tariff__label">Тариф</span>
+                <h3 class="tariff__title">Для бандеролек</h3>
+                <span class="tariff__time">20 - 30 дней</span>
+                <b class="tariff__price">$15,99</b>
+                <ul class="tariff__features">
+                  <li class="tariff__features-item">
+                    <div class="tariff__features-title-wrapper">
+                      <span class="tariff__features-title">Страховка от утери</span>
+                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                          <use xlink:href="img/sprite.svg#question-mark"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <b class="tariff__features-price">$5</b>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="tariffs__slider-nav">
+              <ul class="slider-nav">
+                <li class="slider-nav__item">
+                  <button class="slider-nav__btn slider-nav__btn--prev"></button>
+                </li>
+                <li class="slider-nav__item">
+                  <button class="slider-nav__btn slider-nav__btn--next"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="work-scheme section section--pb-m section--pb mb-lg-6">
+      <div class="container">
+        <h2 class="work-scheme__heading heading-primary">Простобокс – у&nbsp;нас&nbsp;все просто</h2>
+        <ul class="work-scheme__list row">
+          <li class="work-scheme__item col-lg-4">
+            <div class="work-scheme__wrapper">
+              <h3 class="work-scheme__title heading-tertiary">Заказываете</h3>
+              <p class="work-scheme__text">вещи в интернет-магазинах США, как будто вы там живете</p>
+            </div>
+            <div class="work-scheme__phase work-scheme__phase--1">
+              <span>1 - 2 дня</span>
+            </div>
+          </li>
+          <li class="work-scheme__item col-lg-4">
+            <div class="work-scheme__wrapper">
+              <h3 class="work-scheme__title heading-tertiary">Оформляете</h3>
+              <p class="work-scheme__text">и оплатить доставку посылки на&nbsp;ваш Российский адрес</p>
+            </div>
+            <div class="work-scheme__phase work-scheme__phase--2">
+              <span>5 - 10 дней</span>
+            </div>
+          </li>
+          <li class="work-scheme__item work-scheme__item--lines col-lg-4">
+            <div class="work-scheme__wrapper">
+              <h3 class="work-scheme__title heading-tertiary">Получаете</h3>
+              <p class="work-scheme__text">заказ через 5-10 дней после отправки со склада из США</p>
+            </div>
+          </li>
+        </ul>
+        <div class="row">
+          <div class="work-scheme__button col-lg-4 ms-lg-auto">
+            <a class="button" href="#">Зарегистрироваться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-slider section section--pb mb-6 mb-lg-5">
+      <div class="container">
+        <div class="promo-slider__main-wrapper">
+          <div class="promo-slider__container swiper-container swiper-promo-slider">
+            <div class="promo-slider__wrapper swiper-wrapper">
+
+              <div class="promo-slider__item swiper-slide">
+                <div class="promo-slider__img">
+                  <img src="img/slides/iphone.png" alt="iPhone">
+                </div>
+                <div class="promo-slider__text">
+                  <h3 class="promo-slider__title">iPhone из США</h3>
+                  <p class="promo-slider__desc">Как купить новый iPhone 12 из Америки с доставкой в&nbsp;Россию. Мы подготовили подробную инструкцию по&nbsp;покупке с официального сайта Apple, а также рассказали где еще можну купить яблочную продукцию. </p>
+                </div>
+              </div>
+
+              <div class="promo-slider__item swiper-slide">
+                <div class="promo-slider__img">
+                  <img src="img/slides/ptostobot.png" alt="iPhone">
+                </div>
+                <div class="promo-slider__text">
+                  <h3 class="promo-slider__title">ПростоБот от Простобокс</h3>
+                  <p class="promo-slider__desc">Телеграм Бот Простобокса – это возможность делать большую часть операций в личном кабинете не заходя на сайт, быть в курсе актуальных распродаж и скидок, а также общаться с поддержкой при необходимости.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="promo-slider__nav">
+            <ul class="slider-nav">
+              <li class="slider-nav__item">
+                <button class="slider-nav__btn slider-nav__btn--prev"></button>
+              </li>
+              <li class="slider-nav__item">
+                <button class="slider-nav__btn slider-nav__btn--next"></button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="promo-slider__dots nav-dots"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="features section section--pb mb-lg-6">
+      <div class="container">
+        <div class="features__wrapper">
+          <h2 class="features__heading heading-primary">Самое важное о&nbsp;Простобоксе</h2>
+          <p class="features__heading-2 heading-secondary"><span class="blue">Двойная выгода</span> – платите&nbsp;меньше<br> не только за товары, но&nbsp;и&nbsp;за&nbsp;доставку</p>
+          <ul class="features__list">
+            <li class="features__item">Склад в <span class="blue">100% безналоговом</span> Делавэре</li>
+            <li class="features__item"><span class="blue">Бесплатный приём</span> входящих посылок на&nbsp;складе</li>
+            <li class="features__item"><span class="blue">Пополнение</span> счёта от&nbsp;$10 <span class="blue">без комиссии</span> эквайринга</li>
+            <li class="features__item"><span class="blue">Бесплатное объединение</span> входящих посылок</li>
+            <li class="features__item"><span class="blue">Бесплатная</span> стандартная <span class="blue">упаковка</span> посылок</li>
+            <li class="features__item"><span class="blue">Склад без соседей</span>: посылки точно привезут нам</li>
+            <li class="features__item"><span class="blue">24/7&nbsp;работает служба&nbsp;поддержки</span> Простобокса</li>
+            <li class="features__item"><span class="blue">45 дней</span> входящие посылки <span class="blue">хранятся бесплатно</span></li>
+            <li class="features__item"><span class="blue">Выплачиваем $2</span> за каждую посылку, отправленную по реферальной программе</li>
+          </ul>
+
+          <a class="button" href="#">Зарегистрироваться</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section section--pb-m section--pb mb-lg-6">
+
+      <div class="container reviews__container">
+        <h2 class="reviews__heading heading-primary">Отзывы</h2>
+
+        <div class="reviews__wrapper swiper-container swiper-reviews">
+          <ul class="reviews__list swiper-wrapper">
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Москва</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <div class="review__gallery">
+                    <div class="review__gallery-wrapper">
+                      <img class="review__gallery-slide review__gallery-slide--current" src="img/reviews/1.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide" src="img/reviews/2.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide" src="img/reviews/2.png" alt="">
+                    </div>
+                    <div class="review__gallery-nav">
+                      <button class="review__gallery-btn review__gallery-btn--prev">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                      </button>
+                      <button class="review__gallery-btn review__gallery-btn--next">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Владивосток</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <!-- <div class="review__gallery">
+                  </div> -->
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Москва</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <div class="review__gallery">
+                    <div class="review__gallery-wrapper">
+                      <img class="review__gallery-slide review__gallery-slide--current" src="img/reviews/2.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide" src="img/reviews/1.png" alt="">
+                    </div>
+                    <div class="review__gallery-nav">
+                      <button class="review__gallery-btn review__gallery-btn--prev">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                      </button>
+                      <button class="review__gallery-btn review__gallery-btn--next">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item review swiper-slide">
+              <div class="review__wrapper">
+                <time class="review__label review__date" datetime="2021-04-26">26.04.2021</time>
+                <div class="review__wrapper-top">
+                  <div class="review__info">
+                    <b class="review__name">Name</b>
+                    <div class="review__stars">
+                      <div class="rating-stars rating-stars--5" aria-label="рейтинг: 5"></div>
+                    </div>
+                    <span class="review__label review__city">Москва</span>
+                    <span class="review__label review__order">PCT000000443175</span>
+                  </div>
+                  <div class="review__gallery">
+                    <div class="review__gallery-wrapper">
+                      <img class="review__gallery-slide review__gallery-slide--current" src="img/reviews/2.png" alt="">
+                      <img class="review__gallery-slide review__gallery-slide" src="img/reviews/1.png" alt="">
+                    </div>
+                    <div class="review__gallery-nav">
+                      <button class="review__gallery-btn review__gallery-btn--prev">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                      </button>
+                      <button class="review__gallery-btn review__gallery-btn--next">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__content">
+                  <p>А ещё тщательные исследования конкурентов смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Современные технологии достигли такого уровня, что убеждённость некоторых оппонентов предопределяет высокую востребованность системы обучения.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="reviews__slider-nav">
+            <ul class="slider-nav">
+              <li class="slider-nav__item">
+                <button class="slider-nav__btn slider-nav__btn--prev"></button>
+              </li>
+              <li class="slider-nav__item">
+                <button class="slider-nav__btn slider-nav__btn--next"></button>
+              </li>
+            </ul>
+            <div class="reviews-slider__dots nav-dots"></div>
+          </div>
+        </div>
+
+        <div class="reviews__links">
+          <a class="button" href="#">Больше отзывов</a>
+          <a class="reviews__map-link" href="#">
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite.svg#globe"></use>
+            </svg>
+            Отзывы соседей на карте</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="additional section section--pb mb-5">
+      <div class="additional__wrapper section-xxl">
+        <div class="additional__content">
+          <div class="container">
+            <h2 class="additional__heading heading-primary">Что еще надо знать о&nbsp;Простобокс</h2>
+            <ul class="additional__list">
+              <li class="additional__item additional__item--cap">
+                <p class="additional__tertiary heading-tertiary">Удобно</p>
+                <p class="additional__text">доставляем до постаматов или&nbsp;ПВЗ&nbsp;рядом&nbsp;с&nbsp;вашим домом</p>
+              </li>
+              <li class="additional__item additional__item--shield">
+                <p class="additional__tertiary heading-tertiary">Надежно</p>
+                <p class="additional__text">работаем только с проверенными транспортными компаниями</p>
+              </li>
+              <li class="additional__item additional__item--rocket">
+                <p class="additional__tertiary heading-tertiary">Быстро</p>
+                <p class="additional__text">собираем и отправляем посылки за&nbsp;минимальную стоимость, благодаря автоматизированному процессу.</p>
+                <p class="additional__text-special">Доставка от 5 дней до Москвы и 10 дней в&nbsp;регионы</p>
+              </li>
+              <li class="additional__item additional__item--message">
+                <p class="additional__tertiary heading-tertiary">Френдли сервис</p>
+                <p class="additional__text">Наша служба поддержки 24/7 - наедине с&nbsp;проблемой никого не оставит. А Telegram - бот  покажет уведомления о посылках и&nbsp;других событиях</p>
+              </li>
+            </ul>
+            <div class="additional__button-wrapper">
+              <a class="additional__button button" href="#">Зарегистрироваться</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="service section section--pb-m section--pb mb-lg-6">
+      <div class="container">
+        <div class="service__wrapper row">
+          <h2 class="service__heading heading-primary">Посмотрите как мы работаем</h2>
+          <p class="service__text heading-secondary">Доставим между континентами <span class="blue">проще</span> и <span class="blue">быстрее</span>, чем внутри страны.</p>
+          <div class="col-lg-6 ms-lg-auto">
+            <ul class="service__list">
+              <li class="service__item">
+                Наш современный склад находится <span class="blue">далеко от соседей</span>. Ваша посылка попадет только к нам.
+              </li>
+              <li class="service__item">
+                Принимаем посылки за <span class="blue">3 секунды</span>. Весь процесс автоматизирован и продуман до мелочей
+              </li>
+              <li class="service__item">
+                Отправка посылок происходит <span class="blue">2 раза в неделю</span>. Ваша посылка <span class="blue">не задержится на складе</span> долго.
+              </li>
+              <li class="service__item">
+                Самолеты в Россию <span class="blue">летают&nbsp;регулярно</span>. Среднее время доставки посылок от 5 до 10 дней в ПВЗ или Постамат
+              </li>
+            </ul>
+            <a class="service__button button" href="#">3D тур по складу</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendation section section--pb">
+      <div class="container">
+        <div class="recommendation__content">
+          <h2 class="recommendation__heading heading-primary">Подскажем где и&nbsp;что покупать</h2>
+          <p class="recommendation__text heading-tertiary">50 Американских <span class="blue">распродаж</span></p>
+          <a class="button" href="#">К распродажам</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe section section--pb-m section--p mb-lg-5">
+      <div class="container">
+        <div class="subscribe__wrapper row">
+          <div class="col-lg-6 ms-lg-auto">
+            <p class="subscribe__text heading-secondary">
+              <span class="blue">Подпишитесь</span> на новостную рассылку Простобокса и&nbsp;получайте информацию о&nbsp;новинках и&nbsp;акциях в&nbsp;числе первых.
+            </p>
+            <form class="subscribe__form form" method="post" action="#">
+                <input class="form__input form__input--mobile" type="text" placeholder="Ваш e-mail">
+                <button type="submit" class="subscribe__button button">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+{% endblock %}

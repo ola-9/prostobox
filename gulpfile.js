@@ -14,6 +14,8 @@ const del = require('del');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 
+const nunjucks = require('gulp-nunjucks-render');
+
 // Styles
 
 const styles = () => {
@@ -59,6 +61,16 @@ const html = () => {
 
 exports.html = html;
 
+const render = () => {
+  return gulp.src('src/pages/*.html')
+  .pipe(nunjucks({
+      path: ['src/templates']
+    }))
+  .pipe(gulp.dest('build'))
+}
+
+exports.render = render;
+
 // Server
 
 const server = (done) => {
@@ -98,7 +110,7 @@ const watcher = () => {
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
   gulp.watch('src/img/**', gulp.series('copy', 'reload'));
   gulp.watch(['src/js/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
-  gulp.watch('src/*.html', gulp.series('html', 'reload'));
+  gulp.watch(['src/pages/*.html', 'src/templates/**/*.html'], gulp.series('render', 'reload'));
 }
 
 const clean = () => {
@@ -135,7 +147,7 @@ const docs = () => {
 exports.docs = docs;
 
 const build = gulp.series(
-  clean, copy, styles, stylesMin, scripts, html, sprite
+  clean, copy, styles, stylesMin, scripts, render, sprite
 );
 
 exports.build = build;

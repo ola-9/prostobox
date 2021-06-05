@@ -17,6 +17,7 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "^7.0.1",
     "gulp-terser": "^2.0.1",
+    "nunjucks": "^3.2.3",
     "postcss": "^8.3.0",
     "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "0.1.4"
@@ -46,6 +47,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.1",
+    "gulp-nunjucks-render": "^2.2.3",
     "normalize.css": "^8.0.1"
   }
 }
