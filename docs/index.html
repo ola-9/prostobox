@@ -12,7 +12,8 @@
   <title>Prostobox.com</title>
 </head>
 <body>
-  <header class="header">
+
+    <header class="header">
     <div class="container">
       <nav class="main-nav">
         <a class="logo main-nav__logo" href="#">
@@ -96,6 +97,8 @@
       </nav>
     </div>
   </header>
+
+  
 
   <main>
     <section class="main-banner section">
@@ -222,7 +225,7 @@
           </div>
           <div class="col-xl-6">
             <div class="calculator__features-wrapper">
-              <ul class="calculator__features">
+              <ul class="calculator__features list">
                 <li>Приём посылок - <b class="blue">$0</b></li>
                 <li>Консолидация - <b class="blue">$0</b></li>
                 <li>Упаковка стандартная - <b class="blue">$0</b></li>
@@ -668,20 +671,22 @@
           <h2 class="service__heading heading-primary">Посмотрите как мы работаем</h2>
           <p class="service__text heading-secondary">Доставим между континентами <span class="blue">проще</span> и <span class="blue">быстрее</span>, чем внутри страны.</p>
           <div class="col-lg-6 ms-lg-auto">
-            <ul class="service__list">
-              <li class="service__item">
-                Наш современный склад находится <span class="blue">далеко от соседей</span>. Ваша посылка попадет только к нам.
-              </li>
-              <li class="service__item">
-                Принимаем посылки за <span class="blue">3 секунды</span>. Весь процесс автоматизирован и продуман до мелочей
-              </li>
-              <li class="service__item">
-                Отправка посылок происходит <span class="blue">2 раза в неделю</span>. Ваша посылка <span class="blue">не задержится на складе</span> долго.
-              </li>
-              <li class="service__item">
-                Самолеты в Россию <span class="blue">летают&nbsp;регулярно</span>. Среднее время доставки посылок от 5 до 10 дней в ПВЗ или Постамат
-              </li>
-            </ul>
+            <div class="service__list-wrapper">
+              <ul class="service__list list">
+                <li>
+                  Наш современный склад находится <b class="blue">далеко от соседей</b>. Ваша посылка попадет только к нам.
+                </li>
+                <li>
+                  Принимаем посылки за <b class="blue">3 секунды</b>. Весь процесс автоматизирован и продуман до мелочей
+                </li>
+                <li>
+                  Отправка посылок происходит <b class="blue">2 раза в неделю</b>. Ваша посылка <b class="blue">не задержится на складе</b> долго.
+                </li>
+                <li>
+                  Самолеты в Россию <b class="blue">летают&nbsp;регулярно</b>. Среднее&nbsp;время доставки посылок от <b class="blue">5&nbsp;до 10 дней</b> в ПВЗ или Постамат
+                </li>
+              </ul>
+            </div>
             <a class="service__button button" href="#">3D тур по складу</a>
           </div>
         </div>
@@ -716,7 +721,7 @@
 
   </main>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="section-xxl">
       <div class="footer__navigation">
         <div class="container">
@@ -797,6 +802,7 @@
       </div>
     </div>
   </footer>
+
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
