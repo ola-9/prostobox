@@ -1,0 +1,40 @@
+.list {
+  @include list-reset;
+  padding-left: 26px;
+
+  li {
+    position: relative;
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      top: 12px;
+      left: -25px;
+      background-color: $blue;
+      border-radius: 50%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    li {
+      font-size: 20px;
+      line-height: 36px;
+      margin-bottom: 20px;
+
+      &::before {
+        top: 15px;
+      }
+    }
+  }
+}

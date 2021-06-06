@@ -83,31 +83,6 @@
 }
 
 .calculator__features {
-  @include list-reset;
-  padding-left: 26px;
-
-  li {
-    position: relative;
-    line-height: 29px;
-    margin-bottom: 10px;
-
-    &:last-child {
-      margin: 0;
-    }
-
-    &::before {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 6px;
-      position: absolute;
-      top: 12px;
-      left: -26px;
-      background-color: $blue;
-      border-radius: 50%;
-    }
-  }
-
   @include media-breakpoint-up(md) {
     position: relative;
     padding-top: 40px;
@@ -158,15 +133,6 @@
       left: -39px;
       right: auto;
       transform: none;
-    }
-
-    li {
-      line-height: 36px;
-      margin-bottom: 20px;
-
-      &::before {
-        top: 15px;
-      }
     }
   }
 }

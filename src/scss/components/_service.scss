@@ -28,18 +28,22 @@
   }
 }
 
+.service__list-wrapper {
+  padding: 0 23px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+}
+
 .service__list {
-  @include list-reset;
-
   position: relative;
-
   text-align: start;
+  padding-left: 24px;
   margin: 0 0 40px 0;
-  padding-left: 49px;
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 20px;
-    padding-left: 23px;
   }
 
   &::before {
@@ -64,46 +68,6 @@
       background-image: url("../img/service.png");
       background-repeat: no-repeat;
       background-size: 100%;
-    }
-  }
-
-  span {
-    font-weight: 700;
-  }
-}
-
-.service__item {
-  position: relative;
-  font-weight: 400;
-  line-height: 29px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 11px;
-    left: -26px;
-    width: 6px;
-    height: 8px;
-    background-image: url("../img/point-item.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-
-    @include media-breakpoint-up(lg) {
-      top: 13px;
-      left: -28px;
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    line-height: 36px;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 10px;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 20px;
     }
   }
 }

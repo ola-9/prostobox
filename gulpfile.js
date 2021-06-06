@@ -22,8 +22,7 @@ const styles = () => {
   return gulp.src('src/scss/style.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('build/css'))
-    .pipe(sync.stream());
+    .pipe(gulp.dest('build/css'));
 }
 
 exports.styles = styles;
@@ -106,7 +105,7 @@ exports.sprite = sprite;
 // Watcher
 
 const watcher = () => {
-  gulp.watch('src/scss/**/*.scss', gulp.series('stylesMin'));
+  gulp.watch('src/scss/**/*.scss', gulp.series('styles', 'stylesMin'));
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
   gulp.watch('src/img/**', gulp.series('copy', 'reload'));
   gulp.watch(['src/js/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
