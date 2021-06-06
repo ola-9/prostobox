@@ -52,7 +52,9 @@
     top: 0;
     left: -8px;
     border-radius: 50%;
-    background-image: radial-gradient($white, $white 4px, $grey-dark 5px, $grey-dark 7px, #c1c1c1 8px);
+    background-image: radial-gradient($white, $white 4px, $grey-dark 5px, $grey-dark 7px, transparent 8px);
+    box-shadow: 0 4px 4px 0 rgba($black, 0.25), 0 14px 14px 0 rgba(#808080, 0.32);
+    border: 2px solid #c1c1c1;
     z-index: 1;
   }
 
@@ -70,7 +72,8 @@
       height: 38px;
       top: -38px;
       left: 10px;
-      background-image: radial-gradient($white, $white 9px, $grey-dark 10px, $grey-dark 14px, #c1c1c1 15px);
+      background-image: radial-gradient($white, $white 9px, $grey-dark 10px, $grey-dark 14px, transparent 15px);
+      border: 5px solid #c1c1c1;
     }
   }
 

@@ -176,189 +176,191 @@
 
     </section>
 
-    <section class="calculator section section--pb-m section--pb">
-      <div class="container">
-        <h2 class="calculator__heading heading-primary">Калькулятор</h2>
-        <div class="row calculator__wrapper">
-          <div class="col-xl-6 d-flex flex-wrap">
-            <form class="calculator__form form" action="#">
-              <div class="calculator__field">
-                <label class="form__label">Страна доставки*</label>
-                <select class="form__select form__input" id="country" required autocomplete="off">
-                  <option value="" disabled selected>Страна</option>
-                  <option value="RU">Россия</option>
-                </select>
-              </div>
-              <div class="calculator__field">
-                  <label class="form__label">Город доставки*</label>
-                  <input class="form__input" type="text" id="city" value="" placeholder="Город">
-              </div>
-              <div class="calculator__field">
-                  <label class="form__label">Индекс</label>
-                  <input class="form__input" id="zip" type="text">
-              </div>
-
-              <div class="calculator__field calculator__field--weight">
-                <label class="form__label" for="package-weight">Вес посылки*</label>
-                <div class="calculator__weight">
-                  <input class="form__input weight-input" id="package-weight" type="text" value="0.5">
-                </div>
-                <div class="calculator__unit">
-                  <select class="form__select form__select--p-sm form__input">
-                    <option value="kg">Кг</option>
-                    <option value="lb">фунты</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="calculator__field">
-                <label class="form__label">Цена товара </label>
-                <input class="form__input" id="price" type="text">
-              </div>
-
-              <div class="calculator__field calculator__field--submit">
-                <button class="calculator__submit button">Рассчитать доставку</button>
-              </div>
-
-            </form>
-
+    <section class="section section--pb-m section--pb">
+      <div class="calculator">
+  <div class="container">
+    <h2 class="calculator__heading heading-primary">Калькулятор</h2>
+    <div class="row calculator__wrapper">
+      <div class="col-xl-6 d-flex flex-wrap">
+        <form class="calculator__form form" action="#">
+          <div class="calculator__field">
+            <label class="form__label">Страна доставки*</label>
+            <select class="form__select form__input" id="country" required autocomplete="off">
+              <option value="" disabled selected>Страна</option>
+              <option value="RU">Россия</option>
+            </select>
           </div>
-          <div class="col-xl-6">
-            <div class="calculator__features-wrapper">
-              <ul class="calculator__features list">
-                <li>Приём посылок - <b class="blue">$0</b></li>
-                <li>Консолидация - <b class="blue">$0</b></li>
-                <li>Упаковка стандартная - <b class="blue">$0</b></li>
-                <li>Комиссия за пополнение баланса - <b class="blue">$0</b>
-                  <button class="calculator__features-qm question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+          <div class="calculator__field">
+              <label class="form__label">Город доставки*</label>
+              <input class="form__input" type="text" id="city" value="" placeholder="Город">
+          </div>
+          <div class="calculator__field">
+              <label class="form__label">Индекс</label>
+              <input class="form__input" id="zip" type="text">
+          </div>
+
+          <div class="calculator__field calculator__field--weight">
+            <label class="form__label" for="package-weight">Вес посылки*</label>
+            <div class="calculator__weight">
+              <input class="form__input weight-input" id="package-weight" type="text" value="0.5">
+            </div>
+            <div class="calculator__unit">
+              <select class="form__select form__select--p-sm form__input">
+                <option value="kg">Кг</option>
+                <option value="lb">фунты</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calculator__field">
+            <label class="form__label">Цена товара </label>
+            <input class="form__input" id="price" type="text">
+          </div>
+
+          <div class="calculator__field calculator__field--submit">
+            <button class="calculator__submit button">Рассчитать доставку</button>
+          </div>
+
+        </form>
+
+      </div>
+      <div class="col-xl-6">
+        <div class="calculator__features-wrapper">
+          <ul class="calculator__features list">
+            <li>Приём посылок - <b class="blue">$0</b></li>
+            <li>Консолидация - <b class="blue">$0</b></li>
+            <li>Упаковка стандартная - <b class="blue">$0</b></li>
+            <li>Комиссия за пополнение баланса - <b class="blue">$0</b>
+              <button class="calculator__features-qm question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <use xlink:href="img/sprite.svg#question-mark"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="calculator__tariffs tariffs">
+
+      <h3 class="tariffs__heading">Подходящие тарифы:</h3>
+
+      <div class="tariffs__wrapper swiper-container swiper-tariffs">
+        <ul class="tariffs__list swiper-wrapper">
+          <li class="tariffs__item tariff tariff--active tariff--econom swiper-slide">
+            <div class="tariff__wrapper">
+              <span class="tariff__label">Тариф</span>
+              <h3 class="tariff__title">Для экономных</h3>
+              <span class="tariff__time">5 - 10 дней</span>
+              <b class="tariff__price">$3,99</b>
+              <ul class="tariff__features">
+                <li class="tariff__features-item">
+                  <div class="tariff__features-title-wrapper">
+                    <span class="tariff__features-title">Страховка от утери</span>
+                  </div>
+                  <b class="tariff__features-price">...</b>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="tariffs__item tariff tariff--one swiper-slide">
+            <span class="tariff__label">Тариф</span>
+            <h3 class="tariff__title">По одной</h3>
+            <span class="tariff__time">7 - 14 дней</span>
+            <b class="tariff__price">$9,99</b>
+            <ul class="tariff__features">
+              <li class="tariff__features-item">
+                <div class="tariff__features-title-wrapper">
+                  <span class="tariff__features-title">Страховка от утери</span>
+                  <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
                     <svg width="20" height="20" viewBox="0 0 20 20">
                       <use xlink:href="img/sprite.svg#question-mark"></use>
                     </svg>
                   </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="calculator__tariffs tariffs">
-
-          <h3 class="tariffs__heading">Подходящие тарифы:</h3>
-
-          <div class="tariffs__wrapper swiper-container swiper-tariffs">
-            <ul class="tariffs__list swiper-wrapper">
-              <li class="tariffs__item tariff tariff--active tariff--econom swiper-slide">
-                <div class="tariff__wrapper">
-                  <span class="tariff__label">Тариф</span>
-                  <h3 class="tariff__title">Для экономных</h3>
-                  <span class="tariff__time">5 - 10 дней</span>
-                  <b class="tariff__price">$3,99</b>
-                  <ul class="tariff__features">
-                    <li class="tariff__features-item">
-                      <div class="tariff__features-title-wrapper">
-                        <span class="tariff__features-title">Страховка от утери</span>
-                      </div>
-                      <b class="tariff__features-price">...</b>
-                    </li>
-                  </ul>
                 </div>
-              </li>
-              <li class="tariffs__item tariff tariff--one swiper-slide">
-                <span class="tariff__label">Тариф</span>
-                <h3 class="tariff__title">По одной</h3>
-                <span class="tariff__time">7 - 14 дней</span>
-                <b class="tariff__price">$9,99</b>
-                <ul class="tariff__features">
-                  <li class="tariff__features-item">
-                    <div class="tariff__features-title-wrapper">
-                      <span class="tariff__features-title">Страховка от утери</span>
-                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                          <use xlink:href="img/sprite.svg#question-mark"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                </ul>
-              </li>
-              <li class="tariffs__item tariff tariff--combination swiper-slide">
-                <span class="tariff__label">Тариф</span>
-                <h3 class="tariff__title">С объединением</h3>
-                <span class="tariff__time">7 - 14 дней</span>
-                <b class="tariff__price">$14,99</b>
-                <ul class="tariff__features">
-                  <li class="tariff__features-item">
-                    <div class="tariff__features-title-wrapper">
-                      <span class="tariff__features-title">Страховка от утери</span>
-                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                          <use xlink:href="img/sprite.svg#question-mark"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                  <li class="tariff__features-item">
-                    <div class="tariff__features-title-wrapper">
-                      <span class="tariff__features-title">Страховка от утери</span>
-                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                          <use xlink:href="img/sprite.svg#question-mark"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                </ul>
-              </li>
-              <li class="tariffs__item tariff tariff--post swiper-slide">
-                <span class="tariff__label">Тариф</span>
-                <h3 class="tariff__title">Через почту</h3>
-                <span class="tariff__time">20 - 30 дней</span>
-                <b class="tariff__price">$22,99</b>
-                <ul class="tariff__features">
-                  <li class="tariff__features-item">
-                    <div class="tariff__features-title-wrapper">
-                      <span class="tariff__features-title">Страховка от утери</span>
-                    </div>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                </ul>
-              </li>
-              <li class="tariffs__item tariff tariff--parcel swiper-slide">
-                <span class="tariff__label">Тариф</span>
-                <h3 class="tariff__title">Для бандеролек</h3>
-                <span class="tariff__time">20 - 30 дней</span>
-                <b class="tariff__price">$15,99</b>
-                <ul class="tariff__features">
-                  <li class="tariff__features-item">
-                    <div class="tariff__features-title-wrapper">
-                      <span class="tariff__features-title">Страховка от утери</span>
-                      <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                          <use xlink:href="img/sprite.svg#question-mark"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <b class="tariff__features-price">$5</b>
-                  </li>
-                </ul>
+                <b class="tariff__features-price">$5</b>
               </li>
             </ul>
-            <div class="tariffs__slider-nav">
-              <ul class="slider-nav">
-                <li class="slider-nav__item">
-                  <button class="slider-nav__btn slider-nav__btn--prev"></button>
-                </li>
-                <li class="slider-nav__item">
-                  <button class="slider-nav__btn slider-nav__btn--next"></button>
-                </li>
-              </ul>
-            </div>
-          </div>
+          </li>
+          <li class="tariffs__item tariff tariff--combination swiper-slide">
+            <span class="tariff__label">Тариф</span>
+            <h3 class="tariff__title">С объединением</h3>
+            <span class="tariff__time">7 - 14 дней</span>
+            <b class="tariff__price">$14,99</b>
+            <ul class="tariff__features">
+              <li class="tariff__features-item">
+                <div class="tariff__features-title-wrapper">
+                  <span class="tariff__features-title">Страховка от утери</span>
+                  <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </div>
+                <b class="tariff__features-price">$5</b>
+              </li>
+              <li class="tariff__features-item">
+                <div class="tariff__features-title-wrapper">
+                  <span class="tariff__features-title">Страховка от утери</span>
+                  <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </div>
+                <b class="tariff__features-price">$5</b>
+              </li>
+            </ul>
+          </li>
+          <li class="tariffs__item tariff tariff--post swiper-slide">
+            <span class="tariff__label">Тариф</span>
+            <h3 class="tariff__title">Через почту</h3>
+            <span class="tariff__time">20 - 30 дней</span>
+            <b class="tariff__price">$22,99</b>
+            <ul class="tariff__features">
+              <li class="tariff__features-item">
+                <div class="tariff__features-title-wrapper">
+                  <span class="tariff__features-title">Страховка от утери</span>
+                </div>
+                <b class="tariff__features-price">$5</b>
+              </li>
+            </ul>
+          </li>
+          <li class="tariffs__item tariff tariff--parcel swiper-slide">
+            <span class="tariff__label">Тариф</span>
+            <h3 class="tariff__title">Для бандеролек</h3>
+            <span class="tariff__time">20 - 30 дней</span>
+            <b class="tariff__price">$15,99</b>
+            <ul class="tariff__features">
+              <li class="tariff__features-item">
+                <div class="tariff__features-title-wrapper">
+                  <span class="tariff__features-title">Страховка от утери</span>
+                  <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </div>
+                <b class="tariff__features-price">$5</b>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="tariffs__slider-nav">
+          <ul class="slider-nav">
+            <li class="slider-nav__item">
+              <button class="slider-nav__btn slider-nav__btn--prev"></button>
+            </li>
+            <li class="slider-nav__item">
+              <button class="slider-nav__btn slider-nav__btn--next"></button>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
     </section>
 
