@@ -9,7 +9,6 @@ const csso = require('gulp-csso');
 const terser = require('gulp-terser');
 const concat = require('gulp-concat');
 // const webp = require('gulp-webp');
-// const include = require('posthtml-include');
 const del = require('del');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
@@ -29,6 +28,7 @@ exports.styles = styles;
 
 const stylesMin = () => {
   return gulp.src('src/scss/style.scss')
+    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
@@ -65,7 +65,7 @@ const render = () => {
   .pipe(nunjucks({
       path: ['src/templates']
     }))
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest('build'));
 }
 
 exports.render = render;
@@ -109,7 +109,7 @@ const watcher = () => {
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
   gulp.watch('src/img/**', gulp.series('copy', 'reload'));
   gulp.watch(['src/js/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
-  gulp.watch(['src/pages/*.html', 'src/templates/**/*.html'], gulp.series('render', 'reload'));
+  gulp.watch(['src/pages/**/*.html', 'src/templates/**/*.html'], gulp.series('render', 'reload'));
 }
 
 const clean = () => {

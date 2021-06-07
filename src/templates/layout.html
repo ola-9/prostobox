@@ -23,7 +23,10 @@
   <script src="js/script.min.js"></script>
 
   <script>
-    tippy('[data-tippy-content]');
+    tippy('.question-mark', {
+      trigger: 'click',
+      hideOnClick: true,
+    });
   </script>
 </body>
 </html>

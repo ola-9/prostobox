@@ -1,42 +1,22 @@
-.user-nav__login {
+.user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.user-nav__link {
   position: relative;
   display: block;
   padding: 10px;
-  padding-right: 35px;
   font-size: 14px;
   line-height: 20px;
+  border-radius: 20px;
+
   background-color: $blue;
   color: $white;
-  border-radius: 20px;
 
   @include color-transition;
 
   transition-property: color, background-color;
-
-  &:hover {
-    &::before {
-      opacity: 0;
-    }
-  }
-
-  &:active {
-    background-color: $blue-dark;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding: 20px;
-    padding-right: 60px;
-    color: $grey-dark;
-    background-color: $white;
-
-    &:active {
-      background-color: $white;
-    }
-  }
 
   &::before {
     content: "";
@@ -54,10 +34,59 @@
     opacity: 1;
     transition: opacity 0.2s ease;
   }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    background-color: $blue-dark;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 20px;
+    color: $grey-dark;
+    background-color: $white;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      color: $blue-dark;
+      background-color: $white;
+    }
+  }
+}
+
+.user-nav__logout {
+  display: block;
+  width: 32px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.user-nav__login {
+  position: relative;
+  padding-right: 35px;
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 60px;
+
+    &:hover,
+    &:active {
+      color: $grey-dark;
+    }
+  }
 }
 
 .user-nav__login-icon-mobile {
-  display: block;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -70,10 +99,15 @@
   }
 }
 
-.user-nav__login-icon {
-  display: none;
+.user-nav__link-icon {
+  display: block;
+  color: $blue-light;
 
   @include color-transition;
+}
+
+.user-nav__login-icon {
+  display: none;
 
   @include media-breakpoint-up(lg) {
     display: block;
@@ -83,10 +117,10 @@
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    color: $blue-light;
   }
 }
 
-.user-nav__login:active .user-nav__login-icon {
+.user-nav__logout:active .user-nav__link-icon,
+.user-nav__login:active .user-nav__link-icon {
   color: $blue-dark;
 }
