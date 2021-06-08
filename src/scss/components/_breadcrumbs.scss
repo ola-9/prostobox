@@ -1,16 +1,13 @@
 .breadcrumbs {
-  list-style: none;
-  max-width: 330px;
-  margin: 0 auto;
-  padding: 20px 30px;
+  @include list-reset;
+
+  padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 
   @include media-breakpoint-up(md) {
     max-width: none;
-    margin: 0;
-    padding-left: 60px;
   }
 
   @include media-breakpoint-up(lg) {

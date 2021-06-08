@@ -31,10 +31,10 @@ const stylesMin = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(csso())
+    // .pipe(postcss([
+    //   autoprefixer()
+    // ]))
+    // .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
@@ -107,7 +107,7 @@ exports.sprite = sprite;
 const watcher = () => {
   gulp.watch('src/scss/**/*.scss', gulp.series('styles', 'stylesMin'));
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
-  gulp.watch('src/img/**', gulp.series('copy', 'reload'));
+  // gulp.watch('src/img/**/*.{png,jpg,svg}', gulp.series('copy', 'reload'));
   gulp.watch(['src/js/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
   gulp.watch(['src/pages/**/*.html', 'src/templates/**/*.html'], gulp.series('render', 'reload'));
 }
@@ -146,7 +146,7 @@ const docs = () => {
 exports.docs = docs;
 
 const build = gulp.series(
-  clean, copy, styles, stylesMin, scripts, render, sprite
+  clean, copy, stylesMin, scripts, render, sprite
 );
 
 exports.build = build;
