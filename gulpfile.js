@@ -15,26 +15,16 @@ const svgstore = require('gulp-svgstore');
 
 const nunjucks = require('gulp-nunjucks-render');
 
-// Styles
-
-const styles = () => {
-  return gulp.src('src/scss/style.scss')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(gulp.dest('build/css'));
-}
-
-exports.styles = styles;
-
 const stylesMin = () => {
   return gulp.src('src/scss/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    // .pipe(postcss([
-    //   autoprefixer()
-    // ]))
-    // .pipe(csso())
+    .pipe(gulp.dest('build/css'))
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
@@ -105,7 +95,7 @@ exports.sprite = sprite;
 // Watcher
 
 const watcher = () => {
-  gulp.watch('src/scss/**/*.scss', gulp.series('styles', 'stylesMin'));
+  gulp.watch('src/scss/**/*.scss', gulp.series('stylesMin'));
   gulp.watch('src/img/icons/*.svg', gulp.series('sprite', 'reload'));
   // gulp.watch('src/img/**/*.{png,jpg,svg}', gulp.series('copy', 'reload'));
   gulp.watch(['src/js/*.js', 'src/js/vendor/*.js'], gulp.series('scripts', 'reload'));
