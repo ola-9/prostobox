@@ -1,0 +1,239 @@
+.paid-services {
+  overflow: hidden;
+}
+
+.paid-services__wrapper {
+  padding: 0 15px;
+  background-color: $grey-dark;
+  border-radius: 20px;
+}
+
+.paid-services__heading {
+  color: $white;
+  padding: 60px 20px 63px;
+  text-align: center;
+  margin: 0;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 60px;
+    line-height: 78px;
+    text-align: left;
+    padding: 104px 0 100px;
+  }
+}
+
+.paid-services__list {
+  @include list-reset;
+}
+
+.paid-services__item {
+  margin-bottom: 43px;
+  padding: 37px 22px 20px;
+  text-align: center;
+  border-radius: 14px;
+  background-color: $white;
+
+  &:last-child {
+    padding-bottom: 60px;
+    margin-bottom: 0;
+  }
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-image: radial-gradient($white, $white 9px, $grey-dark 9px, $grey-dark 15px, $grey-light-1 15px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 20px;
+    padding: 20px 100px 20px 72px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      transform: none;
+      left: -24px;
+      top: 16px;
+      background-image: radial-gradient($white, $white 14px, $grey-dark 14px, $grey-dark 22px, $grey-light-1 22px);
+    }
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.paid-services__desc {
+  margin: 0 0 10px 0;
+  line-height: 29px;
+  font-weight: 400;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 36px;
+    margin: 0;
+  }
+}
+
+.paid-services__cost {
+  margin: 0;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  color: $blue;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 30px;
+    line-height: 54px;
+    width: 20%;
+  }
+}
+
+.paid-services__cost-note {
+  position: absolute;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 21px;
+    bottom: 0;
+    top: 25px;
+    left: calc(80% + 10px);
+    transform: none;
+  }
+}
+
+.packaging__heading {
+  color: $white;
+  padding: 60px 10px 40px;
+  text-align: center;
+  margin: 0;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+    padding: 150px 0 57px;
+  }
+}
+
+.packaging__list {
+  @include list-reset;
+  padding-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.packaging__item {
+  color: $white;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-image: radial-gradient($white, $white 9px, $blue 9px, $blue 15px, $blue-light 15px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+
+    text-align: left;
+    width: 25%;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      transform: none;
+      left: 0;
+      top: -20px;
+      background-image: radial-gradient($white, $white 14px, $blue 14px, $blue 22px, $blue-light 22px);
+    }
+  }
+}
+
+.packaging__item-wrapper {
+  padding: 60px 15px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 50px 13px 0;
+  }
+}
+
+.packaging__desc {
+  margin: 0 0 10px;
+  line-height: 29px;
+  font-weight: 400;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+}
+
+.packaging__cost {
+  margin: 0;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 30px;
+    line-height: 54px;
+  }
+}
+
+.packaging__cost-note {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 21px;
+    left: 160px;
+  }
+}
