@@ -3,14 +3,14 @@
 }
 
 .paid-services__wrapper {
-  padding: 0 15px;
+  padding: 0 22px;
   background-color: $grey-dark;
   border-radius: 20px;
 }
 
 .paid-services__heading {
   color: $white;
-  padding: 60px 20px 63px;
+  padding: 60px 13px 63px;
   text-align: center;
   margin: 0;
 
@@ -24,17 +24,21 @@
 
 .paid-services__list {
   @include list-reset;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 30px;
+  }
 }
 
 .paid-services__item {
   margin-bottom: 43px;
-  padding: 37px 22px 20px;
+  padding: 37px 26px 20px;
   text-align: center;
   border-radius: 14px;
   background-color: $white;
 
   &:last-child {
-    padding-bottom: 60px;
+    padding-bottom: 58px;
     margin-bottom: 0;
   }
 
@@ -46,19 +50,19 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    top: -20px;
+    top: -25px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
-    background-image: radial-gradient($white, $white 9px, $grey-dark 9px, $grey-dark 15px, $grey-light-1 15px);
+    background-image: url("../img/services-paid-dollar-sign.svg"), radial-gradient($white, $white 9px, $grey-dark 10px, $grey-dark 15px, $grey-light-1 16px);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 8px 13px 40px 40px;
   }
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 20px;
-    padding: 20px 100px 20px 72px;
+    padding: 20px 59px 20px 72px;
 
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +76,8 @@
       transform: none;
       left: -24px;
       top: 16px;
-      background-image: radial-gradient($white, $white 14px, $grey-dark 14px, $grey-dark 22px, $grey-light-1 22px);
+      background-image: url("../img/services-paid-dollar-sign.svg"), radial-gradient($white, $white 14px, $grey-dark 15px, $grey-dark 22px, $grey-light-1 23px);
+      background-size: 12px 19px 60px 60px;
     }
 
     &:last-child {
@@ -123,7 +128,7 @@
     line-height: 21px;
     bottom: 0;
     top: 25px;
-    left: calc(80% + 10px);
+    left: calc(80% + 44px);
     transform: none;
   }
 }
@@ -136,7 +141,7 @@
 
   @include media-breakpoint-up(lg) {
     text-align: left;
-    padding: 150px 0 57px;
+    padding: 150px 0 98px;
   }
 }
 
@@ -145,6 +150,7 @@
   padding-bottom: 60px;
 
   @include media-breakpoint-up(lg) {
+    padding-bottom: 120px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -162,14 +168,14 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 10px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
-    background-image: radial-gradient($white, $white 9px, $blue 9px, $blue 15px, $blue-light 15px);
+    background-image: url("../img/packaging-cross-sign.svg"), radial-gradient($white, $white 9px, $blue 10px, $blue 15px, $blue-light 16px);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 9px 9px 100% 100%;
   }
 
   @include media-breakpoint-up(lg) {
@@ -182,14 +188,15 @@
       height: 60px;
       transform: none;
       left: 0;
-      top: -20px;
-      background-image: radial-gradient($white, $white 14px, $blue 14px, $blue 22px, $blue-light 22px);
+      top: -29px;
+      background-image: url("../img/packaging-cross-sign.svg"), radial-gradient($white, $white 14px, $blue 15px, $blue 22px, $blue-light 23px);
+      background-size: 16px 16px 100% 100%;
     }
   }
 }
 
 .packaging__item-wrapper {
-  padding: 60px 15px 0;
+  padding: 60px 7px 20px;
 
   @include media-breakpoint-up(lg) {
     padding: 50px 13px 0;
@@ -234,6 +241,7 @@
   @include media-breakpoint-up(lg) {
     font-size: 16px;
     line-height: 21px;
-    left: 160px;
+    transform: none;
+    left: 14px;
   }
 }
