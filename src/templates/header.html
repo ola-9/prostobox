@@ -1,7 +1,11 @@
   <header class="header">
     <div class="container">
       <nav class="main-nav">
-        <a class="logo main-nav__logo" href="#">
+        {% if isIndex %}
+        <a class="logo main-nav__logo">
+        {% else %}
+        <a class="logo main-nav__logo" href="index.html">
+        {% endif %}
           <img src="img/logo.svg" alt="Логотип Prostobox.com" width="205" height="30">
         </a>
         <button class="main-nav__toggle nav-toggle">
@@ -70,7 +74,7 @@
           <div class="main-nav__user user-nav">
 
           {% if isAuthenticated %}
-            <a class="user-nav__logout" href="#" aria-label="Выход">
+            <a class="user-nav__logout" href="index.html" aria-label="Выход">
               <svg class="user-nav__link-icon" width="32" height="30">
                 <use href="img/sprite.svg#logout"></use>
               </svg>
@@ -82,7 +86,7 @@
               <span>Личный кабинет</span>
             </a>
           {% else %}
-            <a class="user-nav__link user-nav__login" href="#">Вход
+            <a class="user-nav__link user-nav__login" href="auth.html">Вход
               <svg class="user-nav__link-icon user-nav__login-icon" width="31" height="30">
                 <use href="img/sprite.svg#login"></use>
               </svg>

@@ -68,6 +68,16 @@
 }
 
 .review__order {
+  a {
+    @include color-transition;
+
+    color: $blue;
+
+    &:hover {
+      color: $blue-dark;
+    }
+  }
+
   &::before {
     background-image: url("../img/parcel-icon.svg");
   }
