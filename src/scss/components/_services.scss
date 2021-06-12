@@ -115,10 +115,8 @@
     left: 0;
     position: absolute;
     border-radius: 50%;
-    background-image: radial-gradient($white, $white 5px, $grey-dark 5px, $grey-dark 7px, $grey-light-1 8px);
+    background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
     box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
-    // box-shadow: 0 4px 14px 0 #80808038;
-
     z-index: 1;
   }
 
@@ -129,7 +127,7 @@
     &::before {
       width: 25px;
       height: 25px;
-      background-image: radial-gradient($white, $white 6px, $grey-dark 6px, $grey-dark 8px, $grey-light-1 9px);
+      background-image: radial-gradient($white, $white 6px, $grey-dark 7px, $grey-dark 8px, $grey-light-1 9px);
     }
   }
 
@@ -140,7 +138,6 @@
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 26px;
-    // min-height: 52px;
   }
 }
 
