@@ -63,7 +63,6 @@
     margin-bottom: 20px;
     padding: 20px 20px 20px 72px;
     display: flex;
-    flex-shrink: 0;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
@@ -93,8 +92,9 @@
     font-size: 20px;
     line-height: 36px;
     margin: 0;
-    width: 78%;
-    padding-right: 15px;
+    width: 77.5%;
+    padding-right: 20px;
+    flex-shrink: 0;
   }
 }
 
@@ -121,7 +121,7 @@
     font-size: 16px;
     line-height: 21px;
     bottom: 0;
-    padding-left: 16px;
+    padding-left: 20px;
   }
 }
 
