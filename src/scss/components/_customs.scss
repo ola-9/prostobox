@@ -37,7 +37,7 @@
     bottom: -204px;
     width: 227px;
     height: 174px;
-    background-image: url("../../img/customs-mobile.png");
+    background-image: url("../img/customs-mobile.png");
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -56,7 +56,7 @@
       transform: translateX(-100%);
       left: -58px;
       bottom: -192px;
-      background-image: url("../../img/customs.png");
+      background-image: url("../img/customs.png");
     }
   }
 }
@@ -76,7 +76,7 @@
   @include media-breakpoint-up(lg) {
     font-size: 30px;
     line-height: 39px;
-    padding: 35px 60px;
+    padding: 35px 49px;
     margin-right: 10px;
   }
 }
