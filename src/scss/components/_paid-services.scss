@@ -38,7 +38,6 @@
   background-color: $white;
 
   &:last-child {
-    padding-bottom: 58px;
     margin-bottom: 0;
   }
 
@@ -62,12 +61,10 @@
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 20px;
-    padding: 20px 59px 20px 72px;
-
+    padding: 20px 20px 20px 72px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-align: left;
 
     &::before {
@@ -95,6 +92,9 @@
     font-size: 20px;
     line-height: 36px;
     margin: 0;
+    width: 77.5%;
+    padding-right: 20px;
+    flex-shrink: 0;
   }
 }
 
@@ -104,32 +104,24 @@
   line-height: 32px;
   font-weight: 700;
   color: $blue;
-  position: relative;
 
   @include media-breakpoint-up(lg) {
     font-size: 30px;
     line-height: 54px;
-    width: 19%;
   }
 }
 
 .paid-services__cost-note {
-  position: absolute;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   margin: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
 
   @include media-breakpoint-up(lg) {
     font-size: 16px;
     line-height: 21px;
     bottom: 0;
-    top: 25px;
-    left: calc(80% + 48px);
-    transform: none;
+    padding-left: 20px;
   }
 }
 
@@ -150,7 +142,7 @@
   padding-bottom: 57px;
 
   @include media-breakpoint-up(lg) {
-    padding-bottom: 171px;
+    padding-bottom: 154px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -221,7 +213,6 @@
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
-  position: relative;
 
   @include media-breakpoint-up(lg) {
     font-size: 30px;
@@ -234,10 +225,6 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
 
   @include media-breakpoint-up(lg) {
     font-size: 16px;
