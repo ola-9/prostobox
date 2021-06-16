@@ -1,5 +1,10 @@
 .customs {
   overflow: hidden;
+  margin-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 20px;
+  }
 }
 
 .customs__title {
@@ -9,32 +14,22 @@
 
   @include media-breakpoint-up(lg) {
     text-align: left;
-    margin: 150px 0 0;
+    margin: 0 0 100px;
     padding: 0;
+    width: 50%;
   }
 }
 
-.customs__desc-wrapper {
-  @include media-breakpoint-up(lg) {
-    padding-left: 0;
-  }
-}
-
-.customs__desc {
-  font-weight: 400;
-  line-height: 29px;
-  text-align: center;
-  margin: 0 0 236px;
-  padding: 0 7px;
+.customs__wrapper {
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
     display: block;
-    transform: translateX(50%);
-    left: -30px;
-    bottom: -204px;
+    left: 91px;
+    transform: translateY(50%);
+    bottom: calc(50% - 65px);
     width: 227px;
     height: 174px;
     background-image: url("../img/customs-mobile.png");
@@ -42,22 +37,37 @@
     background-size: 100%;
   }
 
+  @include media-breakpoint-up(lg) {
+    &::after {
+      width: 552px;
+      height: 423px;
+      transform: none;
+      bottom: -13px;
+      left: 7px;
+      background-image: url("../img/customs.png");
+    }
+  }
+}
+
+.customs__desc-wrapper {
+  @include media-breakpoint-up(lg) {
+    padding-left: 9px;
+  }
+}
+
+.customs__desc {
+  line-height: 29px;
+  text-align: center;
+  margin: 0 0 236px;
+  padding: 0 7px;
+  position: relative;
 
   @include media-breakpoint-up(lg) {
     font-size: 20px;
     line-height: 36px;
     text-align: left;
-    margin: 406px 0 27px 0;
+    margin: 0 0 27px 0;
     padding: 0 10px 0 0;
-
-    &::after {
-      width: 552px;
-      height: 423px;
-      transform: translateX(-100%);
-      left: -58px;
-      bottom: -192px;
-      background-image: url("../img/customs.png");
-    }
   }
 }
 
@@ -68,7 +78,7 @@
   font-weight: 700;
   text-align: center;
   padding: 38px 25px;
-  margin: 0 0 60px;
+  margin: 0;
   border: 2px dashed $grey-medium-1;
   border-radius: 30px;
   background-color: $white-1;
@@ -77,6 +87,5 @@
     font-size: 30px;
     line-height: 39px;
     padding: 35px 49px;
-    margin-right: 10px;
   }
 }
