@@ -1,18 +1,23 @@
 .insurance {
   overflow: hidden;
+  margin-bottom: 37px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 26px;
+  }
 }
 
-.insurance__wrapper {
-  margin-bottom: 40px;
-}
+// .insurance__wrapper {
+  // margin-bottom: 37px;
+// }
 
 .insurance__heading {
-  margin: 60px 0 20px;
+  margin: 0 0 21px;
   text-align: center;
 
   @include media-breakpoint-up(lg) {
     text-align: left;
-    margin: 150px 0 100px;
+    margin: 0 0 100px;
   }
 }
 
@@ -21,12 +26,13 @@
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 0;
+    padding-left: 6px;
   }
 }
 
 .insurance__text {
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0 0 39px;
   padding: 0 25px;
 
   @include media-breakpoint-up(lg) {
@@ -37,7 +43,7 @@
 }
 
 .insurance__list {
-  margin: 0 15px 0 23px;
+  margin: 0 15px 0 22px;
 
   @include media-breakpoint-up(lg) {
     margin-left: 0;
@@ -45,7 +51,7 @@
   }
 }
 
-.insurance__list-item {
+.insurance__list li {
   margin-bottom: 20px;
 
   &:last-child {
@@ -53,12 +59,20 @@
   }
 }
 
+// .insurance__list-item {
+//   margin-bottom: 20px;
+
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+
 .insurance__price-wrapper {
   padding-right: 0;
   padding-left: 0;
 
   @include media-breakpoint-up(lg) {
-    padding-top: 330px;
+    padding-top: 181px;
     padding-right: 80px;
   }
 }
@@ -72,10 +86,10 @@
   &::before {
     content: "";
     display: block;
-    width: 201px;
-    height: 183px;
+    width: 198px;
+    height: 179px;
     position: absolute;
-    left: calc(50% + 27px);
+    left: calc(50% + 25px);
     top: -200px;
     transform: translateX(-50%);
     background-image: url("../img/insurance-lock-mobile.png");
@@ -97,6 +111,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    z-index: -1;
   }
 
   @include media-breakpoint-up(lg) {

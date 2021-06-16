@@ -1,5 +1,10 @@
 .paid-services {
   overflow: hidden;
+  margin-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 50px;
+  }
 }
 
 .paid-services__wrapper {
@@ -127,19 +132,19 @@
 
 .packaging__heading {
   color: $white;
-  padding: 60px 10px 40px;
+  padding: 61px 10px 40px;
   text-align: center;
   margin: 0;
 
   @include media-breakpoint-up(lg) {
     text-align: left;
-    padding: 150px 0 98px;
+    padding: 155px 0 98px;
   }
 }
 
 .packaging__list {
   @include list-reset;
-  padding-bottom: 57px;
+  padding-bottom: 41px;
 
   @include media-breakpoint-up(lg) {
     padding-bottom: 154px;
