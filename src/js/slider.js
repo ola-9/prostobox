@@ -109,7 +109,7 @@
         prevEl: ".reviews .slider-nav__btn--prev",
       },
       pagination: {
-        el: '.reviews-slider__dots',
+        el: '.reviews__slider-dots',
         type: 'bullets',
         bulletClass: 'nav-dots__btn',
         bulletActiveClass: 'nav-dots__btn--active',

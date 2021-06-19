@@ -4,6 +4,7 @@
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 26px;
+    padding-top: 100px;
   }
 }
 
@@ -93,7 +94,8 @@
     width: 312px;
     height: 175px;
     position: absolute;
-    left: -36px;
+    transform: translateX(-50%);
+    left: calc(50% - 47px);
     top: -252px;
     background-image: url("../img/insurance-line-mobile.svg");
     background-position: center;
