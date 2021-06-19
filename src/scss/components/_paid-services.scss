@@ -1,10 +1,5 @@
 .paid-services {
   overflow: hidden;
-  margin-bottom: 60px;
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 50px;
-  }
 }
 
 .paid-services__wrapper {

@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% set siteName = "Prostobox.com - Услуги" %}
+{% set calcWithDescription = true %}
 
 {% block main %}
 
@@ -18,7 +19,7 @@
 
 <main>
 
-  <section class="services section">
+  <section class="services section section--pb mb-6 mb-lg-5">
     <div class="section-xxl">
       <div class="services__wrapper">
         <div class="container">
@@ -102,7 +103,11 @@
     </div>
   </section>
 
-  <section class="paid-services section section--pb">
+  <section class="section section--pb-m section--pb mb-lg-5">
+    {% include "../templates/components/calculator.html" %}
+  </section>
+
+  <section class="paid-services section section--pb-m section--pb mb-lg-5">
     <div class="section-xxl">
       <div class="paid-services__wrapper">
         <div class="container">
