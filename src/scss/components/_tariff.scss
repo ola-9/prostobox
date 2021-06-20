@@ -1,8 +1,9 @@
 .tariff {
   position: relative;
+  padding: 30px;
+  cursor: pointer;
 
   @include block-shadow;
-  padding: 30px;
 
   @include media-breakpoint-up(lg) {
     padding-top: 24px;
@@ -10,6 +11,22 @@
 
   &--active {
     background-color: $yellow;
+
+    .tariffs--with-info & {
+      @include media-breakpoint-up(md) {
+        &::after {
+          content: "";
+          display: block;
+          height: 120px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -120px;
+          background-color: $white;
+          z-index: -1;
+        }
+      }
+    }
   }
 
   &::before {

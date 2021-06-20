@@ -1,7 +1,15 @@
 .slider-nav {
   @include list-reset;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transform: translateY(-20px);
   display: flex;
   justify-content: space-between;
+
+  @include media-breakpoint-up(xl) {
+    transform: translateY(-30px);
+  }
 }
 
 .slider-nav__btn {
