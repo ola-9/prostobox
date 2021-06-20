@@ -9,6 +9,7 @@
   let activeTariff = document.querySelector('.tariff--active');
   let activeTariffInfo = document.querySelector('.tariff-info__tariff--active');
 
+
   const tariffClickHandler = (tariff) => {
     if (tariff === activeTariff) return;
 

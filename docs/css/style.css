@@ -5120,17 +5120,6 @@ a {
       padding-top: 24px; } }
   .tariff--active {
     background-color: #ffe200; }
-    @media (min-width: 768px) {
-      .tariffs--with-info .tariff--active::after {
-        content: "";
-        display: block;
-        height: 120px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -120px;
-        background-color: #ffffff;
-        z-index: -1; } }
   .tariff::before {
     content: "";
     display: block;
@@ -5303,8 +5292,7 @@ a {
     .tariff-info {
       position: relative;
       padding-top: 25px;
-      margin-top: 0;
-      z-index: 1; } }
+      margin-top: 0; } }
 
 .tariff-info__wrapper {
   padding: 0 40px; }

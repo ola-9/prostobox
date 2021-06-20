@@ -153,6 +153,7 @@
   if (tariffs) {
     const swiperTariffs = new Swiper(".swiper-tariffs", {
       roundLengths: true,
+      slideToClickedSlide: true,
       breakpoints: {
         320: {
           slidesPerView: 1.295,
@@ -252,6 +253,7 @@
 
   let activeTariff = document.querySelector('.tariff--active');
   let activeTariffInfo = document.querySelector('.tariff-info__tariff--active');
+
 
   const tariffClickHandler = (tariff) => {
     if (tariff === activeTariff) return;

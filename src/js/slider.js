@@ -47,6 +47,7 @@
   if (tariffs) {
     const swiperTariffs = new Swiper(".swiper-tariffs", {
       roundLengths: true,
+      slideToClickedSlide: true,
       breakpoints: {
         320: {
           slidesPerView: 1.295,
