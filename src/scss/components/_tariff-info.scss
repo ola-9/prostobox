@@ -15,12 +15,16 @@
   padding: 0 40px;
 }
 
+.tariff-info__tariff-list {
+  @include list-reset;
+}
+
 .tariff-info__title {
   display: block;
   margin-bottom: 20px;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -160,7 +164,11 @@
   line-height: 29px;
   font-weight: 500;
   color: $grey-dark;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 10px;
+  }
 
   @include media-breakpoint-up(xl) {
     min-height: 58px;
@@ -200,7 +208,7 @@
   margin-bottom: 20px;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 

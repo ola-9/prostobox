@@ -1,0 +1,243 @@
+(function() {
+  'use strict';
+
+  const nav = document.querySelector('.main-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+
+  navToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    navToggle.classList.toggle('nav-toggle--opened');
+    nav.classList.toggle('main-nav--opened');
+  });
+
+})();
+
+(function() {
+  'use strict';
+
+  const reviews = document.querySelectorAll('.review');
+
+  if (reviews.length === 0) return;
+
+  const setBtnDisabled = (btn) => {
+    btn.classList.add('review__gallery-btn--disabled');
+  }
+
+  const setBtnEnabled = (btn) => {
+    btn.classList.remove('review__gallery-btn--disabled');
+  }
+
+  const addCurrentSlideClass = (currentSlide) => {
+    currentSlide.classList.add('review__gallery-slide--current');
+  }
+
+  const removeCurrentSlideClass = (currentSlide) => {
+    currentSlide.classList.remove('review__gallery-slide--current');
+  }
+
+  const initReviewSlider = (review) => {
+    const nav = review.querySelector('.review__gallery-nav');
+
+    if (!nav) return;
+
+    const prev = review.querySelector('.review__gallery-btn--prev');
+    const next = review.querySelector('.review__gallery-btn--next');
+    const slides = review.querySelectorAll('.review__gallery-slide');
+
+    if (!slides) return;
+
+    if (slides.length === 1) {
+      nav.classList.add('review__gallery-nav--hidden');
+      return;
+    }
+
+    let currentSlide = review.querySelector('.review__gallery-slide--current');
+
+    if (!currentSlide) {
+      currentSlide = slides[0];
+      addCurrentSlideClass(currentSlide);
+    }
+
+    if (currentSlide === slides[0]) {
+      setBtnDisabled(prev);
+    }
+
+    if (currentSlide === slides[slides.length - 1]) {
+      setBtnDisabled(next);
+    }
+
+    prev.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (currentSlide === slides[0]) return;
+
+      setBtnEnabled(next);
+
+      removeCurrentSlideClass(currentSlide);
+      addCurrentSlideClass(currentSlide.previousElementSibling);
+      currentSlide = review.querySelector('.review__gallery-slide--current');
+
+      if (currentSlide === slides[0]) {
+        setBtnDisabled(prev);
+      }
+    });
+
+    next.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentSlide === slides[slides.length - 1]) return;
+
+      setBtnEnabled(prev);
+
+      removeCurrentSlideClass(currentSlide);
+      addCurrentSlideClass(currentSlide.nextElementSibling);
+      currentSlide = review.querySelector('.review__gallery-slide--current');
+
+      if (currentSlide === slides[slides.length - 1]) {
+        setBtnDisabled(next);
+      }
+    });
+  }
+
+  for (let i = 0; i < reviews.length; i++) {
+    initReviewSlider(reviews[i]);
+  }
+
+})();
+
+(function() {
+  'use strict';
+
+  const advantages = document.querySelector('.advantages');
+  if (advantages) {
+    const swiperAdvantages = new Swiper(".swiper-advantages", {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  }
+
+  const promoSLider = document.querySelector('.promo-slider');
+
+  if (promoSLider) {
+    const swiperPromoSLider = new Swiper(".swiper-promo-slider", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        768: {
+          spaceBetween: 40
+        },
+        992: {
+          spaceBetween: 82
+        },
+      },
+      navigation: {
+        disabledClass: "slider-nav__btn--disabled",
+        nextEl: ".promo-slider .slider-nav__btn--next",
+        prevEl: ".promo-slider .slider-nav__btn--prev",
+      },
+      pagination: {
+        el: '.promo-slider__dots',
+        type: 'bullets',
+        bulletClass: 'nav-dots__btn',
+        bulletActiveClass: 'nav-dots__btn--active',
+        bulletElement: 'button',
+        clickable: true
+      },
+    });
+  }
+
+  const tariffs = document.querySelector('.tariffs');
+
+  if (tariffs) {
+    const swiperTariffs = new Swiper(".swiper-tariffs", {
+      roundLengths: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.295,
+          spaceBetween: 20,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: 2.4,
+          spaceBetween: 20,
+          centeredSlides: false,
+        },
+        992: {
+          slidesPerView: 3.42,
+          spaceBetween: 20
+        },
+        1240: {
+          slidesPerView: 4.42,
+          spaceBetween: 27,
+        }
+      },
+      navigation: {
+        disabledClass: "slider-nav__btn--disabled",
+        nextEl: ".tariffs .slider-nav__btn--next",
+        prevEl: ".tariffs .slider-nav__btn--prev",
+      },
+    });
+  }
+
+  const reviews = document.querySelector('.swiper-reviews');
+
+  if (reviews) {
+    const reviewsWrapper = document.querySelector('.reviews__wrapper');
+    const swiperReviews = new Swiper(".swiper-reviews", {
+      roundLengths: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+          centeredSlides: true,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+          centeredSlides: false,
+        },
+        1240: {
+          slidesPerView: 2.132,
+          spaceBetween: 102,
+          centeredSlides: false,
+        },
+      },
+      navigation: {
+        disabledClass: "slider-nav__btn--disabled",
+        nextEl: ".reviews .slider-nav__btn--next",
+        prevEl: ".reviews .slider-nav__btn--prev",
+      },
+      pagination: {
+        el: '.reviews__slider-dots',
+        type: 'bullets',
+        bulletClass: 'nav-dots__btn',
+        bulletActiveClass: 'nav-dots__btn--active',
+        bulletElement: 'button',
+        clickable: true
+      },
+
+      on: {
+        slidePrevTransitionStart: function () {
+          reviewsWrapper.classList.remove('reviews__wrapper--end');
+        },
+        slideNextTransitionStart: function () {
+          reviewsWrapper.classList.remove('reviews__wrapper--start');
+        },
+        reachBeginning: function () {
+          reviewsWrapper.classList.add('reviews__wrapper--start');
+        },
+        reachEnd: function () {
+          reviewsWrapper.classList.add('reviews__wrapper--end');
+        },
+      }
+    });
+  }
+
+})();

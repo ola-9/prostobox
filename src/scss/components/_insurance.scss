@@ -1,10 +1,8 @@
 .insurance {
   overflow: hidden;
-  margin-bottom: 37px;
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 26px;
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
 
@@ -18,7 +16,7 @@
   }
 }
 
-.insurace__text-wrapper {
+.insurance__text-wrapper {
   margin-bottom: 203px;
 
   @include media-breakpoint-up(lg) {
@@ -75,8 +73,8 @@
   &::before {
     content: "";
     display: block;
-    width: 198px;
-    height: 179px;
+    width: 183px;
+    height: 167px;
     position: absolute;
     left: calc(50% + 25px);
     top: -200px;
@@ -108,8 +106,8 @@
     text-align: left;
 
     &::before {
-      width: 261px;
-      height: 242px;
+      width: 254px;
+      height: 227px;
       transform: translateX(50%);
       left: calc(50% - 50px);
       top: -244px;

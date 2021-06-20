@@ -22,7 +22,11 @@
   line-height: 22px;
   font-weight: 400;
 
-  &:first-child::after {
+  a {
+    color: $grey-dark;
+  }
+
+  &:not(:last-child)::after {
     content: "/";
     width: 22px;
     height: 22px;

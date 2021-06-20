@@ -182,71 +182,80 @@
 
       {% if calcWithDescription %}
         <div class="tariffs__description tariff-info">
-          <div class="tariff-info__wrapper">
-            <b class="tariff-info__title heading-tertiary">Включает в себя:</b>
+          <ul class="tariff-info__tariff-list">
+            <li class="tariff-info__tariff">
+              <div class="tariff-info__wrapper">
+                <b class="tariff-info__title heading-tertiary">Включает в себя:</b>
+                <ul class="tariff-info__list tariff-info__list--5 list">
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Участие&nbsp;Почты России</b>
+                    <span class="tariff-info__value blue">нет</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Отслеживание посылки</b>
+                    <span class="tariff-info__value blue">на нашем сайте</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Частота отправления</b>
+                    <span class="tariff-info__value blue">2 раза в неделю каждый понедельник и&nbsp;четверг<br> в 12:00 по времени в&nbsp;штате Делавэр</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Страховка</b>
+                    <span class="tariff-info__value blue">$3 на посылки до&nbsp;$100 и $5 на&nbsp;посылки&nbsp;до&nbsp;$500</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Таможенный лимит</b>
+                    <span class="tariff-info__value blue">до 200&nbsp;евро и&nbsp;31&nbsp;кг на&nbsp;одну посылку пошлиной не&nbsp;облагаются</span>
+                  </li>
+                </ul>
 
-            <ul class="tariff-info__list tariff-info__list--5 list">
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Участие&nbsp;Почты России</b>
-                <span class="tariff-info__value blue">нет</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Отслеживание посылки</b>
-                <span class="tariff-info__value blue">на нашем сайте</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Частота отправления</b>
-                <span class="tariff-info__value blue">2 раза в неделю каждый понедельник и&nbsp;четверг<br> в 12:00 по времени в&nbsp;штате Делавэр</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Страховка</b>
-                <span class="tariff-info__value blue">$3 на посылки до&nbsp;$100 и $5 на&nbsp;посылки&nbsp;до&nbsp;$500</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Таможенный лимит</b>
-                <span class="tariff-info__value blue">до 200&nbsp;евро и&nbsp;31&nbsp;кг на&nbsp;одну посылку пошлиной не&nbsp;облагаются</span>
-              </li>
-            </ul>
+                <ul class="tariff-info__list tariff-info__list--bg tariff-info__list--4 list">
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Максимальный вес для ПВЗ</b>
+                    <span class="tariff-info__value blue">31 кг</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Максимальный вес для постамата</b>
+                    <span class="tariff-info__value blue">15 кг</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Максимальный размер для ПВЗ</b>
+                    <span class="tariff-info__value blue">сумма трех сторон 230&nbsp;см, длина меньше 180&nbsp;см</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__term">Максимальный размер для постамата</b>
+                    <span class="tariff-info__value blue">62,5×56,5×40 см</span>
+                  </li>
+                </ul>
 
-            <ul class="tariff-info__list tariff-info__list--bg tariff-info__list--4 list">
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Максимальный вес для ПВЗ</b>
-                <span class="tariff-info__value blue">31 кг</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Максимальный вес для постамата</b>
-                <span class="tariff-info__value blue">15 кг</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Максимальный размер для ПВЗ</b>
-                <span class="tariff-info__value blue">сумма трех сторон 230&nbsp;см, длина меньше 180&nbsp;см</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__term">Максимальный размер для постамата</b>
-                <span class="tariff-info__value blue">62,5×56,5×40 см</span>
-              </li>
-            </ul>
+                <ul class="tariff-info__list tariff-info__list--2 list">
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__heading blue">Доставка с предварительным оформлением.</b>
+                    <span>Необходимо заполнить декларацию,адрес и&nbsp;данные получателя до&nbsp;прихода посылки на&nbsp;склад.</span>
+                  </li>
+                  <li class="tariff-info__item">
+                    <b class="tariff-info__heading">Обязательная полная страховка от&nbsp;утери и&nbsp;кражи вложений.</b>
+                  </li>
+                </ul>
+              </div>
 
-            <ul class="tariff-info__list tariff-info__list--2 list">
-              <li class="tariff-info__item">
-                <b class="tariff-info__heading blue">Доставка с предварительным оформлением.</b>
-                <span>Необходимо заполнить декларацию,адрес и&nbsp;данные получателя до&nbsp;прихода посылки на&nbsp;склад.</span>
-              </li>
-              <li class="tariff-info__item">
-                <b class="tariff-info__heading">Обязательная полная страховка от&nbsp;утери и&nbsp;кражи вложений.</b>
-              </li>
-            </ul>
-          </div>
+              <div class="tariff-info__limits">
+                <b class="tariff-info__limits-title heading-tertiary">Ограничения:</b>
+                <ul class="tariff-info__list tariff-info__list--4 tariff-info__limits-list list">
+                  <li>Обязательно предварительное оформление посылки, до прихода на склад</li>
+                  <li>Без объединения: не&nbsp;более одной входящей в каждой исходящей посылке</li>
+                  <li>Без переупаковки или&nbsp;переупаковка по нашему усмотрению</li>
+                  <li>Доставка возможна до&nbsp;ПВЗ&nbsp;(пункта выдачи заказа) и&nbsp;в&nbsp;постаматы</li>
+                </ul>
+              </div>
+            </li>
 
-          <div class="tariff-info__limits">
-            <b class="tariff-info__limits-title heading-tertiary">Ограничения:</b>
-            <ul class="tariff-info__list tariff-info__list--4 tariff-info__limits-list list">
-              <li>Обязательно предварительное оформление посылки, до прихода на склад</li>
-              <li>Без объединения: не&nbsp;более одной входящей в каждой исходящей посылке</li>
-              <li>Без переупаковки или&nbsp;переупаковка по нашему усмотрению</li>
-              <li>Доставка возможна до&nbsp;ПВЗ&nbsp;(пункта выдачи заказа) и&nbsp;в&nbsp;постаматы</li>
-            </ul>
-          </div>
+            <li class="tariff-info__tariff"></li>
+            <li class="tariff-info__tariff"></li>
+            <li class="tariff-info__tariff"></li>
+            <li class="tariff-info__tariff"></li>
+
+          </ul>
         </div>
       {% endif %}
     </div>

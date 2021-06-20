@@ -6,14 +6,14 @@
 {% block main %}
 
 <style>
-  /* html {
-    background-image: url("img/services.png");
-    background-position: center top;
+  {# html {
+    background-image: url("img/services-mobile.png");
+    background-position: center top 0;
     background-repeat: no-repeat;
   }
   body {
     opacity: 0.5;
-  } */
+  } #}
 
 </style>
 
@@ -24,7 +24,7 @@
       <div class="services__wrapper">
         <div class="container">
           <ul class="breadcrumbs">
-            <li class="breadcrumbs__item">Главная</li>
+            <li class="breadcrumbs__item"><a href="#">Главная</a></li>
             <li class="breadcrumbs__item breadcrumbs__item--active">Услуги</li>
           </ul>
           <h1 class="services__heading heading-primary">Услуги Простобокса</h1>
@@ -108,7 +108,7 @@
   </section>
 
   {# <section class="paid-services section section--pb-m section--pb mb-lg-5"> #}
-  <section class="paid-services section mb-lg-5">
+  <section class="paid-services section section--pb-m">
 
     <div class="section-xxl">
       <div class="paid-services__wrapper">
@@ -177,43 +177,45 @@
               <p class="paid-services__cost-note">+ стоимость <br> пересылки</p>
             </li>
           </ul>
-          <h3 class="packaging__heading heading-primary">Дополнительная упаковка</h3>
-          <ul class="packaging__list">
-            <li class="packaging__item">
-              <div class="packaging__item-wrapper">
-                <p class="packaging__desc">Многослойная <br> защитная плёнка</p>
-                <p class="packaging__cost">$4</p>
-              </div>
-            </li>
-            <li class="packaging__item">
-              <div class="packaging__item-wrapper">
-                <p class="packaging__desc">Упаковка в пакет</p>
-                <p class="packaging__cost">$3</p>
-              </div>
-            </li>
-            <li class="packaging__item">
-              <div class="packaging__item-wrapper">
-                <p class="packaging__desc">Упаковка в коробку с&nbsp;двойными стенками</p>
-                <p class="packaging__cost">$5</p>
-              </div>
-            </li>
-            <li class="packaging__item">
-              <div class="packaging__item-wrapper">
-                <p class="packaging__desc">Наклейки “Обращаться осторожно” и “Хрупкий груз”</p>
-                <p class="packaging__cost">$0.35</p>
-                <p class="packaging__cost-note">за одну наклейку</p>
-              </div>
-            </li>
-          </ul>
+          <div class="paid-services__packaging packaging">
+            <h3 class="packaging__heading heading-primary">Дополнительная упаковка</h3>
+            <ul class="packaging__list">
+              <li class="packaging__item">
+                <div class="packaging__item-wrapper">
+                  <p class="packaging__desc">Многослойная <br> защитная плёнка</p>
+                  <p class="packaging__cost">$4</p>
+                </div>
+              </li>
+              <li class="packaging__item">
+                <div class="packaging__item-wrapper">
+                  <p class="packaging__desc">Упаковка в пакет</p>
+                  <p class="packaging__cost">$3</p>
+                </div>
+              </li>
+              <li class="packaging__item">
+                <div class="packaging__item-wrapper">
+                  <p class="packaging__desc">Упаковка в коробку с&nbsp;двойными стенками</p>
+                  <p class="packaging__cost">$5</p>
+                </div>
+              </li>
+              <li class="packaging__item">
+                <div class="packaging__item-wrapper">
+                  <p class="packaging__desc">Наклейки “Обращаться осторожно” и “Хрупкий груз”</p>
+                  <p class="packaging__cost">$0.35</p>
+                  <p class="packaging__cost-note">за одну наклейку</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="insurance section section--pb">
+  <section class="insurance section section--pb mb-5 mb-lg-2">
     <div class="container">
       <div class="row">
-        <div class="insurace__text-wrapper col-lg-6">
+        <div class="insurance__text-wrapper col-lg-6">
           <h2 class="insurance__heading heading-primary">Страховка</h2>
           <p class="insurance__text heading-secondary"><b class="blue">Страховка от утери обязательна</b> для всех
             тарифов.</p>
@@ -263,7 +265,7 @@
             ускорит прохождение посылкой таможни.
           </p>
             <p class="customs__cost">
-              Стоимость услуги – <span class="blue">4% от&nbsp;суммы таможенного сбора.</span>
+              Стоимость услуги – <span class="blue">4%<br> от&nbsp;суммы таможенного сбора.</span>
               <button class="question-mark"
                 data-tippy-content="Например, если ваш товар стоит 300 долларов, пошлина будет составлять примерно $8.33 + фиксированный сбор таможни $6.80, то наша комиссия будет составлять примерно $0,6">
                 <svg width="20" height="20" viewBox="0 0 20 20">
