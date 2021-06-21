@@ -6,10 +6,8 @@
   text-align: left;
 
   @include media-breakpoint-up(md) {
-    position: relative;
     padding-top: 25px;
     margin-top: 0;
-    // z-index: 1;
   }
 }
 
@@ -22,7 +20,9 @@
 }
 
 .tariff-info__tariff {
+  position: relative;
   display: none;
+  z-index: 1;
 
   &--active {
     display: block;

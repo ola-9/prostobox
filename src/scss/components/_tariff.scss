@@ -3,6 +3,7 @@
   padding: 30px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s ease;
 
   @include block-shadow;
 
@@ -10,8 +11,33 @@
     padding-top: 24px;
   }
 
+  .tariffs--with-info & {
+    &::after {
+      content: "";
+      display: block;
+      opacity: 0;
+    }
+  }
+
   &--active {
     background-color: $yellow;
+
+    .tariffs--with-info & {
+      @include media-breakpoint-up(md) {
+        &::after {
+          position: absolute;
+          left: 0;
+          top: calc(100% - 40px);
+          height: 100%;
+          width: 100%;
+          background-image: linear-gradient(to bottom, $white, $white 50%, transparent);
+          // background-color: $white;
+          opacity: 1;
+          transition: opacity 1s ease;
+          z-index: -1;
+        }
+      }
+    }
   }
 
   &::before {
