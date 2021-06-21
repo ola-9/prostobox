@@ -2,6 +2,7 @@
   position: relative;
   padding: 30px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   @include block-shadow;
 
@@ -9,32 +10,8 @@
     padding-top: 24px;
   }
 
-  // &::after {
-  //   content: "";
-  //   opacity: 0;
-  //   transition: opacity 0.8s ease;
-  // }
-
   &--active {
     background-color: $yellow;
-
-    // .tariffs--with-info & {
-    //   @include media-breakpoint-up(md) {
-    //     &::after {
-    //       // content: "";
-    //       display: block;
-    //       height: 120px;
-    //       position: absolute;
-    //       left: 0;
-    //       right: 0;
-    //       bottom: -120px;
-    //       background-color: $white;
-    //       z-index: -1;
-    //       opacity: 1;
-
-    //     }
-    //   }
-    // }
   }
 
   &::before {
