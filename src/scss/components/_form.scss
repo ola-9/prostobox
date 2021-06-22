@@ -74,3 +74,28 @@
     color: rgba(#bfbfbf, 1);
   }
 }
+
+.form__dropdown-combo {
+  position: relative;
+  width: 100%;
+
+  ul {
+    @include list-reset;
+    @include block-shadow;
+
+    top: 100%;
+    left: 0;
+    max-width: 100%;
+    max-height: 330px;
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+    z-index: 11;
+    overflow-y: scroll;
+
+    li + li {
+      margin-top: 5px;
+    }
+  }
+}
