@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% set siteName = "Prostobox.com - Услуги" %}
+{% set calcWithDescription = true %}
+
+{% block main %}
+
+<style>
+  {# html {
+    background-image: url("img/how-to-s.png");
+    background-position: center top 0;
+    background-repeat: no-repeat;
+  }
+  body {
+    opacity: 0.5;
+  } #}
+
+</style>
+
+<main>
+  <section class="section how-to-buy">
+    <div class="section-xxl">
+      <div class="how-to-buy__wrapper">
+        <div class=" container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+            <li class="breadcrumbs__item breadcrumbs__item--active">Как покупать в США</li>
+          </ul>
+          <h1 class="how-to-buy__heading heading-primary">Как покупать в&nbsp;США?</h1>
+          <p class="how-to-buy__desc">
+            Магазины США часто не&nbsp;доставляют товары в&nbsp;Россию, но это не проблема.
+            Мы поможем покупать по лучшим ценам и&nbsp;экономить на доставке.
+            Наш новый современный склад в&nbsp;Делавере подойдет для&nbsp;покупок
+            в&nbsp;магазинах Америки. Мы получим ваши посылки и отправим их
+            к&nbsp;вам домой. Быстро и дёшево.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% endblock %}
