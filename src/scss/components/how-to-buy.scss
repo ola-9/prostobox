@@ -1,16 +1,49 @@
-.how-to-buy {
-  overflow: hidden;
-}
-
 .how-to-buy__wrapper {
   border-radius: 20px;
   background-color: $white;
-  padding: 0 8px;
+  padding: 0 8px 300px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    transform: translateX(50%);
+    left: calc(50% - 278px);
+    width: 279px;
+    height: 238px;
+    bottom: 30px;
+    background-image: url("../img/how-to-buy-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 161px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 590px;
+      height: 527px;
+      top: 74px;
+      right: 110px;
+      background-image: url("../img/how-to-buy.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
 }
 
 .how-to-buy__heading {
   margin: 0 0 20px;
   text-align: center;
+  position: relative;
 
   @include media-breakpoint-up(lg) {
     text-align: left;
@@ -20,50 +53,17 @@
 }
 
 .how-to-buy__desc {
-  position: relative;
   text-align: center;
   margin: 0;
   font-size: 14px;
   line-height: 25px;
-  padding-bottom: 300px;
-  // z-index: 2;
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    transform: translateX(-50%);
-    left: calc(50%);
-    width: 360px;
-    height: 379px;
-    bottom: -65px;
-    background-image: url("../img/how-to-buy-mobile.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
+  position: relative;
 
   @include media-breakpoint-up(lg) {
     text-align: left;
-    max-width: 730px;
+    max-width: 63%;
     font-size: 16px;
     line-height: 29px;
-    padding-bottom: 161px;
     font-weight: 400;
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 949px;
-      height: 736px;
-      top: -291px;
-      transform: translateX(50%);
-      left: calc(50% - 294px);
-      background-image: url("../img/how-to-buy.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      // box-shadow: 0 30px 50px rgba(0, 0, 0, 0.05);
-      z-index: 3;
-    }
   }
 }
