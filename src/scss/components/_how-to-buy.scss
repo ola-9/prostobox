@@ -1,3 +1,9 @@
+.how-to-buy {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 158px;
+  }
+}
+
 .how-to-buy__wrapper {
   border-radius: 20px;
   background-color: $white;
