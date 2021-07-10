@@ -1,0 +1,105 @@
+.how-details {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 1144px;
+    top: -175px;
+    left: 6px;
+    position: absolute;
+    background-image: url("../img/how-to-line-mobile.svg");
+  }
+}
+
+.how-details__wrapper {
+  padding: 12px 7px 0 40px;
+
+  &--shipment {
+    padding-top: 210px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 222px;
+      height: 195px;
+      transform: translateX(50%);
+      top: 5px;
+      left: calc(50% - 222px);
+      position: absolute;
+      background-image: url("../img/how-to-shopping-mobile.png");
+    }
+  }
+}
+
+.how-details__container {
+  padding-left: 26px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    top: -77px;
+    left: -76px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: url("../img/how-to-airplane-mobile.png");
+  }
+}
+
+.how-details__button-wrapper {
+  padding: 0 23px;
+  margin-bottom: 44px;
+}
+
+.how-details__buttons-wrapper {
+  padding-top: 11px;
+  margin-bottom: 43px;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 23px;
+  }
+}
+
+.how-details__brief {
+  margin: 0 0 9px;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  color: $black-1;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: -40px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
+    box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 40px;
+  }
+}
+
+.how-details__desc {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  color: $grey-dark;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 40px;
+  }
+}
