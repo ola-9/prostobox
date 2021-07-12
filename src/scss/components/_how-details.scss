@@ -1,5 +1,12 @@
 .how-details {
   position: relative;
+  max-width: 360px;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    max-width: none;
+    margin: 0;
+  }
 
   &::before {
     content: "";
@@ -69,7 +76,7 @@
         content: "";
         position: absolute;
         width: 1026px;
-        height: 578px;
+        height: 587px;
         display: block;
         left: -49px;
         top: -80px;
