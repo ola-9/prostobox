@@ -41,19 +41,6 @@
         top: -214px;
         background-image: url("../img/how-to-airplane.png");
       }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 599px;
-        height: 953px;
-        display: block;
-        left: 30px;
-        transform: translateY(-50%);
-        top: calc(-50% + 308px);
-        background-image: url("../img/how-to-line-1.svg");
-        z-index: -1;
-      }
     }
 
     &--us-prices {
@@ -71,30 +58,53 @@
         background-image: url("../img/how-to-shopping.png");
         z-index: 1;
       }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 1026px;
-        height: 587px;
-        display: block;
-        left: -49px;
-        top: -80px;
-        background-image: url("../img/how-to-line-2.svg");
-      }
     }
   }
 }
 
 .how-details__block-container {
+  &--shipment {
+    position: relative;
+  }
+
   @include media-breakpoint-up(lg) {
     padding: 0;
     margin-bottom: 108px;
+
+    &--shipment {
+      &::before {
+        content: "";
+        position: absolute;
+        // width: 1026px;
+        width: 168%;
+        height: 1500px;
+        display: block;
+        bottom: calc(100% + 47px);
+        transform: translateX(-50%);
+        left: calc(-50% + 157px);
+        background-image: url("../img/how-to-line.svg");
+        z-index: -1;
+      }
+    }
   }
 }
 
 .how-details__wrapper {
   padding: 12px 7px 20px 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    left: 0;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
+    box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
+  }
 
   &--shipment {
     padding-top: 210px;
@@ -111,6 +121,8 @@
       left: calc(50% - 222px);
       position: absolute;
       background-image: url("../img/how-to-shopping-mobile.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
   }
 
@@ -181,18 +193,18 @@
   color: $black-1;
   position: relative;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: -40px;
-    position: absolute;
-    border-radius: 50%;
-    background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
-    box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
-  }
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   width: 20px;
+  //   height: 20px;
+  //   top: 0;
+  //   left: -40px;
+  //   position: absolute;
+  //   border-radius: 50%;
+  //   background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
+  //   box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
+  // }
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 40px;
