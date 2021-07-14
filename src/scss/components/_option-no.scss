@@ -1,0 +1,44 @@
+.option-no {
+  color: $white;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+}
+
+.option-no__wrapper {
+  border-radius: 20px;
+  background-color: $grey-dark;
+  box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.option-no__item-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+
+  @include media-breakpoint-up(lg) {
+    font-family: "Jost", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+
+.option-no__item-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+.option-no__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
