@@ -15,19 +15,6 @@
   z-index: 1;
   cursor: pointer;
 
-  &--medium {
-    min-width: 285px;
-  }
-
-  &--medium-2 {
-    padding-top: 23px;
-    padding-bottom: 23px;
-  }
-
-  &--small {
-    min-width: auto;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -60,6 +47,20 @@
     transition: none;
   }
 
+  &--medium {
+    min-width: 285px;
+  }
+
+  &--medium-2 {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  &--small {
+    min-width: 90px;
+    padding: 20px 15px 21px;
+  }
+
   &:hover {
     &::before {
       opacity: 0;
@@ -79,6 +80,11 @@
 
   &--white {
     color: $blue;
+    background-color: $white;
+
+    &:active {
+      color: $white;
+    }
 
     &::before {
       content: "";

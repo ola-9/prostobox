@@ -5,6 +5,7 @@
 
   @include media-breakpoint-up(lg) {
     max-width: none;
+    padding-top: 94px;
     margin: 0;
   }
 
@@ -76,6 +77,10 @@
       position: absolute;
       background-image: url("../img/how-to-line-mobile.svg");
       z-index: -1;
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
     }
   }
 
@@ -83,21 +88,23 @@
     padding: 0;
     margin-bottom: 108px;
 
-    &--shipment {
-      &::before {
-        content: "";
-        position: absolute;
-        // width: 1026px;
-        width: 168%;
-        height: 1500px;
-        display: block;
-        bottom: calc(100% + 47px);
-        transform: translateX(-50%);
-        left: calc(-50% + 157px);
-        background-image: url("../img/how-to-line.svg");
-        z-index: -1;
-      }
-    }
+    // &--shipment {
+      // &::before {
+  //       content: "";
+  //       position: absolute;
+  //       // width: 1026px;
+  //       width: 168.2%;
+  //       height: 1520px;
+  //       display: block;
+  //       top: auto;
+  //       bottom: calc(100% + 28px);
+  //       transform: translateX(-50%);
+  //       left: calc(-50% + 158px);
+  //       background-image: url("../img/how-to-line.svg");
+  //       z-index: -1;
+  //       background-size: 100%;
+  //     }
+    // }
   }
 }
 
@@ -259,20 +266,8 @@
   line-height: 23px;
   font-weight: 700;
   color: $black-1;
+  letter-spacing: 0;
   position: relative;
-
-  // &::before {
-  //   content: "";
-  //   display: block;
-  //   width: 20px;
-  //   height: 20px;
-  //   top: 0;
-  //   left: -40px;
-  //   position: absolute;
-  //   border-radius: 50%;
-  //   background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
-  //   box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
-  // }
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 40px;
@@ -297,9 +292,30 @@
   color: $grey-dark;
 
   @include media-breakpoint-up(lg) {
-    // margin-bottom: 69px;
     font-size: 16px;
     line-height: 29px;
     padding-right: 35px;
+  }
+}
+
+
+.how-details__lines {
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 82.75%;
+      height: 103%;
+      min-height: 1520px;
+      display: block;
+      top: -31%;
+      left: -40px;
+      background-image: url("../img/how-to-line.svg");
+      z-index: -1;
+      background-size: 100% 100%;
+      background-position: center top;
+    }
   }
 }
