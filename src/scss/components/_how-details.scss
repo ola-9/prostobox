@@ -8,22 +8,22 @@
     margin: 0;
   }
 
-  &::before {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 1144px;
-    top: -175px;
-    left: 6px;
-    position: absolute;
-    background-image: url("../img/how-to-line-mobile.svg");
-  }
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   width: 70px;
+  //   height: 1144px;
+  //   top: -175px;
+  //   left: 6px;
+  //   position: absolute;
+  //   background-image: url("../img/how-to-line-mobile.svg");
+  // }
 
-  @include media-breakpoint-up(lg) {
-    &::before {
-      display: none;
-    }
-  }
+  // @include media-breakpoint-up(lg) {
+  //   &::before {
+  //     display: none;
+  //   }
+  // }
 }
 
 .how-details__block-wrapper {
@@ -65,6 +65,18 @@
 .how-details__block-container {
   &--shipment {
     position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 1144px;
+      top: calc(-240% - 17px);
+      left: 0;
+      position: absolute;
+      background-image: url("../img/how-to-line-mobile.svg");
+      z-index: -1;
+    }
   }
 
   @include media-breakpoint-up(lg) {
@@ -93,7 +105,7 @@
   padding: 12px 7px 20px 40px;
   position: relative;
 
-  &::before {
+  &::after {
     content: "";
     display: block;
     width: 20px;
@@ -104,6 +116,12 @@
     border-radius: 50%;
     background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
     box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
+  }
+
+  &--us-prices {
+    &::after {
+      left: 35px;
+    }
   }
 
   &--shipment {
@@ -124,6 +142,11 @@
       background-repeat: no-repeat;
       background-size: 100%;
     }
+
+    &::after {
+      top: auto;
+      bottom: 27px;
+    }
   }
 
   @include media-breakpoint-up(lg) {
@@ -133,6 +156,20 @@
     &--shipment {
       &::before {
         display: none;
+      }
+    }
+
+    &::after {
+      width: 38px;
+      height: 38px;
+      top: -77px;
+      left: 0;
+      background-image: radial-gradient($white, $white 9px, $grey-dark 10px, $grey-dark 14px, $grey-light-1 15px);
+    }
+
+    &--us-prices {
+      &::after {
+        left: 9px;
       }
     }
   }
@@ -172,15 +209,46 @@
 
   @include media-breakpoint-up(lg) {
     padding: 0;
+
+    &--us-prices {
+      padding: 0 0 0 10px;
+    }
   }
 }
 
 .how-details__buttons-wrapper {
   padding-top: 11px;
   margin-bottom: 43px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    bottom: -44px;
+    right: calc(100% - 20px);
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient($white, $white 5px, $grey-dark 6px, $grey-dark 7px, $grey-light-1 8px);
+    box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
+  }
 
   @include media-breakpoint-up(sm) {
     padding-left: 23px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+
+    &::after {
+      width: 38px;
+      height: 38px;
+      right: auto;
+      left: calc(-100% + 10px);
+      bottom: -135px;
+      background-image: radial-gradient($white, $white 9px, $grey-dark 10px, $grey-dark 14px, $grey-light-1 15px);
+    }
   }
 }
 

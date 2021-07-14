@@ -13,15 +13,25 @@
 }
 
 .parcel__list {
-  // @include list-reset;
   list-style: none;
   padding: 0 14px 46px;
   margin: 0;
 }
 
 .parcel__item {
+  padding-top: 53px;
+
+  &:first-child {
+    padding-top: 44px;
+  }
+
   @include media-breakpoint-up(lg) {
     margin-bottom: 100px;
+    padding-top: 0;
+
+    &:first-child {
+      padding-top: 11px;
+    }
   }
 }
 
@@ -31,11 +41,11 @@
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 21px;
-  padding-top: 44px;
 
   @include media-breakpoint-up(lg) {
     font-size: 30px;
     line-height: 39px;
+    padding: 31px 0 0 24px;
   }
 }
 
@@ -79,5 +89,9 @@
 }
 
 .parcel__button-wrapper {
-  margin-top: 8px;
+  margin-top: 10px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
 }
