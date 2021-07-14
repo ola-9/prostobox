@@ -1,0 +1,16 @@
+.pricing-options {
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-up(sm) {
+    justify-content: flex-start;
+  }
+}
+
+.pricing-options__item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin: 0;
+  }
+}

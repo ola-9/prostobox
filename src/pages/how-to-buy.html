@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% set siteName = "Prostobox.com - Услуги" %}
+{% set calcWithDescription = true %}
+
+{% block main %}
+
+<!-- <style>
+  html {
+    background-image: url("img/how-to-s.png");
+    background-position: center top 0;
+    background-repeat: no-repeat;
+  }
+
+  body {
+    opacity: 0.5;
+  }
+
+</style> -->
+
+<main class="main main__how-to-buy">
+  <section class="how-to-buy section section--pb-m">
+    <div class="section-xxl">
+      <div class="how-to-buy__wrapper">
+        <div class=" container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+            <li class="breadcrumbs__item breadcrumbs__item--active">Как покупать в США</li>
+          </ul>
+          <div class="how-to-buy__text-wrapper">
+            <h1 class="how-to-buy__heading heading-primary">Как покупать в&nbsp;США?</h1>
+            <p class="how-to-buy__desc">
+              Магазины США часто не&nbsp;доставляют товары в&nbsp;Россию, но это не проблема.
+              Мы&nbsp;поможем покупать по лучшим ценам и&nbsp;экономить на доставке.
+              Наш новый современный склад в&nbsp;Делавере подойдет для&nbsp;покупок
+              в&nbsp;магазинах Америки. Мы получим ваши посылки и отправим их
+              к&nbsp;вам домой. Быстро и дёшево.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section how-details">
+    <div class="container">
+      <div class="row justify-content-end how-details__block-wrapper how-details__block-wrapper--free-address">
+        <div class="col-lg-6 how-details__block-container">
+          <div class="how-details__wrapper">
+            <p class="how-details__brief">
+              Получаете <span class="blue">бесплатный адрес</span> в Америке, чтобы магазины приняли вас
+              за Американца.
+            </p>
+            <p class="how-details__desc">
+              После регистрации на нашем сайте у вас будет виртуальный адрес в США,
+              который вы сможете указывать при оформлении заказов
+              в&nbsp;Американских интернет&#8209;магазинах.
+            </p>
+
+          </div>
+          <div class="how-details__button-wrapper">
+            <a class="button button--medium" href="#">Зарегистрироваться</a>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-start how-details__block-wrapper how-details__block-wrapper--us-prices">
+        <div class="col-lg-6 how-details__block-container">
+          <div class="how-details__wrapper how-details__wrapper--us-prices">
+            <div class="how-details__container how-details__container--us-prices">
+              <p class="how-details__brief">
+                <span class="blue">Покупаете</span> в&nbsp;Американском магазине
+                <span class="blue">по ценам для Американцев</span>
+              </p>
+              <p class="how-details__desc">
+                Выбираете нужные товары в&nbsp;магазинах Америки. Расплачиваетесь
+                своей картой и в качестве адреса доставки указываете адрес
+                и телефон нашего склада.
+              </p>
+            </div>
+          </div>
+          <div class="how-details__button-wrapper how-details__button-wrapper--us-prices">
+            <a class="button button--medium" href="#">Что можно покупать?</a>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-lg-6 how-details__block-container how-details__block-container--shipment">
+          <div class="how-details__wrapper how-details__wrapper--shipment">
+            <p class="how-details__brief">Хотите получить самую <span class="blue">выгодную цену</span> на доставку?</p>
+          </div>
+          <div class="how-details__buttons-wrapper pricing-options">
+            <a class="button button--small pricing-options__item" href="#">Да</a>
+            <a class="button button--small button--white pricing-options__item" href="#">Нет</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section parcel">
+    <div class="parcel__wrapper">
+      <div class="container">
+        <ul class="parcel__list">
+          <li class="parcel__item row justify-content-start">
+            <div class="parcel__item-number col-lg-1">01.</div>
+            <div class="parcel__item-text-wrapper col-lg-8">
+              <p class="parcel__item-title">
+                <span class="blue">Регистрируете посылку</span> как только магазин выдал вам трекинг номер (номер
+                отслеживания)
+              </p>
+              <p class="parcel__item-desc">
+                Как только магазин прислал вам трекинг номер – внесите посылку
+                в&nbsp;личный кабинет, заполняете декларацию и адрес доставки (пункт выдачи или постамат)
+                на&nbsp;сайте Простобокс и вам будет доступна самая выгодная цена
+                на&nbsp;доставку.
+              </p>
+              <p class="parcel__item-desc">
+                На этом этапе вы можете положить
+                в вашу посылку сладости, напитки или заказать дополнительную упаковку. Но будьте внимательны, конфеты и
+                напитки пропорционально увеличивают вес вашей посылки. Коме того, можно сразу пополнить счет на
+                примерную
+                сумму доставки и средства
+                за&nbsp;доставку спишутся автоматически после прихода посылки на склад.
+              </p>
+            </div>
+          </li>
+          <li class="parcel__item row justify-content-start">
+            <div class="parcel__item-number col-lg-1">02.</div>
+            <div class="parcel__item-text-wrapper col-lg-8">
+              <p class="parcel__item-title">
+                Посылка прилетает на склад
+              </p>
+              <p class="parcel__item-desc">
+                Вам осталось оплатить доставку, если вы не сделали этого заранее. После оплаты посылка улетит ближайшим
+                рейсом к вам домой.
+              </p>
+            </div>
+          </li>
+          <li class="parcel__item row justify-content-start">
+            <div class="parcel__item-number col-lg-1">03.</div>
+            <div class="parcel__item-text-wrapper col-lg-8">
+              <p class="parcel__item-title">
+                <span class="blue">Получаете посылку</span> через 5-10 дней после отправки из США
+              </p>
+              <a class="button parcel__button-wrapper" href="">Получить адрес в США</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+  <section class="section get-address">
+    <div class="container">
+      <div class="get-address__wrapper row justify-content-end">
+        <div class="get-address__block-wrapper col-lg-6">
+        <div class="get-address__text-wrapper">
+          <p class="get-address__heading heading-secondary">
+            Получите <span class="blue">бесплатный адрес</span> для покупок в США
+          </p>
+        </div>
+        <div class="get-address__button-wrapper">
+          <a class="button button--medium button--medium-2" href="#">Зарегистрироватьcя</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% endblock %}

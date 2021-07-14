@@ -1,0 +1,110 @@
+.how-to-buy {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 158px;
+  }
+}
+
+.how-to-buy__wrapper {
+  border-radius: 20px;
+  background-color: $white;
+  padding: 0 8px 300px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    transform: translateX(50%);
+    right: 50%;
+    width: 360px;
+    height: 379px;
+    bottom: -66px;
+    background-image: url("../img/how-to-buy-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 100px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 360px;
+      height: 379px;
+      transform: translateY(50%);
+      right: 5%;
+      background-image: url("../img/how-to-buy-mobile.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 161px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      transform: none;
+      width: 949px;
+      height: 736px;
+      top: -10px;
+      left: 50%;
+      background-image: url("../img/how-to-buy.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &::before {
+      left: calc(50% - 54px);
+    }
+  }
+}
+
+.how-to-buy__text-wrapper {
+  @include media-breakpoint-up(lg) {
+    padding-top: 83px;
+    // min-width: 70%;
+  }
+}
+
+.how-to-buy__heading {
+  margin: 0 0 20px;
+  text-align: center;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+    margin-bottom: 37px;
+    // max-width: 70%;
+  }
+}
+
+.how-to-buy__desc {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 25px;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+    max-width: 63%;
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 400;
+  }
+
+  // @include media-breakpoint-up(xxl) {
+  //   max-width: 63%;
+  // }
+}
