@@ -1,0 +1,84 @@
+.section-banner {
+  padding-top: 40px;
+  padding-bottom: 56px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 150px 0;
+  }
+}
+
+.section-banner__wrapper {
+  position: relative;
+  padding-top: 240px;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 503px;
+    padding-top: 523px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    min-height: 503px;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 219px;
+    height: 219px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .section-banner--get-address & {
+      background-image: url("../img/man-with-pin-mobile.png");
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 503px;
+      height: 503px;
+
+      .section-banner--get-address & {
+        background-image:
+          url("../img/get-address-check-sign.svg"),
+          url("../img/man-with-pin.png");
+
+        background-size: 482px 342px, 100%;
+        background-position: center top 95px, center;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.section-banner__block-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  @include media-breakpoint-up(xl) {
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
+.section-banner__text-wrapper {
+  padding-top: 15px;
+}
+
+.section-banner__heading {
+  margin: 0;
+  margin-bottom: 35px;
+}

@@ -24,27 +24,6 @@
     &::after {
       display: none;
     }
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   display: block;
-    //   width: 360px;
-    //   height: 379px;
-    //   // transform: translateY(50%);
-    //   right: 5%;
-    //   background-image: url("../img/how-to-buy-mobile.png");
-    //   background-repeat: no-repeat;
-    //   background-size: 100%;
-    // }
-  }
-
-
-
-  @include media-breakpoint-up(xxl) {
-    &::before {
-      // left: calc(50% - 54px);
-    }
   }
 }
 
@@ -108,8 +87,4 @@
     font-size: 16px;
     line-height: 29px;
   }
-
-  // @include media-breakpoint-up(xxl) {
-  //   max-width: 63%;
-  // }
 }
