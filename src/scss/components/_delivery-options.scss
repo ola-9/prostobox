@@ -1,41 +1,57 @@
-.parcel {
+.delivery-options {
   text-align: center;
 
   @include media-breakpoint-up(lg) {
     text-align: left;
-    padding-top: 55px;
   }
 }
 
-.parcel__wrapper {
+.delivery-options__wrapper {
+  padding: 100px 0;
   border-radius: 20px;
   background-color: $white;
 }
 
-.parcel__list {
-  list-style: none;
-  padding: 0 14px 46px;
-  margin: 0;
+.delivery-options__list {
+  @include list-reset;
+  counter-reset: delivery-opts;
 }
 
-.parcel__item {
-  padding-top: 53px;
+.delivery-options__item {
+  position: relative;
+  counter-increment: delivery-opts;
 
-  &:first-child {
-    padding-top: 44px;
+  &::before {
+    font-family: "Jost", "Arial", sans-serif;
+    content: "0"counter(delivery-opts)".";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 0 rgba($black, 0.05);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100px;
+    text-align: center;
+    color: $black-1;
   }
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 100px;
     padding-top: 0;
+    padding-left: 161px;
+    margin-bottom: 100px;
 
-    &:first-child {
-      padding-top: 11px;
-    }
+    // &:first-child {
+    //   padding-top: 11px;
+    // }
   }
 }
 
-.parcel__item-number {
+.delivery-options__item-number {
   font-family: "Jost", "Arial", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -49,16 +65,17 @@
   }
 }
 
-.parcel__item-text-wrapper {
+.delivery-options__item-text-wrapper {
   @include media-breakpoint-up(lg) {
-    padding-left: 58px;
+    max-width: 754px;
   }
 }
 
-.parcel__item-title {
+.delivery-options__item-title {
   font-weight: 400;
   line-height: 29px;
   color: $black-1;
+  letter-spacing: 0;
   margin: 0 0 10px;
 
   @include media-breakpoint-up(lg) {
@@ -70,8 +87,7 @@
   }
 }
 
-.parcel__item-desc {
-  font-weight: 400;
+.delivery-options__item-desc {
   font-size: 14px;
   line-height: 25px;
   color: $grey-dark;
@@ -88,7 +104,7 @@
   }
 }
 
-.parcel__button-wrapper {
+.delivery-options__button-wrapper {
   margin-top: 10px;
 
   @include media-breakpoint-up(lg) {

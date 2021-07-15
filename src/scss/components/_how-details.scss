@@ -8,23 +8,6 @@
     padding-top: 94px;
     margin: 0;
   }
-
-  // &::before {
-  //   content: "";
-  //   display: block;
-  //   width: 70px;
-  //   height: 1144px;
-  //   top: -175px;
-  //   left: 6px;
-  //   position: absolute;
-  //   background-image: url("../img/how-to-line-mobile.svg");
-  // }
-
-  // @include media-breakpoint-up(lg) {
-  //   &::before {
-  //     display: none;
-  //   }
-  // }
 }
 
 .how-details__block-wrapper {
@@ -86,25 +69,11 @@
 
   @include media-breakpoint-up(lg) {
     padding: 0;
-    margin-bottom: 108px;
+    padding-bottom: 108px;
 
-    // &--shipment {
-      // &::before {
-  //       content: "";
-  //       position: absolute;
-  //       // width: 1026px;
-  //       width: 168.2%;
-  //       height: 1520px;
-  //       display: block;
-  //       top: auto;
-  //       bottom: calc(100% + 28px);
-  //       transform: translateX(-50%);
-  //       left: calc(-50% + 158px);
-  //       background-image: url("../img/how-to-line.svg");
-  //       z-index: -1;
-  //       background-size: 100%;
-  //     }
-    // }
+    &--shipment {
+      padding-bottom: 75px;
+    }
   }
 }
 
@@ -288,13 +257,12 @@
   margin: 0;
   font-size: 14px;
   line-height: 25px;
-  font-weight: 400;
   color: $grey-dark;
 
   @include media-breakpoint-up(lg) {
     font-size: 16px;
     line-height: 29px;
-    padding-right: 35px;
+    padding-right: 40px;
   }
 }
 
@@ -307,10 +275,10 @@
       content: "";
       position: absolute;
       width: 82.75%;
-      height: 103%;
+      height: 105%;
       min-height: 1520px;
       display: block;
-      top: -31%;
+      top: -31.5%;
       left: -40px;
       background-image: url("../img/how-to-line.svg");
       z-index: -1;
