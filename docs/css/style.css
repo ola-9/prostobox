@@ -4165,6 +4165,14 @@ a {
     border-radius: 20px;
     z-index: -1;
     transition: none; }
+  .button--medium {
+    min-width: 285px; }
+  .button--medium-2 {
+    padding-top: 23px;
+    padding-bottom: 23px; }
+  .button--small {
+    min-width: 90px;
+    padding: 20px 15px 21px; }
   .button:hover::before {
     opacity: 0; }
   .button:hover::after {
@@ -4174,6 +4182,39 @@ a {
     transition: all 0.5s ease; }
   .button:active {
     background-color: #084fd1; }
+  .button--white {
+    color: #1467ff;
+    background-color: #ffffff; }
+    .button--white:active {
+      color: #ffffff; }
+    .button--white::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      display: block;
+      width: 90%;
+      height: 31px;
+      background-color: rgba(20, 103, 255, 0.4);
+      border-radius: 20px;
+      filter: blur(44px);
+      z-index: -1;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+      will-change: opacity; }
+    .button--white::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: white;
+      border-radius: 20px;
+      z-index: -1;
+      transition: none; }
 
 .slider-nav {
   list-style: none;
@@ -6896,3 +6937,549 @@ a {
     .insurance__pricelist-rate {
       font-size: 30px;
       line-height: 54px; } }
+
+.how-to-buy__wrapper {
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 0 8px 300px;
+  position: relative; }
+  .how-to-buy__wrapper::after {
+    content: "";
+    position: absolute;
+    display: block;
+    transform: translateX(50%);
+    right: 50%;
+    width: 360px;
+    height: 379px;
+    bottom: -66px;
+    background-image: url("../img/how-to-buy-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%; }
+  @media (min-width: 992px) {
+    .how-to-buy__wrapper {
+      padding-bottom: 100px; }
+      .how-to-buy__wrapper::after {
+        display: none; } }
+
+.how-to-buy__text-wrapper {
+  position: relative; }
+  @media (min-width: 992px) {
+    .how-to-buy__text-wrapper {
+      padding-top: 83px; }
+      .how-to-buy__text-wrapper::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 60%;
+        transform: translateY(-50%);
+        width: 301px;
+        height: 287px;
+        right: 0;
+        background-image: url("../img/how-to-buy.png");
+        background-repeat: no-repeat;
+        background-size: 100%; } }
+  @media (min-width: 1240px) {
+    .how-to-buy__text-wrapper {
+      padding-bottom: 61px; }
+      .how-to-buy__text-wrapper::before {
+        width: 602px;
+        height: 574px;
+        top: -13px;
+        right: -103px;
+        transform: none; } }
+
+.how-to-buy__heading {
+  margin: 0 0 20px;
+  text-align: center;
+  position: relative; }
+  @media (min-width: 992px) {
+    .how-to-buy__heading {
+      text-align: left;
+      margin-bottom: 37px; } }
+
+.how-to-buy__desc {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 25px;
+  position: relative; }
+  @media (min-width: 992px) {
+    .how-to-buy__desc {
+      text-align: left;
+      max-width: 63%;
+      font-size: 16px;
+      line-height: 29px; } }
+
+.how-details {
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto; }
+  @media (min-width: 992px) {
+    .how-details {
+      max-width: none;
+      padding-top: 94px;
+      margin: 0; } }
+
+@media (min-width: 992px) {
+  .how-details__block-wrapper--free-address {
+    position: relative; }
+    .how-details__block-wrapper--free-address::before {
+      content: "";
+      position: absolute;
+      width: 592px;
+      height: 661px;
+      display: block;
+      left: -72px;
+      top: -214px;
+      background-image: url("../img/how-to-airplane.png"); }
+  .how-details__block-wrapper--us-prices {
+    position: relative; }
+    .how-details__block-wrapper--us-prices::before {
+      content: "";
+      position: absolute;
+      width: 540px;
+      height: 488px;
+      display: block;
+      transform: translateX(50%);
+      left: calc(50% - 241px);
+      top: -27px;
+      background-image: url("../img/how-to-shopping.png");
+      z-index: 1; } }
+
+.how-details__block-container--shipment {
+  position: relative; }
+  .how-details__block-container--shipment::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 1144px;
+    top: calc(-240% - 17px);
+    left: 0;
+    position: absolute;
+    background-image: url("../img/how-to-line-mobile.svg");
+    z-index: -1; }
+    @media (min-width: 992px) {
+      .how-details__block-container--shipment::before {
+        display: none; } }
+
+@media (min-width: 992px) {
+  .how-details__block-container {
+    padding: 0;
+    padding-bottom: 108px; }
+    .how-details__block-container--shipment {
+      padding-bottom: 75px; } }
+
+.how-details__wrapper {
+  padding: 12px 7px 20px 40px;
+  position: relative; }
+  .how-details__wrapper::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    left: 0;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(#ffffff, #ffffff 5px, #282828 6px, #282828 7px, #c1c1c1 8px);
+    box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22); }
+  .how-details__wrapper--us-prices::after {
+    left: 35px; }
+  .how-details__wrapper--shipment {
+    padding-top: 210px;
+    padding-bottom: 0;
+    position: relative; }
+    .how-details__wrapper--shipment::before {
+      content: "";
+      display: block;
+      width: 222px;
+      height: 195px;
+      transform: translateX(50%);
+      top: 5px;
+      left: calc(50% - 222px);
+      position: absolute;
+      background-image: url("../img/how-to-shopping-mobile.png");
+      background-repeat: no-repeat;
+      background-size: 100%; }
+    .how-details__wrapper--shipment::after {
+      top: auto;
+      bottom: 27px; }
+  @media (min-width: 992px) {
+    .how-details__wrapper {
+      padding: 0;
+      margin-bottom: 40px; }
+      .how-details__wrapper--shipment::before {
+        display: none; }
+      .how-details__wrapper::after {
+        width: 38px;
+        height: 38px;
+        top: -77px;
+        left: 0;
+        background-image: radial-gradient(#ffffff, #ffffff 9px, #282828 10px, #282828 14px, #c1c1c1 15px); }
+      .how-details__wrapper--us-prices::after {
+        left: 9px; } }
+
+.how-details__container {
+  padding-left: 26px;
+  position: relative; }
+  .how-details__container--us-prices::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    top: -77px;
+    left: -76px;
+    position: absolute;
+    background-image: url("../img/how-to-airplane-mobile.png"); }
+  @media (min-width: 992px) {
+    .how-details__container {
+      padding-left: 10px; }
+      .how-details__container--us-prices::after {
+        display: none; } }
+
+.how-details__button-wrapper {
+  padding: 0 23px;
+  margin-bottom: 44px; }
+  @media (min-width: 992px) {
+    .how-details__button-wrapper {
+      padding: 0; }
+      .how-details__button-wrapper--us-prices {
+        padding: 0 0 0 10px; } }
+
+.how-details__buttons-wrapper {
+  padding-top: 11px;
+  margin-bottom: 43px;
+  position: relative; }
+  .how-details__buttons-wrapper::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    bottom: -44px;
+    right: calc(100% - 20px);
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(#ffffff, #ffffff 5px, #282828 6px, #282828 7px, #c1c1c1 8px);
+    box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22); }
+  @media (min-width: 992px) {
+    .how-details__buttons-wrapper {
+      padding: 0; }
+      .how-details__buttons-wrapper::after {
+        width: 38px;
+        height: 38px;
+        right: auto;
+        left: calc(-100% + 10px);
+        bottom: -135px;
+        background-image: radial-gradient(#ffffff, #ffffff 9px, #282828 10px, #282828 14px, #c1c1c1 15px); } }
+
+.how-details__brief {
+  margin: 0 0 9px;
+  font-family: "Jost", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  color: #1a223f;
+  letter-spacing: 0;
+  position: relative; }
+  @media (min-width: 992px) {
+    .how-details__brief {
+      margin-bottom: 40px;
+      font-size: 40px;
+      line-height: 52px; }
+      .how-details__brief::before {
+        width: 38px;
+        height: 38px;
+        top: -77px;
+        left: -2px;
+        background-image: radial-gradient(#ffffff, #ffffff 9px, #282828 10px, #282828 14px, #c1c1c1 15px); } }
+
+.how-details__desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 25px;
+  color: #282828; }
+  @media (min-width: 992px) {
+    .how-details__desc {
+      font-size: 16px;
+      line-height: 29px;
+      padding-right: 40px; } }
+
+.how-details__lines {
+  position: relative; }
+  @media (min-width: 992px) {
+    .how-details__lines::before {
+      content: "";
+      position: absolute;
+      width: 82.75%;
+      height: 105%;
+      min-height: 1520px;
+      display: block;
+      top: -31.5%;
+      left: -40px;
+      background-image: url("../img/how-to-line.svg");
+      z-index: -1;
+      background-size: 100% 100%;
+      background-position: center top; } }
+
+.pricing-options {
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 992px) {
+    .pricing-options {
+      justify-content: flex-start; } }
+  .pricing-options::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 136px;
+    height: 1030px;
+    transform: none;
+    left: 7px;
+    top: 54px;
+    background-image: url("../img/how-to-line-yes-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1; }
+    @media (min-width: 992px) {
+      .pricing-options::before {
+        width: 154.8%;
+        height: 945px;
+        transform: translate(-50%, -50%);
+        left: calc(-50% + 86px);
+        top: calc(-50% + 284px);
+        background-image: url("../img/how-to-line-yes.svg"); } }
+
+.pricing-options--yes::before {
+  left: 7px;
+  top: 54px; }
+  @media (min-width: 992px) {
+    .pricing-options--yes::before {
+      width: 154.8%;
+      height: 945px;
+      transform: translate(-50%, -50%);
+      left: calc(-50% + 86px);
+      top: calc(-50% + 284px); } }
+
+.pricing-options--no::before {
+  width: 230px;
+  left: 7px;
+  top: 63px; }
+  @media (min-width: 992px) {
+    .pricing-options--no::before {
+      width: 185%;
+      height: 945px;
+      transform: translate(-50%, -50%);
+      left: calc(-38% + 86px);
+      top: calc(-50% + 284px); } }
+
+.pricing-options__item {
+  margin-right: 20px; }
+  .pricing-options__item:last-child {
+    margin: 0; }
+
+.main__how-to-buy {
+  overflow: hidden; }
+
+.delivery-options {
+  text-align: center; }
+  @media (min-width: 992px) {
+    .delivery-options {
+      text-align: left; } }
+  .delivery-options--no {
+    display: none; }
+
+.delivery-options__wrapper {
+  padding: 32px 0;
+  padding-top: 45px;
+  border-radius: 20px;
+  background-color: #ffffff; }
+  .delivery-options--black .delivery-options__wrapper {
+    background-color: #282828; }
+  @media (min-width: 992px) {
+    .delivery-options__wrapper {
+      padding: 100px 0; } }
+
+.delivery-options__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: delivery-opts; }
+
+.delivery-options__item {
+  position: relative;
+  padding-top: 70px;
+  counter-increment: delivery-opts;
+  margin-bottom: 40px; }
+  .delivery-options__item--fast, .delivery-options__item--simple {
+    display: none; }
+  .delivery-options__item::before {
+    font-family: "Jost", "Arial", sans-serif;
+    content: "0" counter(delivery-opts) ".";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    color: #1a223f; }
+    .delivery-options--black .delivery-options__item::before {
+      color: #c1c1c1;
+      background-color: #464646; }
+  @media (min-width: 992px) {
+    .delivery-options__item {
+      padding-top: 0;
+      padding-left: 161px;
+      margin-bottom: 100px; }
+      .delivery-options__item::before {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+        line-height: 100px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05); } }
+  .delivery-options__item:last-child {
+    margin-bottom: 0; }
+
+@media (min-width: 992px) {
+  .delivery-options__item-text-wrapper {
+    max-width: 754px; } }
+
+.delivery-options__item-title {
+  font-weight: 400;
+  line-height: 29px;
+  color: #1a223f;
+  letter-spacing: 0;
+  margin: 0 0 10px; }
+  @media (min-width: 992px) {
+    .delivery-options__item-title {
+      font-family: "Jost", "Arial", sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 40px; } }
+  .delivery-options--black .delivery-options__item-title {
+    color: #ffffff; }
+
+.delivery-options__item-desc {
+  font-size: 14px;
+  line-height: 25px;
+  color: #282828;
+  margin: 0 0 10px; }
+  .delivery-options__item-desc:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 992px) {
+    .delivery-options__item-desc {
+      font-size: 16px;
+      line-height: 29px;
+      margin-bottom: 20px; } }
+  .delivery-options--black .delivery-options__item-desc {
+    color: #ffffff; }
+
+.delivery-options__button-wrapper {
+  margin-top: 10px; }
+  @media (min-width: 992px) {
+    .delivery-options__button-wrapper {
+      margin-top: 0; } }
+
+.delivery-options__buttons {
+  padding-top: 20px; }
+  .delivery-options__buttons a {
+    margin-bottom: 15px; }
+    .delivery-options__buttons a.button--white {
+      color: #1a223f; }
+
+.section-banner {
+  padding-top: 40px;
+  padding-bottom: 56px; }
+  @media (min-width: 1240px) {
+    .section-banner {
+      padding: 150px 0; } }
+  .section-banner--get-address {
+    position: relative; }
+    .section-banner--get-address::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 371px;
+      height: 707px;
+      top: -108px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/get-address-lines-mobile.svg");
+      z-index: -1;
+      background-color: #fbfbfb; }
+    @media (min-width: 992px) {
+      .section-banner--get-address::before {
+        width: 1773px;
+        height: 1459px;
+        left: calc(50% + 30px);
+        top: -108px;
+        background-image: url("../img/get-address-lines.svg"); } }
+
+.section-banner__wrapper {
+  position: relative;
+  padding-top: 240px;
+  text-align: center; }
+  @media (min-width: 992px) {
+    .section-banner__wrapper {
+      min-height: 503px;
+      padding-top: 523px; } }
+  @media (min-width: 1240px) {
+    .section-banner__wrapper {
+      display: flex;
+      min-height: 503px;
+      padding-top: 0;
+      text-align: left; } }
+  .section-banner__wrapper::before {
+    content: "";
+    display: block;
+    width: 219px;
+    height: 219px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .section-banner--get-address .section-banner__wrapper::before {
+      background-image: url("../img/man-with-pin-mobile.png"); }
+    @media (min-width: 992px) {
+      .section-banner__wrapper::before {
+        width: 503px;
+        height: 503px; }
+        .section-banner--get-address .section-banner__wrapper::before {
+          background-image: url("../img/get-address-check-sign.svg"), url("../img/man-with-pin.png");
+          background-size: 482px 342px, 100%;
+          background-position: center top 95px, center; } }
+    @media (min-width: 1240px) {
+      .section-banner__wrapper::before {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); } }
+
+.section-banner__block-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media (min-width: 1240px) {
+    .section-banner__block-wrapper {
+      width: 50%;
+      margin-left: auto; } }
+
+.section-banner__text-wrapper {
+  padding-top: 15px; }
+
+.section-banner__heading {
+  margin: 0;
+  margin-bottom: 35px; }
