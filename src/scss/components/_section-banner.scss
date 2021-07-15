@@ -5,6 +5,34 @@
   @include media-breakpoint-up(xl) {
     padding: 150px 0;
   }
+
+  &--get-address {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 371px;
+      height: 707px;
+      top: -108px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/get-address-lines-mobile.svg");
+      z-index: -1;
+      background-color: #fbfbfb;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &::before {
+        width: 1773px;
+        height: 1459px;
+        left: calc(50% + 30px);
+        top: -108px;
+        background-image: url("../img/get-address-lines.svg");
+      }
+    }
+  }
 }
 
 .section-banner__wrapper {

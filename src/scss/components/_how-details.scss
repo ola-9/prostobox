@@ -197,21 +197,6 @@
   margin-bottom: 43px;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 136px;
-    height: 1030px;
-    transform: none;
-    left: 7px;
-    top: 54px;
-    background-image: url("../img/how-to-line-yes-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: -1;
-  }
-
   &::after {
     content: "";
     display: block;
@@ -225,9 +210,9 @@
     box-shadow: 0 4px 14px rgba(128, 128, 128, 0.22);
   }
 
-  @include media-breakpoint-up(sm) {
-    padding-left: 23px;
-  }
+  // @include media-breakpoint-up(sm) {
+  //   padding-left: 23px;
+  // }
 
   @include media-breakpoint-up(lg) {
     padding: 0;
@@ -239,15 +224,6 @@
       left: calc(-100% + 10px);
       bottom: -135px;
       background-image: radial-gradient($white, $white 9px, $grey-dark 10px, $grey-dark 14px, $grey-light-1 15px);
-    }
-
-    &::before {
-      width: 944px;
-      height: 945px;
-      transform: translate(-50%, -50%);
-      left: calc(-50% + 86px);
-      top: calc(-50% + 284px);
-      background-image: url("../img/how-to-line-yes.svg");
     }
   }
 }

@@ -87,15 +87,15 @@
           <div class="how-details__wrapper how-details__wrapper--shipment">
             <p class="how-details__brief">Хотите получить самую <span class="blue">выгодную цену</span> на доставку?</p>
           </div>
-          <div class="how-details__buttons-wrapper pricing-options">
-            <a class="button button--small pricing-options__item" href="#">Да</a>
-            <a class="button button--small button--white pricing-options__item" href="#">Нет</a>
+          <div class="how-details__buttons-wrapper pricing-options pricing-options--yes">
+            <a class="button button--small pricing-options__item js-pricing-options-yes js-pricing-options-current" href="#">Да</a>
+            <a class="button button--small button--white pricing-options__item js-pricing-options-no" href="#">Нет</a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="section delivery-options">
+  <section class="section delivery-options delivery-options--yes">
     <div class="section-xxl">
       <div class="delivery-options__wrapper">
         <div class="container">
@@ -148,7 +148,7 @@
 
 
   </section>
-  <section class="section delivery-options delivery-options--black">
+  <section class="section delivery-options delivery-options--no delivery-options--black">
     <div class="section-xxl">
       <div class="delivery-options__wrapper">
         <div class="container">
@@ -174,11 +174,13 @@
                 <p class="delivery-options__item-desc">
                   Если вы не хотите заморачиваться с декларацией и вам не важны сроки – воспользуйтесь нашей доставкой через Почту России.
                 </p>
-                <a class="button" href="">Быстрая доставка</a>
-                <a class="button" href="">Простая декларация</a>
+                <div class="delivery-options__buttons">
+                  <a class="button button--white js-delivery-btn-fast" href="">Быстрая доставка</a>
+                  <a class="button button--white js-delivery-btn-simple" href="">Простая декларация</a>
+                </div>
               </div>
             </li>
-            <li class="delivery-options__item">
+            <li class="delivery-options__item delivery-options__item--fast">
               <div class="delivery-options__item-text-wrapper">
                 <p class="delivery-options__item-title">
                   Оформляете доставку
@@ -191,7 +193,7 @@
                 </p>
               </div>
             </li>
-            <li class="delivery-options__item">
+            <li class="delivery-options__item delivery-options__item--fast">
               <div class="delivery-options__item-text-wrapper">
                 <p class="delivery-options__item-title">
                   Оплачиваете доставку и посылка улетает к вам
@@ -201,10 +203,44 @@
                 </p>
               </div>
             </li>
-            <li class="delivery-options__item">
+            <li class="delivery-options__item delivery-options__item--fast">
               <div class="delivery-options__item-text-wrapper">
                 <p class="delivery-options__item-title">
                   Step-last
+                </p>
+                <p class="delivery-options__item-desc">
+                  Получаете посылку через 7-15 дней после отправки из США.
+                </p>
+                <a class="button delivery-options__button-wrapper" href="">Получить адрес в США</a>
+              </div>
+            </li>
+            <li class="delivery-options__item delivery-options__item--simple">
+              <div class="delivery-options__item-text-wrapper">
+                <p class="delivery-options__item-title">
+                  TEST
+                </p>
+                <p class="delivery-options__item-desc">
+                  Итак, посылка на складе. Теперь вам надо немного постараться. Заполняете декларацию на каждый товар в посылке. Вносите все необходимые данные получателя, паспортные данные, ИНН и выбираете удобный пункт самовывоза или постамат.
+                </p>
+                <p class="delivery-options__item-desc">
+                  На этом этапе вы можете положить в вашу посылку сладости, напитки или заказать дополнительную упаковку. Но будьте внимательны, конфеты и напитки пропорционально увеличивают вес вашей посылки. Можно сразу пополнить счет на примерную сумму доставки и средства за доставку спишутся автоматически после взвешивания.
+                </p>
+              </div>
+            </li>
+            <li class="delivery-options__item delivery-options__item--simple">
+              <div class="delivery-options__item-text-wrapper">
+                <p class="delivery-options__item-title">
+                  TEST
+                </p>
+                <p class="delivery-options__item-desc">
+                  После того как мы примем и взвесим вашу посылку, вам останется пополнить баланс и оплатить доставку, если вы не сделали этого заранее. После оплаты посылка улетит ближайшим рейсом к вам домой.
+                </p>
+              </div>
+            </li>
+            <li class="delivery-options__item delivery-options__item--simple">
+              <div class="delivery-options__item-text-wrapper">
+                <p class="delivery-options__item-title">
+                  Step-last TEST
                 </p>
                 <p class="delivery-options__item-desc">
                   Получаете посылку через 7-15 дней после отправки из США.

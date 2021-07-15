@@ -2,8 +2,63 @@
   display: flex;
   justify-content: center;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     justify-content: flex-start;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 136px;
+    height: 1030px;
+    transform: none;
+    left: 7px;
+    top: 54px;
+    background-image: url("../img/how-to-line-yes-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+
+    @include media-breakpoint-up(lg) {
+      width: 154.8%;
+      height: 945px;
+      transform: translate(-50%, -50%);
+      left: calc(-50% + 86px);
+      top: calc(-50% + 284px);
+      background-image: url("../img/how-to-line-yes.svg");
+    }
+  }
+}
+
+.pricing-options--yes {
+  &::before {
+    left: 7px;
+    top: 54px;
+
+    @include media-breakpoint-up(lg) {
+      width: 154.8%;
+      height: 945px;
+      transform: translate(-50%, -50%);
+      left: calc(-50% + 86px);
+      top: calc(-50% + 284px);
+    }
+  }
+}
+
+.pricing-options--no {
+  &::before {
+    width: 230px;
+    left: 7px;
+    top: 63px;
+
+    @include media-breakpoint-up(lg) {
+      width: 185%;
+      height: 945px;
+      transform: translate(-50%, -50%);
+      left: calc(-38% + 86px);
+      top: calc(-50% + 284px);
+    }
   }
 }
 
