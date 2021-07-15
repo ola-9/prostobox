@@ -10,6 +10,10 @@
   padding: 100px 0;
   border-radius: 20px;
   background-color: $white;
+
+  .delivery-options--black & {
+    background-color: $grey-dark;
+  }
 }
 
 .delivery-options__list {
@@ -38,30 +42,17 @@
     line-height: 100px;
     text-align: center;
     color: $black-1;
+
+    .delivery-options--black & {
+      color: #c1c1c1;
+      background-color: #464646;
+    }
   }
 
   @include media-breakpoint-up(lg) {
     padding-top: 0;
     padding-left: 161px;
     margin-bottom: 100px;
-
-    // &:first-child {
-    //   padding-top: 11px;
-    // }
-  }
-}
-
-.delivery-options__item-number {
-  font-family: "Jost", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  margin-bottom: 21px;
-
-  @include media-breakpoint-up(lg) {
-    font-size: 30px;
-    line-height: 39px;
-    padding: 31px 0 0 24px;
   }
 }
 
@@ -85,6 +76,10 @@
     line-height: 52px;
     margin-bottom: 40px;
   }
+
+  .delivery-options--black & {
+    color: $white;
+  }
 }
 
 .delivery-options__item-desc {
@@ -101,6 +96,10 @@
     font-size: 16px;
     line-height: 29px;
     margin-bottom: 20px;
+  }
+
+  .delivery-options--black & {
+    color: $white;
   }
 }
 
