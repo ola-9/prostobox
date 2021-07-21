@@ -67,6 +67,10 @@
   @include media-breakpoint-up(lg) {
     max-width: none;
   }
+}
+
+.advantages__text-block {
+  position: relative;
 
   &::before {
     content: "";
@@ -81,11 +85,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 27px;
+    z-index: 11;
 
     @include block-shadow;
 
     @include media-breakpoint-up(lg) {
-      left: 0;
+      left: calc(var(--bs-gutter-x) / 2);
       width: 100px;
       height: 100px;
       background-size: 64px 54px;

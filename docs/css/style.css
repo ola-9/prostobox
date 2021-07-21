@@ -3488,6 +3488,9 @@ img {
 a {
   text-decoration: none; }
 
+main {
+  overflow: hidden; }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -3628,7 +3631,8 @@ a {
 
 @media (min-width: 992px) {
   .section--pb {
-    padding-bottom: 100px; } }
+    padding-bottom: 100px;
+    overflow: hidden; } }
 
 .section-xxl {
   max-width: 1600px;
@@ -4339,8 +4343,8 @@ a {
     background-size: 100% 100%; }
     @media (min-width: 992px) {
       .main-banner__wrapper::before {
-        width: 2438px;
-        height: 1282px;
+        width: 2437px;
+        height: 1280px;
         top: -308px;
         bottom: auto;
         left: calc(50% - 11px);
@@ -4479,7 +4483,10 @@ a {
   @media (min-width: 992px) {
     .advantages__container {
       max-width: none; } }
-  .advantages__container::before {
+
+.advantages__text-block {
+  position: relative; }
+  .advantages__text-block::before {
     content: "";
     display: block;
     position: absolute;
@@ -4492,12 +4499,13 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 27px;
+    z-index: 11;
     border-radius: 20px;
     background-color: #ffffff;
     box-shadow: 0 24px 30px 0 rgba(0, 0, 0, 0.05); }
     @media (min-width: 992px) {
-      .advantages__container::before {
-        left: 0;
+      .advantages__text-block::before {
+        left: calc(var(--bs-gutter-x) / 2);
         width: 100px;
         height: 100px;
         background-size: 64px 54px;
@@ -4971,9 +4979,6 @@ a {
     overflow-y: scroll; }
     .form__dropdown-combo ul li + li {
       margin-top: 5px; }
-
-.calculator {
-  overflow: hidden; }
 
 .calculator__heading {
   text-align: center;
@@ -7276,9 +7281,6 @@ a {
   margin-right: 20px; }
   .pricing-options__item:last-child {
     margin: 0; }
-
-.main__how-to-buy {
-  overflow: hidden; }
 
 .delivery-options {
   text-align: center; }
