@@ -5546,10 +5546,24 @@ main {
   margin-bottom: 20px; }
   @media (min-width: 768px) {
     .tariff-info__limits-title {
-      margin-bottom: 10px; } }
+      margin-bottom: 30px; } }
 
-.tariff-info__limits-list li {
-  font-weight: 500; }
+.tariff-info__limits-list {
+  margin-bottom: 10px; }
+  .tariff-info__limits-list li {
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 500; }
+    .tariff-info__limits-list li::before {
+      top: 12px; }
+
+.tariff-info__limits-text {
+  font-size: 14px;
+  line-height: 25px;
+  padding: 0 26px;
+  margin: 0; }
+  .tariff-info__limits-text:not(:last-child) {
+    margin-bottom: 25px; }
 
 .work-scheme {
   overflow: hidden; }

@@ -218,12 +218,31 @@
   margin-bottom: 20px;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 
 .tariff-info__limits-list {
+  margin-bottom: 10px;
+
   li {
+    font-size: 16px;
+    line-height: 29px;
     font-weight: 500;
+
+    &::before {
+      top: 12px;
+    }
+  }
+}
+
+.tariff-info__limits-text {
+  font-size: 14px;
+  line-height: 25px;
+  padding: 0 26px;
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
   }
 }
