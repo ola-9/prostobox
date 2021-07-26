@@ -1,0 +1,33 @@
+.link {
+  color: $blue;
+  @include color-transition;
+
+  svg {
+    vertical-align: top;
+    margin-top: 2px;
+    margin-left: 2px;
+    fill: $blue;
+    @include color-transition;
+    transition-property: fill, margin-left;
+  }
+
+  &:hover {
+    color: $blue-1;
+
+    svg {
+      fill: $blue-1;
+      margin-left: 5px;
+    }
+  }
+
+  &:active {
+    color: $blue-dark;
+
+    svg {
+      fill: $blue-dark;
+      margin-left: 3px;
+    }
+  }
+
+
+}

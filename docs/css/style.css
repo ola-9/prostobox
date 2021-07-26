@@ -3622,6 +3622,27 @@ main {
       font-size: 30px;
       line-height: 39px; } }
 
+.link {
+  color: #1467ff;
+  transition: color 0.2s ease; }
+  .link svg {
+    vertical-align: top;
+    margin-top: 2px;
+    margin-left: 2px;
+    fill: #1467ff;
+    transition: color 0.2s ease;
+    transition-property: fill, margin-left; }
+  .link:hover {
+    color: #5591FF; }
+    .link:hover svg {
+      fill: #5591FF;
+      margin-left: 5px; }
+  .link:active {
+    color: #084fd1; }
+    .link:active svg {
+      fill: #084fd1;
+      margin-left: 3px; }
+
 @media (min-width: 768px) {
   .container {
     --bs-gutter-x: 1.25rem; } }
