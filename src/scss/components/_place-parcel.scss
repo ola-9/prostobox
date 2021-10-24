@@ -1,0 +1,63 @@
+.place-parcel {
+  background: $lilac;
+  letter-spacing: normal;
+  padding: 28px 20px 20px 20px;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    text-align: start;
+    padding: 28px 42px 20px 42px;
+  }
+}
+
+.place-parcel__heading {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $black;
+  margin: 0 0 5px 0;
+}
+.place-parcel__text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $black;
+  margin: 0 0 15px 0;
+}
+
+.place-parcel__form {
+  @media (min-width: 992px) {
+    display: flex;
+  }
+}
+
+.place-parcel__input {
+  font-family: "Montserrat", "Arial", sans-serif;
+  width: 100%;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $black;
+  padding: 14px 20px 16px 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+.place-parcel__input::placeholder {
+  color: $grey-light-2;
+}
+
+.place-parcel__btn {
+  min-width: 183px;
+  font-size: 13px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $white;
+  padding: 5px 10px 5px 10px;
+}
