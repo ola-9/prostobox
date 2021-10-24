@@ -1,0 +1,47 @@
+.current-sales {
+  max-width: 251px;
+  padding: 152px 21px 20px 21px;
+  background: url("/../img/current-sales/photo-camera.png"), $white;
+  background-repeat: no-repeat;
+  background-position: center 14px;
+  text-align: center;
+}
+
+.current-sales__heading {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: $black;
+  margin: 0 0 10px 0;
+}
+
+.current-sales__text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $purple;
+}
+
+.current-sales__text span {
+  font-family: "Stolzl", "Arial", sans-serif;
+  color: $black;
+}
+
+.current-sales__link {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: $blue-3;
+  transition: color .2s ease;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:hover {
+    color: $blue-dark;
+  }
+}
