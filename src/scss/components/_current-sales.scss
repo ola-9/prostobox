@@ -1,19 +1,19 @@
 .current-sales {
   max-width: 251px;
-  padding: 152px 21px 20px 21px;
+  padding: 152px 21px 16px 21px;
   background: url("/../img/current-sales/photo-camera.png"), $white;
   background-repeat: no-repeat;
   background-position: center 14px;
   text-align: center;
+  letter-spacing: normal;
 }
 
 .current-sales__heading {
-  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   line-height: 19px;
   font-weight: 400;
   color: $black;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
 }
 
 .current-sales__text {
@@ -21,10 +21,10 @@
   line-height: 16px;
   font-weight: 400;
   color: $purple;
+  margin: 0 0 0 0;
 }
 
 .current-sales__text span {
-  font-family: "Stolzl", "Arial", sans-serif;
   color: $black;
 }
 
@@ -36,6 +36,7 @@
   text-decoration: underline;
   color: $blue-3;
   transition: color .2s ease;
+
 
   &:hover {
     color: $blue;
