@@ -106,28 +106,38 @@
 
 
   <main>
-    <section class="notification notification--content notification--new">
+    <section class="notification">
       <h3 class="notification__heading">Уведомления</h3>
-      <div class="notification__item">
-        <p class="notification__subtitle">Вам пришла новая посылка.</p>
-        <p class="notification__text">Посылка <span>#4535</span> уже на складе в вашем городе. Получить ее вы можете по <span>данному адресу</span>.</p>
-      </div>
-      <button class="notification__btn-close " aria-label="Закрыть" type="button"></button>
-    </section>
-
-    <section class="notification notification--content notification--error">
-      <h3 class="notification__heading">Уведомления</h3>
-      <div class="notification__item">
-        <p class="notification__subtitle">Ошибка в оформлении посылки. </p>
-        <p class="notification__text">Посылка <span>#4535</span> уже на складе в вашем городе. Получить ее вы можете по <span>данному адресу</span>.</p>
+      <div class="notification__content">
+        <div class="notification__item notification__item--new">
+          <p class="notification__subtitle">Вам пришла новая посылка.</p>
+          <p class="notification__text">Посылка <a href="#">#4535</a> уже на складе в вашем городе. Получить ее вы можете по <a href="#">данному адресу</a>.</p>
+        </div>
+        <div class="notification__item notification__item--error">
+          <p class="notification__subtitle">Ошибка в оформлении посылки. </p>
+          <p class="notification__text">Посылка <a href="#">#4535</a> уже на складе в вашем городе. Получить ее вы можете по <a href="#">данному адресу</a>.</p>
+        </div>
       </div>
       <button class="notification__btn-close " aria-label="Закрыть" type="button"></button>
     </section>
 
     <section class="notification">
       <h3 class="notification__heading">Уведомления</h3>
-      <div class="notification__item">
-        <p class="notification__text">У вас пока нету не прочитанных уведомлений</p>
+      <div class="notification__content">
+        <div class="notification__item notification__item--error">
+          <p class="notification__subtitle">Ошибка в оформлении посылки. </p>
+          <p class="notification__text">Посылка <a href="#">#4535</a> уже на складе в вашем городе. Получить ее вы можете по <a href="#">данному адресу</a>.</p>
+        </div>
+      </div>
+      <button class="notification__btn-close " aria-label="Закрыть" type="button"></button>
+    </section>
+
+    <section class="notification notification--empty">
+      <h3 class="notification__heading">Уведомления</h3>
+      <div class="notification__content">
+        <div class="notification__item">
+          <p class="notification__text">У вас пока нету не прочитанных уведомлений</p>
+        </div>
       </div>
       <button class="notification__btn-close " aria-label="Закрыть" type="button"></button>
     </section>
