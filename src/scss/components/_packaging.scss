@@ -37,7 +37,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
-    background-image: url("../img/packaging-cross-sign.svg"), radial-gradient($white, $white 9px, $blue 10px, $blue 15px, $blue-light 16px);
+    background-image: url("../../img/new_main_page/packaging-cross-sign.svg"), radial-gradient($white, $white 9px, $blue 10px, $blue 15px, $blue-light 16px);
     background-position: top 15px left 15px, center;
     background-repeat: no-repeat;
     background-size: 10px 10px, 40px 40px;
@@ -54,7 +54,7 @@
       transform: none;
       left: 0;
       top: -29px;
-      background-image: url("../img/packaging-cross-sign.svg"), radial-gradient($white, $white 14px, $blue 15px, $blue 22px, $blue-light 23px);
+      background-image: url("../../img/new_main_page/packaging-cross-sign.svg"), radial-gradient($white, $white 14px, $blue 15px, $blue 22px, $blue-light 23px);
       background-position: top 23px left 23px, center;
       background-size: 14px 14px, 60px 60px;
     }

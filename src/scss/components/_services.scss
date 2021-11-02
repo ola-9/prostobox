@@ -59,7 +59,7 @@
     top: -283px;
     left: calc(50% + 69px);
     transform: translateX(-50%);
-    background-image: url("../img/services-lines-mobile.svg");
+    background-image: url("../../img/new_main_page/services-lines-mobile.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -70,7 +70,7 @@
     &::before {
       width: 848px;
       left: calc(50% + 200px);
-      background-image: url("../img/services-lines.svg");
+      background-image: url("../../img/new_main_page/services-lines.svg");
     }
   }
 

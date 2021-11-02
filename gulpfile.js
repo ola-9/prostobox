@@ -19,24 +19,24 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('./build/prostobox/css'))
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('./build/prostobox/css'))
     .pipe(sync.stream());
 }
 
 const scripts = () => {
-  return gulp.src('./src/js/**/*.js')
+  return gulp.src('./src/prostobox/js/**/*.js')
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/prostobox/js'))
     .pipe(terser())
     .pipe(rename('script.min.js'))
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('./build/prostobox/js'));
 }
 
 // const html = () => {
@@ -78,11 +78,12 @@ const reload = (done) => {
   done();
 }
 
+
 const sprite = () => {
-  return gulp.src('./src/img/icons/**/*.svg')
+  return gulp.src('./src/img/new_main_page/icons/**/*.svg')
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('./build/img'));
+    .pipe(gulp.dest('./build/img/new_main_page'));
 }
 
 const clean = () => {
@@ -96,8 +97,8 @@ const cleanDocs = () => {
 const copy = () => {
   return gulp.src([
     // 'src/*.ico',
-    './src/fonts/**/*.{woff,woff2}',
-    './src/img/**/*.{png,jpg,svg}'
+    './src/prostobox/fonts/**/*.{woff,woff2}',
+    './src/img/new_main_page/**/*.{png,jpg,svg}'
   ], {
     base: 'src'
   }).pipe(gulp.dest('./build'));
@@ -105,7 +106,7 @@ const copy = () => {
 
 const copyImages = () => {
   return gulp.src([
-    './src/img/**/*.{png,jpg,svg}'
+    './src/img/new_main_page/**/*.{png,jpg,svg}'
   ], {
     base: 'src'
   }).pipe(gulp.dest('./build'));
@@ -115,9 +116,9 @@ const copyImages = () => {
 
 const watcher = () => {
   gulp.watch(['./src/scss/**/*.scss'], gulp.series(styles));
-  gulp.watch(['./src/img/icons/*.svg'], gulp.series(sprite, reload));
-  gulp.watch(['./src/img/**/*.{png,jpg,svg}'], gulp.series(copyImages, reload));
-  gulp.watch(['./src/js/*.js', '!./src/js/vendor/*.js'], gulp.series(scripts, reload));
+  gulp.watch(['./src/img/new_main_page/icons/*.svg'], gulp.series(sprite, reload));
+  gulp.watch(['./src/img/new_main_page/**/*.{png,jpg,svg}'], gulp.series(copyImages, reload));
+  gulp.watch(['./src/prostobox/js/*.js', '!./src/prostobox/js/vendor/*.js'], gulp.series(scripts, reload));
   gulp.watch(['./src/pages/**/*.html', './src/templates/**/*.html'], gulp.series(render, reload));
 }
 

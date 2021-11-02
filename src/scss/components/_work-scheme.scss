@@ -88,7 +88,7 @@
       bottom: calc(100% - 5px);
       background-repeat: no-repeat;
       background-size: 100%;
-      background-image: url("../img/work-scheme-lines-mobile.svg");
+      background-image: url("../../img/new_main_page/work-scheme-lines-mobile.svg");
     }
 
     @include media-breakpoint-up(lg) {
@@ -100,7 +100,7 @@
         right: calc(100% - 25px);
         left: auto;
         bottom: auto;
-        background-image: url("../img/work-scheme-lines.svg");
+        background-image: url("../../img/new_main_page/work-scheme-lines.svg");
       }
     }
   }
@@ -173,7 +173,7 @@
 
   &--1 {
     &::before {
-      background-image: url("../img/delivery-truck.svg");
+      background-image: url("../../img/new_main_page/delivery-truck.svg");
     }
   }
 
@@ -183,7 +183,7 @@
 
     &::before {
       bottom: calc(100% + 19px);
-      background-image: url("../img/airplane.svg");
+      background-image: url("../../img/new_main_page/airplane.svg");
     }
   }
 

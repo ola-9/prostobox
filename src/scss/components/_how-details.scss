@@ -23,7 +23,7 @@
         display: block;
         left: -72px;
         top: -214px;
-        background-image: url("../img/how-to-airplane.png");
+        background-image: url("../../img/new_main_page/how-to-airplane.png");
       }
     }
 
@@ -39,7 +39,7 @@
         transform: translateX(50%);
         left: calc(50% - 241px);
         top: -27px;
-        background-image: url("../img/how-to-shopping.png");
+        background-image: url("../../img/new_main_page/how-to-shopping.png");
         z-index: 1;
       }
     }
@@ -58,7 +58,7 @@
       top: calc(-240% - 17px);
       left: 0;
       position: absolute;
-      background-image: url("../img/how-to-line-mobile.svg");
+      background-image: url("../../img/new_main_page/how-to-line-mobile.svg");
       z-index: -1;
 
       @include media-breakpoint-up(lg) {
@@ -114,7 +114,7 @@
       top: 5px;
       left: calc(50% - 222px);
       position: absolute;
-      background-image: url("../img/how-to-shopping-mobile.png");
+      background-image: url("../../img/new_main_page/how-to-shopping-mobile.png");
       background-repeat: no-repeat;
       background-size: 100%;
     }
@@ -164,7 +164,7 @@
       top: -77px;
       left: -76px;
       position: absolute;
-      background-image: url("../img/how-to-airplane-mobile.png");
+      background-image: url("../../img/new_main_page/how-to-airplane-mobile.png");
     }
   }
 
@@ -280,7 +280,7 @@
       display: block;
       top: -31.5%;
       left: -40px;
-      background-image: url("../img/how-to-line.svg");
+      background-image: url("../../img/new_main_page/how-to-line.svg");
       z-index: -1;
       background-size: 100% 100%;
       background-position: center top;

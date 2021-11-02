@@ -55,7 +55,7 @@
     width: 100px;
     height: 100px;
     top: -30px;
-    background-image: url("../img/tariffs/econom.png");
+    background-image: url("../../img/new_main_page/tariffs/econom.png");
 
     @include media-breakpoint-up(lg) {
       width: 134px;
@@ -68,7 +68,7 @@
   &--one::before {
     width: 63px;
     height: 63px;
-    background-image: url("../img/tariffs/one.png");
+    background-image: url("../../img/new_main_page/tariffs/one.png");
 
     @include media-breakpoint-up(lg) {
       width: 84px;
@@ -81,7 +81,7 @@
   &--combination::before {
     width: 72px;
     height: 77px;
-    background-image: url("../img/tariffs/combination.png");
+    background-image: url("../../img/new_main_page/tariffs/combination.png");
 
     @include media-breakpoint-up(lg) {
       width: 96px;
@@ -94,7 +94,7 @@
   &--post::before {
     width: 83px;
     height: 84px;
-    background-image: url("../img/tariffs/post.png");
+    background-image: url("../../img/new_main_page/tariffs/post.png");
 
     @include media-breakpoint-up(lg) {
       width: 113px;
@@ -108,7 +108,7 @@
     width: 74px;
     height: 89px;
     top: -30px;
-    background-image: url("../img/tariffs/parcel.png");
+    background-image: url("../../img/new_main_page/tariffs/parcel.png");
 
     @include media-breakpoint-up(lg) {
       width: 99px;

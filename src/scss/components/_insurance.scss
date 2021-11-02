@@ -79,7 +79,7 @@
     left: calc(50% + 25px);
     top: -200px;
     transform: translateX(-50%);
-    background-image: url("../img/insurance-lock-mobile.png");
+    background-image: url("../../img/new_main_page/insurance-lock-mobile.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -95,7 +95,7 @@
     transform: translateX(-50%);
     left: calc(50% - 47px);
     top: -252px;
-    background-image: url("../img/insurance-line-mobile.svg");
+    background-image: url("../../img/new_main_page/insurance-line-mobile.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -111,7 +111,7 @@
       transform: translateX(50%);
       left: calc(50% - 50px);
       top: -244px;
-      background-image: url("../img/insurance-lock.png");
+      background-image: url("../../img/new_main_page/insurance-lock.png");
     }
 
     &::after {
@@ -120,7 +120,7 @@
       left: -142px;
       transform: translateY(-35%);
       top: -255px;
-      background-image: url("../img/insurance-line.svg");
+      background-image: url("../../img/new_main_page/insurance-line.svg");
     }
   }
 }

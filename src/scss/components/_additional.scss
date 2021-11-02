@@ -77,34 +77,34 @@
 }
 
 .additional__item--cap::before {
-  background-image: url("../img/additional/propeller-cap-mobile.png");
+  background-image: url("../../img/new_main_page/additional/propeller-cap-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/additional/propeller-cap.png");
+    background-image: url("../../img/new_main_page/additional/propeller-cap.png");
   }
 }
 
 .additional__item--shield::before {
-  background-image: url("../img/additional/box-shield-mobile.png");
+  background-image: url("../../img/new_main_page/additional/box-shield-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/additional/box-shield.png");
+    background-image: url("../../img/new_main_page/additional/box-shield.png");
   }
 }
 
 .additional__item--rocket::before {
-  background-image: url("../img/additional/rocket-mobile.png");
+  background-image: url("../../img/new_main_page/additional/rocket-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/additional/rocket.png");
+    background-image: url("../../img/new_main_page/additional/rocket.png");
   }
 }
 
 .additional__item--message::before {
-  background-image: url("../img/additional/message-mobile.png");
+  background-image: url("../../img/new_main_page/additional/message-mobile.png");
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../img/additional/message.png");
+    background-image: url("../../img/new_main_page/additional/message.png");
   }
 }
 
@@ -142,7 +142,7 @@
     transform: translateX(52%);
     width: 480px;
     height: 1100px;
-    background-image: url("../img/line-mobile.svg");
+    background-image: url("../../img/new_main_page/line-mobile.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 
@@ -152,7 +152,7 @@
       transform: translateX(52%);
       width: 2120px;
       height: 1125px;
-      background-image: url("../img/line.svg");
+      background-image: url("../../img/new_main_page/line.svg");
       background-repeat: no-repeat;
       background-size: 100%;
     }

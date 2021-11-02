@@ -18,7 +18,7 @@
       top: -108px;
       left: 50%;
       transform: translateX(-50%);
-      background-image: url("../img/get-address-lines-mobile.svg");
+      background-image: url("../../img/new_main_page/get-address-lines-mobile.svg");
       z-index: -1;
       background-color: #fbfbfb;
     }
@@ -29,7 +29,7 @@
         height: 1459px;
         left: calc(50% + 30px);
         top: -108px;
-        background-image: url("../img/get-address-lines.svg");
+        background-image: url("../../img/new_main_page/get-address-lines.svg");
       }
     }
   }
@@ -65,7 +65,7 @@
     background-repeat: no-repeat;
 
     .section-banner--get-address & {
-      background-image: url("../img/man-with-pin-mobile.png");
+      background-image: url("../../img/new_main_page/man-with-pin-mobile.png");
     }
 
     @include media-breakpoint-up(lg) {
@@ -74,8 +74,8 @@
 
       .section-banner--get-address & {
         background-image:
-          url("../img/get-address-check-sign.svg"),
-          url("../img/man-with-pin.png");
+          url("../../img/new_main_page/get-address-check-sign.svg"),
+          url("../../img/new_main_page/man-with-pin.png");
 
         background-size: 482px 342px, 100%;
         background-position: center top 95px, center;
