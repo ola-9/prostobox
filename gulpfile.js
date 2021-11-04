@@ -11,6 +11,9 @@ const concat = require('gulp-concat');
 const del = require('del');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
+const imagemin = require('gulp-imagemin');
+const imageminPngquant = require('imagemin-pngquant');
+
 
 const nunjucks = require('gulp-nunjucks-render');
 
@@ -104,12 +107,34 @@ const copy = () => {
   }).pipe(gulp.dest('./build'));
 }
 
+const copyBuild = () => {
+  return gulp.src([
+    './src/prostobox/fonts/**/*.{woff,woff2}',
+    './src/img/new_main_page/**/*.{svg}'
+  ], {
+    base: 'src'
+  }).pipe(gulp.dest('./build'));
+}
+
 const copyImages = () => {
   return gulp.src([
     './src/img/new_main_page/**/*.{png,jpg,svg}'
   ], {
     base: 'src'
   }).pipe(gulp.dest('./build'));
+}
+
+const optimizeImages = () => {
+  return gulp.src("src/img/new_main_page/**/*.{jpg,png}")
+    .pipe(imagemin([
+      imageminPngquant({
+        strip: true,
+        speed: 1,
+        // quality: [0.95, 1] //lossy settings
+      }),
+      imagemin.mozjpeg({ progressive: true }),
+    ]))
+    .pipe(gulp.dest("build/img/new_main_page/"))
 }
 
 // Watcher
@@ -142,5 +167,5 @@ const deploy = gulp.series(
 exports.deploy = deploy;
 
 exports.default = gulp.series(
-  build, server, watcher
+  clean, copy, styles, scripts, render, sprite, server, watcher
 );

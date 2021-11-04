@@ -48,6 +48,7 @@
     background-image: url("../../img/new_main_page/man-with-boxes-2-mobile.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 272px 272px;
 
     @include media-breakpoint-up(lg) {
       top: -34px;
@@ -56,6 +57,7 @@
       width: 571px;
       height: 601px;
       background-image: url("../../img/new_main_page/man-with-boxes-2.png");
+      background-size: 571px 601px;
     }
   }
 }

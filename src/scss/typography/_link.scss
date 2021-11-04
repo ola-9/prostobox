@@ -1,5 +1,6 @@
 .link {
   color: $blue;
+
   @include color-transition;
 
   svg {
@@ -7,6 +8,7 @@
     margin-top: 2px;
     margin-left: 2px;
     fill: $blue;
+
     @include color-transition;
     transition-property: fill, margin-left;
   }
@@ -28,6 +30,4 @@
       margin-left: 3px;
     }
   }
-
-
 }
