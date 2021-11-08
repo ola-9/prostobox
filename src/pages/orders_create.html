@@ -8,7 +8,48 @@
     <div class="container">
       <div class="orders-wrapper">
         <div class="my-order">
-          test
+          <form class="my-order__form order-form">
+            <div class="my-order__field">
+              <label class="order-form__label">Ссылка на товар</label>
+              <input class="order-form__input" type="url" placeholder="Например: http://amazom.com/phone/iphone12">
+            </div>
+            <div class="my-order__field">
+              <label class="order-form__label">Название товара на сайте</label>
+              <input class="order-form__input" type="text" placeholder="Например: Iphone 12 pro 256 gold">
+            </div>
+            <div class="my-order__field">
+              <label class="form__label">Цена</label>
+              <input class="form__input" type="number" placeholder="Например: $1234.33">
+            </div>
+            <div class="my-order__field">
+              <label class="form__label">Цвет (colour)</label>
+              <input class="form__input" type="text" placeholder="Например: green">
+            </div>
+            <div class="my-order__field">
+              <label class="form__label">Размер (size)</label>
+              <input class="form__input" type="text" placeholder="Например: 7 M / 9,5 W">
+            </div>
+            <div class="my-order__field">
+              <label class="form__label">Количество</label>
+              <input class="form__input" type="text" placeholder="Например: 1">
+            </div>
+            <div class="my-order__field">
+              <label class="form__label">Замена по размеру</label>
+              <input class="form__input" type="text" placeholder="Например: green">
+              <p>На случай отсутствия осного варианта.</p>
+            </div>
+            <div class="my-order__field">
+              <label class="form__label">Замена по цвету</label>
+              <input class="form__input" type="text" placeholder="Например: 7 M / 9,5 W">
+              <p>На случай отсутствия осного варианта.</p>
+            </div>
+            <button>
+              Предпросмотр заказа
+            </button>
+            <button>
+              Сохранить и добавить еще один товар
+            </button>
+          </form>
         </div>
       </div>
     </div>
