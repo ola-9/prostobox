@@ -11,17 +11,40 @@
   font-family: "Ubuntu", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  // padding: 19px 23px 23px;
+  letter-spacing: 0;
+  border: 2px solid $black;
+  padding: 21px;
+  border-radius: 7px;
+  box-shadow: 0 0 20px 0 rgba(213, 234, 241, 0.5);
+}
+
+.my-order__bb {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -22px;
+    right: -22px;
+    bottom: 0;
+    height: 1px;
+    background-color: $black;
+  }
 }
 
 .my-order__field-group {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
+  @include media-breakpoint-up(md) {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
 }
 
 .my-order__field-group--params {
-  border-bottom: 1px solid $black;
+  padding-bottom: 5px;
 }
 
 .my-order__field-group--replacements {
@@ -33,22 +56,65 @@
   margin-bottom: 14px;
 }
 
-.my-order__field--replacements {
-  width: calc(50% - 15px);
+.my-order__col-1-2 {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
 }
 
-.my-order__field--price {
-  width: calc(27% - 24px);
+.my-order__col-1-4 {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: 25%;
+  }
 }
 
-.my-order__field--color {
-  width: calc(23% - 24px);
+.my-order__button {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: $blue-4;
+  border-radius: 5px;
+  color: $white;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 14px;
+  transition: background-color 0.2s linear;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: rgba($blue-4, 0.8);
+  }
+
+  &:active {
+    color: rgba($white, 0.6);
+  }
 }
 
-.my-order__field--size {
-  width: calc(28% - 24px);
-}
+.my-order__button--white {
+  background-color: $white;
+  color: $blue-4;
+  padding: 10px 12px;
+  border: 2px solid $blue-4;
 
-.my-order__field--quantity {
-  width: calc(22% - 24px);
+  &:hover {
+    color: rgba($blue-4, 0.8);
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba($blue-4, 0.6);
+  }
 }
