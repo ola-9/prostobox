@@ -9,4 +9,46 @@
 
 .my-order {
   font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  // padding: 19px 23px 23px;
+}
+
+.my-order__field-group {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.my-order__field-group--params {
+  border-bottom: 1px solid $black;
+}
+
+.my-order__field-group--replacements {
+  padding-top: 19px;
+  margin-bottom: 6px;
+}
+
+.my-order__field {
+  margin-bottom: 14px;
+}
+
+.my-order__field--replacements {
+  width: calc(50% - 15px);
+}
+
+.my-order__field--price {
+  width: calc(27% - 24px);
+}
+
+.my-order__field--color {
+  width: calc(23% - 24px);
+}
+
+.my-order__field--size {
+  width: calc(28% - 24px);
+}
+
+.my-order__field--quantity {
+  width: calc(22% - 24px);
 }

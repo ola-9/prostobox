@@ -8,7 +8,52 @@
     <div class="container">
       <div class="orders-wrapper">
         <div class="my-order">
-          test
+          <form class="my-order__form order-form">
+            <div class="my-order__field">
+              <label class="order-form__label">Ссылка на товар</label>
+              <input class="order-form__input" type="url" placeholder="Например: http://amazom.com/phone/iphone12">
+            </div>
+            <div class="my-order__field">
+              <label class="order-form__label">Название товара на сайте</label>
+              <input class="order-form__input" type="text" placeholder="Например: Iphone 12 pro 256 gold">
+            </div>
+            <div class = "my-order__field-group my-order__field-group--params">
+              <div class="my-order__field my-order__field--price">
+                <label class="order-form__label">Цена</label>
+                <input class="order-form__input" type="number" placeholder="Например: $1234.33">
+              </div>
+              <div class="my-order__field my-order__field--color">
+                <label class="order-form__label">Цвет (colour)</label>
+                <input class="order-form__input" type="text" placeholder="Например: green">
+              </div>
+              <div class="my-order__field my-order__field--size">
+                <label class="order-form__label">Размер (size)</label>
+                <input class="order-form__input" type="text" placeholder="Например: 7 M / 9,5 W">
+              </div>
+              <div class="my-order__field my-order__field--quantity">
+                <label class="order-form__label">Количество</label>
+                <input class="order-form__input" type="text" placeholder="Например: 1">
+              </div>
+          </div>
+            <div class="my-order__field-group my-order__field-group--replacements">
+              <div class="my-order__field my-order__field--replacements">
+                <label class="order-form__label">Замена по размеру</label>
+                <input class="order-form__input" type="text" placeholder="Например: green">
+                <p class="order-form__comment">На случай отсутствия осного варианта.</p>
+              </div>
+              <div class="my-order__field my-order__field--replacements">
+                <label class="order-form__label">Замена по цвету</label>
+                <input class="order-form__input" type="text" placeholder="Например: 7 M / 9,5 W">
+                <p class="order-form__comment">На случай отсутствия осного варианта.</p>
+              </div>
+            </div>
+            <a href="#" class="order-form__button">
+              Предпросмотр заказа
+            </a>
+            <a href="#" class="order-form__button order-form__button--save">
+              Сохранить и добавить еще один товар
+            </a>
+          </form>
         </div>
       </div>
     </div>
