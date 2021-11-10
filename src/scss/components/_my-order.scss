@@ -36,6 +36,7 @@
   row-gap: 14px;
 
   @include media-breakpoint-up(md) {
+    width: auto;
     flex-wrap: nowrap;
   }
 }
