@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% set siteName = "Prostobox.com" %}
+
+{% block main %}
+
+  <main>
+    <div class="container">
+      <div class="orders-wrapper">
+        <div class="my-order">
+          <div class="my-order__status my-order__wrapper my-order__bb">
+            <ul class="my-order__status-list">
+              <li class="my-order__status-item">
+                <span class="my-order__label">Номер заказа</span>
+                <p class="my-order__status-val my-order__heading-2">#84567-1</p>
+              </li>
+              <li class="my-order__status-item">
+                <span class="my-order__label">Статус заказа</span>
+                <p class="my-order__status-state">Выкуплен</p>
+              </li>
+              <li class="my-order__status-item">
+                <span class="my-order__label">Дата заказа</span>
+                <p class="my-order__status-val my-order__heading-2">25 сентября 2020 г.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="my-order__shops my-order__wrapper my-order__bb">
+            <span class="my-order__label">В этом товаре заказы из магазина:</span>
+            <ul class="my-order__shops-list">
+              <li class="my-order__shops-item">
+                <a href="#">amazon.com</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="my-order__total my-order__wrapper my-order__bb">
+            <ul class="my-order__total-list">
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Стоимость товаров:</span>
+                <b class="my-order__total-value my-order__total-value--price">$2467.02</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Товаров в заказе:</span>
+                <b class="my-order__total-value">12 шт</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Комиссия</span>
+                <b class="my-order__total-value">$25.00</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Промокод</span>
+                <b class="my-order__total-value">Fast2Fast3</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Налог штата</span>
+                <b class="my-order__total-value">$0</b>
+              </li>
+            </ul>
+          </div>
+
+          <div class="my-order__wrapper">
+            <span class="my-order__label">Коментарии или промокод сайта:</span>
+            <p class="my-order__textarea">примените промокод 40estra  без него не выкупайте товар; выкупайте заказ как есть; если не будет размера s/m купите m/l</p>
+          </div>
+
+          <div class="my-order__flex-wrap my-order__flex-wrap--sb my-order__wrapper">
+            <div class="my-order__flex-wrap">
+              <span class="my-order__label my-order__label--mb-0">Стоимость товаров:</span>
+              <b class="my-order__total-value my-order__total-value--price">$2467.02</b>
+            </div>
+            <a class="my-order__button my-order__button--white" href="#">Посмотреть содержимое корзины</a>
+          </div>
+
+        </div>
+
+        <br>
+
+        <div class="my-order">
+          <div class="my-order__status my-order__wrapper my-order__bb">
+            <ul class="my-order__status-list">
+              <li class="my-order__status-item">
+                <span class="my-order__label">Номер заказа</span>
+                <p class="my-order__status-val my-order__heading-2">#84567-1</p>
+              </li>
+              <li class="my-order__status-item">
+                <span class="my-order__label">Статус заказа</span>
+                <p class="my-order__status-state">Выкуплен</p>
+              </li>
+              <li class="my-order__status-item">
+                <span class="my-order__label">Дата заказа</span>
+                <p class="my-order__status-val my-order__heading-2">25 сентября 2020 г.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="my-order__wrapper my-order__bb">
+            <p class="my-order__label">Отредактируйте товарыв заказе и отправьте их на выкуп операторам.
+              Если не хотите ничего менять – нажмите кнопку “Отменить”, чтобы невыкупенный  заказ отправился в архив. Средства за невыкупленные товары уже вернулись на ваш счет в Pochtoy.com</p>
+          </div>
+
+          <div class="my-order__total my-order__wrapper my-order__bb">
+            <ul class="my-order__total-list">
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Стоимость товаров:</span>
+                <b class="my-order__total-value my-order__total-value--price">$2467.02</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Товаров в заказе:</span>
+                <b class="my-order__total-value">12 шт</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Комиссия</span>
+                <b class="my-order__total-value">$25.00</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Промокод</span>
+                <b class="my-order__total-value">Fast2Fast3</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Налог штата</span>
+                <b class="my-order__total-value">$0</b>
+              </li>
+            </ul>
+          </div>
+
+          <div class="my-order__wrapper">
+            <span class="my-order__label">Коментарии или промокод сайта:</span>
+            <p class="my-order__textarea">примените промокод 40estra  без него не выкупайте товар; выкупайте заказ как есть; если не будет размера s/m купите m/l</p>
+          </div>
+
+          <div class="my-order__flex-wrap my-order__flex-wrap--sb my-order__wrapper">
+            <div class="my-order__flex-wrap">
+              <span class="my-order__label my-order__label--mb-0">Стоимость товаров:</span>
+              <b class="my-order__total-value my-order__total-value--price">$2467.02</b>
+            </div>
+            <div class="my-order__flex-wrap">
+              <a class="my-order__button my-order__button--white" href="#">Посмотреть содержимое корзины</a>
+              <a class="my-order__button" href="#">Отменить заказ</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </main>
+{% endblock %}

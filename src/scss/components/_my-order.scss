@@ -7,6 +7,8 @@
   min-height: 300px;
 }
 
+// Base
+
 .my-order {
   font-family: "Ubuntu", sans-serif;
   font-size: 14px;
@@ -26,7 +28,9 @@
 }
 
 .my-order__flex-wrap {
+  width: 100%;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   row-gap: 14px;
@@ -38,6 +42,10 @@
 
 .my-order__flex-wrap--cg-40 {
   column-gap: 40px;
+}
+
+.my-order__flex-wrap--sb {
+  justify-content: space-between;
 }
 
 .my-order__fg-1 {
@@ -81,6 +89,37 @@
   @include media-breakpoint-up(md) {
     width: 25%;
   }
+}
+
+.my-order__label {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: $grey-2;
+  margin: 0;
+  margin-bottom: 12px;
+
+  &--mb-0 {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.my-order__textarea {
+  display: block;
+  height: auto;
+  resize: vertical;
+  padding: 13px 24px;
+  border-radius: 7px;
+  border: 2px solid $grey-2;
+  font-weight: 400;
+  color: $grey-3;
+  line-height: 17px;
+  background-color: rgba($grey-4, 0.1);
+  margin: 0;
 }
 
 .my-order__button {
@@ -309,4 +348,58 @@
 
 .my-order__promocode {
   margin-top: 14px;
+}
+
+// Status
+
+.my-order__status-list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 14px;
+
+  @include media-breakpoint-up(md) {
+    gap: 77px;
+  }
+}
+
+.my-order__status-item {
+  &:nth-child(2) {
+    margin-right: auto;
+  }
+}
+
+.my-order__status-val {
+  margin: 0;
+}
+
+.my-order__status-state {
+  display: block;
+  line-height: 16px;
+  padding: 3px 8px;
+  border: 2px solid $blue-5;
+  border-radius: 5px;
+  margin: 0;
+}
+
+// Shops
+
+.my-order__shops-list {
+  @include list-reset;
+}
+
+.my-order__shops-item {
+  font-size: 16px;
+  line-height: 18px;
+  color: $blue-4;
+
+  a {
+    color: $blue-4;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
