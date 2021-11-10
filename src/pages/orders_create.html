@@ -9,47 +9,163 @@
       <div class="orders-wrapper">
         <div class="my-order">
           <form class="my-order__form order-form">
-            <div class="my-order__field">
-              <label class="order-form__label" for="product-url">Ссылка на товар</label>
-              <input class="order-form__input" type="url" id="product-url" placeholder="Например: http://amazom.com/phone/iphone12">
-            </div>
-            <div class="my-order__field">
-              <label class="order-form__label" for="product-title">Название товара на сайте</label>
-              <input class="order-form__input" type="text" id="product-title" placeholder="Например: Iphone 12 pro 256 gold">
-            </div>
-            <div class="my-order__field-group my-order__field-group--params my-order__bb">
-              <div class="my-order__field my-order__col-1-4">
-                <label class="order-form__label" for="product-price">Цена</label>
-                <input class="order-form__input" type="text" id="product-price" placeholder="Например: $1234.33">
+            <div class="my-order__wrapper my-order__bb">
+              <div class="my-order__field my-order__col-1-1">
+                <label class="order-form__label" for="product-url">Ссылка на товар</label>
+                <input class="order-form__input" type="url" id="product-url" placeholder="Например: http://amazom.com/phone/iphone12">
               </div>
-              <div class="my-order__field my-order__col-1-4">
-                <label class="order-form__label" for="product-color">Цвет (colour)</label>
-                <input class="order-form__input" type="text" id="product-color" placeholder="Например: green">
+              <div class="my-order__field my-order__col-1-1">
+                <label class="order-form__label" for="product-title">Название товара на сайте</label>
+                <input class="order-form__input" type="text" id="product-title" placeholder="Например: Iphone 12 pro 256 gold">
               </div>
-              <div class="my-order__field my-order__col-1-4">
-                <label class="order-form__label" for="product-size">Размер (size)</label>
-                <input class="order-form__input" type="text" id="product-size" placeholder="Например: 7 M / 9,5 W">
-              </div>
-              <div class="my-order__field my-order__col-1-4">
-                <label class="order-form__label" for="product-quantity">Количество</label>
-                <input class="order-form__input" type="text" id="product-quantity" placeholder="Например: 1">
-              </div>
-            </div>
-            <div class="my-order__field-group my-order__field-group--replacements">
-              <div class="my-order__field my-order__field--replacements my-order__col-1-2">
-                <label class="order-form__label" for="replacements-size">Замена по размеру</label>
-                <input class="order-form__input" type="text" id="replacements-size" placeholder="Например: 7 M / 9,5 W">
-                <p class="order-form__comment">На случай отсутствия осного варианта.</p>
-              </div>
-              <div class="my-order__field my-order__field--replacements my-order__col-1-2">
-                <label class="order-form__label" for="replacements-color">Замена по цвету</label>
-                <input class="order-form__input" type="text" id="replacements-color" placeholder="Например: 7 M / 9,5 W">
-                <p class="order-form__comment">На случай отсутствия осного варианта.</p>
+              <div class="my-order__field-group my-order__field-group--params">
+                <div class="my-order__field my-order__col-1-4">
+                  <label class="order-form__label" for="product-price">Цена</label>
+                  <input class="order-form__input" type="text" id="product-price" placeholder="Например: $1234.33">
+                </div>
+                <div class="my-order__field my-order__col-1-4">
+                  <label class="order-form__label" for="product-color">Цвет (colour)</label>
+                  <input class="order-form__input" type="text" id="product-color" placeholder="Например: green">
+                </div>
+                <div class="my-order__field my-order__col-1-4">
+                  <label class="order-form__label" for="product-size">Размер (size)</label>
+                  <input class="order-form__input" type="text" id="product-size" placeholder="Например: 7 M / 9,5 W">
+                </div>
+                <div class="my-order__field my-order__col-1-4">
+                  <label class="order-form__label" for="product-quantity">Количество</label>
+                  <input class="order-form__input" type="text" id="product-quantity" placeholder="Например: 1">
+                </div>
               </div>
             </div>
-            <a href="#" class="my-order__button">Предпросмотр заказа</a>
-            <a href="#" class="my-order__button my-order__button--white">Сохранить и добавить еще один товар</a>
+            <div class="my-order__wrapper">
+              <div class="my-order__field-group my-order__field-group--replacements">
+                <div class="my-order__field my-order__field--replacements my-order__col-1-2">
+                  <label class="order-form__label" for="replacements-size">Замена по размеру</label>
+                  <input class="order-form__input" type="text" id="replacements-size" placeholder="Например: 7 M / 9,5 W">
+                  <p class="order-form__comment">На случай отсутствия осного варианта.</p>
+                </div>
+                <div class="my-order__field my-order__field--replacements my-order__col-1-2">
+                  <label class="order-form__label" for="replacements-color">Замена по цвету</label>
+                  <input class="order-form__input" type="text" id="replacements-color" placeholder="Например: 7 M / 9,5 W">
+                  <p class="order-form__comment">На случай отсутствия осного варианта.</p>
+                </div>
+              </div>
+              <div class="my-order__flex-wrap">
+                <a href="#" class="my-order__button">Предпросмотр заказа</a>
+                <button class="my-order__button my-order__button--white">Сохранить и добавить еще один товар</button>
+              </div>
+            </div>
           </form>
+        </div>
+
+        <br>
+
+        <div class="my-order">
+          <div class="my-order__products my-order__wrapper my-order__bb">
+            <h3 class="my-order__heading">Заказ №1387626-1 (Amazon.com)</h3>
+
+            <div class="my-order__table-wrapper">
+              <table class="my-order__table">
+                <thead>
+                  <tr><th>#</th><th>Название</th><th>Цена</th><th>Цвет</th><th>Размер</th><th>Кол-во</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>iPhone 12 pro 256gb, iPhone 12 pro 256gb</td>
+                    <td>$1000.00</td>
+                    <td>Black/white</td>
+                    <td>7m / 10,5W</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>iPhone 12 pro 256gb, iPhone 12 pro 256gb</td>
+                    <td>$1000.00</td>
+                    <td>Black/white</td>
+                    <td>7m / 10,5W</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>iPhone 12 pro 256gb, iPhone 12 pro 256gb</td>
+                    <td>$1000.00</td>
+                    <td>Black/white</td>
+                    <td>7m / 10,5W</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="my-order__total my-order__wrapper my-order__bb">
+            <ul class="my-order__total-list">
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Стоимость товаров:</span>
+                <b class="my-order__total-value my-order__total-value--price">$2467.02</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Товаров в заказе:</span>
+                <b class="my-order__total-value">12 шт</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Комиссия</span>
+                <b class="my-order__total-value">$25.00</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Промокод</span>
+                <b class="my-order__total-value">Fast2Fast3</b>
+              </li>
+              <li class="my-order__total-item">
+                <span class="my-order__total-title">Налог штата</span>
+                <b class="my-order__total-value">$0</b>
+              </li>
+            </ul>
+          </div>
+
+          <div class="my-order__wrapper my-order__bb">
+            <form class="my-order__comment order-form" action="#">
+              <label class="order-form__label" for="order-comment">Комментарий</label>
+              <textarea class="order-form__input order-form__textarea" name="order-comment" id="order-comment">примените промокод 40estra  без него не выкупайте товар; выкупайте заказ как есть; если не будет размера s/m купите m/l</textarea>
+            </form>
+
+            <form class="my-order__promocode order-form" action="#">
+              <label class="order-form__label" for="order-promocode">Если у вас есть промокод на бесплатный выкуп заказа – введите его здесь и нажмите применить:</label>
+              <div class="my-order__flex-wrap">
+                <input class="order-form__input order-form__input--blue my-order__fg-1" type="text" id="order-promocode">
+                <button class="my-order__button my-order__button--blue" type="submit">Применить промокод</button>
+              </div>
+            </form>
+          </div>
+          <div class="my-order__wrapper my-order__bb">
+            <p class="my-order__heading-2">Что делать если такого товара не будет в магазине:</p>
+            <div class="my-order__flex-wrap my-order__flex-wrap--cg-40">
+              <label class="my-order__checkbox">
+                <input type="checkbox">
+                <span class="my-order__checkbox-icon"></span>
+                Купить те товары, которые будут
+              </label>
+              <label class="my-order__checkbox">
+                <input type="checkbox">
+                <span class="my-order__checkbox-icon"></span>
+                Отменить весь заказ
+              </label>
+            </div>
+
+          </div>
+          <div class="my-order__wrapper">
+            <label class="my-order__checkbox my-order__agreement">
+              <input type="checkbox">
+              <span class="my-order__checkbox-icon"></span>
+              Если промокод на сайте выкупа не cработает, я соглашаюсь с выкупом заказа без скидки.
+            </label>
+            <div class="my-order__flex-wrap">
+              <a href="#" class="my-order__button">Оформить заказ и оплатить</a>
+              <a href="#" class="my-order__button my-order__button--white">Редактирование заказа</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

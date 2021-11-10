@@ -13,24 +13,35 @@
   font-weight: 500;
   letter-spacing: 0;
   border: 2px solid $black;
-  padding: 21px;
   border-radius: 7px;
   box-shadow: 0 0 20px 0 rgba(213, 234, 241, 0.5);
 }
 
-.my-order__bb {
-  position: relative;
+.my-order__wrapper {
+  padding: 21px;
+}
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -22px;
-    right: -22px;
-    bottom: 0;
-    height: 1px;
-    background-color: $black;
+.my-order__bb {
+  border-bottom: 1px solid $black;
+}
+
+.my-order__flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  row-gap: 14px;
+
+  @include media-breakpoint-up(md) {
+    flex-wrap: nowrap;
   }
+}
+
+.my-order__flex-wrap--cg-40 {
+  column-gap: 40px;
+}
+
+.my-order__fg-1 {
+  flex-grow: 1;
 }
 
 .my-order__field-group {
@@ -43,30 +54,30 @@
   }
 }
 
-.my-order__field-group--params {
-  padding-bottom: 5px;
-}
-
 .my-order__field-group--replacements {
-  padding-top: 19px;
-  margin-bottom: 6px;
+  margin-bottom: 21px;
 }
 
-.my-order__field {
+.my-order__col-1-1 {
   margin-bottom: 14px;
 }
 
-.my-order__col-1-2 {
+.my-order__col-1-2,
+.my-order__col-1-4 {
   width: 100%;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @include media-breakpoint-up(md) {
     width: 50%;
+    margin-bottom: 0;
   }
 }
 
 .my-order__col-1-4 {
-  width: 100%;
-
   @include media-breakpoint-up(md) {
     width: 25%;
   }
@@ -74,6 +85,8 @@
 
 .my-order__button {
   display: inline-block;
+  flex-shrink: 0;
+  border: none;
   width: 100%;
   padding: 12px;
   background-color: $blue-4;
@@ -82,16 +95,11 @@
   font-weight: 400;
   line-height: 16px;
   text-align: center;
-  margin-bottom: 14px;
   transition: background-color 0.2s linear;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  cursor: pointer;
 
   @include media-breakpoint-up(md) {
     width: auto;
-    margin-bottom: 0;
   }
 
   &:hover {
@@ -100,6 +108,10 @@
 
   &:active {
     color: rgba($white, 0.6);
+  }
+
+  &--blue {
+    background-color: $blue-5;
   }
 }
 
@@ -117,4 +129,184 @@
   &:active {
     color: rgba($blue-4, 0.6);
   }
+}
+
+.my-order__heading {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.my-order__heading-2 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.my-order__table-wrapper {
+  overflow: auto;
+}
+
+.my-order__table {
+  width: 100%;
+}
+
+.my-order__table th,
+.my-order__table td {
+  vertical-align: top;
+}
+
+.my-order__table th {
+  line-height: 20px;
+  color: $grey-blue;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.my-order__table td {
+  line-height: 16px;
+}
+
+.my-order__table th,
+.my-order__table td {
+  padding: 0 10px;
+  padding-bottom: 20px;
+}
+
+.my-order__table tr:last-child td {
+  padding-bottom: 0;
+}
+
+.my-order__table th:first-child,
+.my-order__table td:first-child {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.my-order__table th:last-child,
+.my-order__table td:last-child {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+@include media-breakpoint-up(md) {
+  .my-order__table th,
+  .my-order__table td {
+    padding: 0 20px;
+    padding-bottom: 30px;
+  }
+
+  .my-order__table tr:last-child td {
+    padding-bottom: 0;
+  }
+
+  .my-order__table th:first-child,
+  .my-order__table td:first-child {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+
+  .my-order__table th:last-child,
+  .my-order__table td:last-child {
+    padding-right: 0;
+    padding-left: 20px;
+  }
+}
+
+.my-order__total-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 14px;
+
+  @include media-breakpoint-up(md) {
+    flex-wrap: nowrap;
+  }
+}
+
+.my-order__total-title {
+  display: block;
+  line-height: 16px;
+  font-weight: 400;
+  color: $grey-blue;
+  margin-bottom: 4px;
+}
+
+.my-order__total-value {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+}
+
+.my-order__total-value--price {
+  color: $blue-4;
+}
+
+.my-order__checkbox input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.my-order__checkbox {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+  color: $grey-3;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.my-order__checkbox-icon {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $grey-3;
+  border-radius: 2px;
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 6px;
+    position: absolute;
+    border-bottom: 2px solid $grey-3;
+    border-left: 2px solid $grey-3;
+    transform: rotate(-45deg);
+  }
+}
+
+.my-order__checkbox:hover {
+  color: $blue-4;
+
+  .my-order__checkbox-icon,
+  .my-order__checkbox-icon::before {
+    border-color: $blue-4;
+  }
+}
+
+.my-order__checkbox input:checked + .my-order__checkbox-icon::before {
+  display: block;
+}
+
+.my-order__agreement {
+  margin-bottom: 32px;
+}
+
+.my-order__promocode {
+  margin-top: 14px;
 }

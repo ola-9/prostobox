@@ -20,6 +20,21 @@
   }
 }
 
+.order-form__input--blue {
+  border-color: $blue-5;
+
+  &:focus {
+    border-color: $blue-4;
+  }
+}
+
+.order-form__textarea {
+  display: block;
+  height: auto;
+  resize: vertical;
+  background-color: rgba($grey-4, 0.1);
+}
+
 .order-form__comment {
   font-weight: 400;
   line-height: 19px;
