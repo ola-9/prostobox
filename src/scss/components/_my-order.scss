@@ -19,12 +19,56 @@
   box-shadow: 0 0 20px 0 rgba(213, 234, 241, 0.5);
 }
 
+.my-order__card {
+  border: 2px solid $blue-5;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.my-order__card-item-desc {
+
+}
+
+.my-order__card-desc-wrapper {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.my-order__card-item {
+  display: flex;
+}
+
+.my-order__card-item-desc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 52px;
+}
+
+.my-order__card-item-name {
+  font-weight: 400;
+}
+
+.my-order__card-storage-date {
+  color: $grey-blue;
+}
+
 .my-order__wrapper {
   padding: 21px;
 }
 
+.my-order__storage-period {
+  display: flex;
+  gap: 32px;
+}
+
 .my-order__bb {
   border-bottom: 1px solid $black;
+}
+
+.my-order__bb--card {
+  border-bottom: 1px solid $blue-5;
 }
 
 .my-order__flex-wrap {
