@@ -12,6 +12,7 @@
 .my-order {
   font-family: "Ubuntu", sans-serif;
   font-size: 14px;
+  line-height: 16px;
   font-weight: 500;
   letter-spacing: 0;
   border: 2px solid $black;
@@ -362,11 +363,16 @@
   row-gap: 14px;
 
   @include media-breakpoint-up(md) {
+    flex-wrap: nowrap;
     gap: 77px;
   }
 }
 
 .my-order__status-item {
+  @include media-breakpoint-up(md) {
+    max-width: 200px;
+  }
+
   &:nth-child(2) {
     margin-right: auto;
   }
@@ -383,6 +389,16 @@
   border: 2px solid $blue-5;
   border-radius: 5px;
   margin: 0;
+
+  &--grey {
+    color: $grey-2;
+    border-color: $grey-2;
+  }
+
+  &--yellow {
+    background-color: $yellow-2;
+    border-color: $yellow-2;
+  }
 }
 
 // Shops
@@ -398,9 +414,30 @@
 
   a {
     color: $blue-4;
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
+}
+
+// Product
+
+.my-order__product-status {
+  margin-bottom: 16px;
+
+  a {
+    color: $blue-4;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.my-order__product-heading {
+  margin: 0;
+  margin-right: auto;
 }
