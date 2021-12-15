@@ -1,0 +1,122 @@
+.pagination__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__item {
+  margin: 0 3px;
+
+
+  &:first-child {
+    margin-right: 20px;
+  }
+
+  &:last-child {
+    margin-left: 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 0 5px;
+
+    &:first-child {
+
+      margin-right: 35px;
+    }
+
+    &:last-child {
+      margin-left: 35px;
+    }
+  }
+}
+
+.pagination__btn {
+  font-family: "Jost", sans-serif;
+  display: block;
+  min-width: 30px;
+  padding: 5px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: $black-1;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 0 rgba($black, 0.05);
+  transition: all 0.2s ease;
+
+  @include media-breakpoint-up(lg) {
+    min-width: 40px;
+    padding: 7px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &--current {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $blue-dark;
+  }
+}
+
+.pagination__nav-btn {
+  @include button-reset;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 5px solid $blue-light-1;
+  background-color: $blue;
+  border-radius: 50%;
+  box-shadow: 0 14px 14px 0 rgba($blue, 0.28);
+  transition: all 0.2s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @include media-breakpoint-up(lg) {
+    width: 60px;
+    height: 60px;
+    border-width: 8px;
+  }
+
+  &--prev {
+    background-image: url("../../img/new_main_page/arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../../img/new_main_page/arrow-right.svg");
+  }
+
+  &:hover {
+    box-shadow: 0 14px 14px 0 rgba($blue, 0.2);
+  }
+
+  &:active {
+    background-color: $blue-dark;
+    box-shadow: 0 14px 14px 0 rgba($blue, 0.1);
+  }
+
+  &--disabled {
+    background-color: $blue-light;
+
+    &:hover {
+      box-shadow: 0 14px 14px 0 rgba($blue, 0.28);
+    }
+
+    &:active {
+      background-color: $blue-light;
+      box-shadow: 0 14px 14px 0 rgba($blue, 0.28);
+    }
+  }
+}

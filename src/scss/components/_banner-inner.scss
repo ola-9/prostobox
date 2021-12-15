@@ -1,0 +1,123 @@
+.banner-inner__wrapper {
+  border-radius: 20px;
+  background-color: $white;
+  padding: 0 8px;
+  position: relative;
+
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 553px;
+    height: 428px;
+
+    top: -95px;
+    left: 69%;
+    transform: translateX(-50%);
+
+    background-image: url("../../img/new_main_page/banner-inner/lines-mobile.svg");
+
+    @include media-breakpoint-up(lg) {
+      width: 2713px;
+      height: 1600px;
+
+      top: -95px;
+      left: 40%;
+      transform: translateX(-50%);
+      background-image: url("../../img/new_main_page/banner-inner/lines.svg");
+    }
+  }
+}
+
+.banner-inner__text-wrapper {
+  position: relative;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 65%;
+    padding-top: 83px;
+    padding-bottom: 66px;
+    text-align: left;
+  }
+}
+
+.banner-inner__container {
+  position: relative;
+  padding-bottom: 300px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 12px;
+    width: 100%;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 0;
+
+    &::before {
+      width: 35%;
+      height: 100%;
+      top: -20px;
+      right: 0;
+      left: auto;
+      bottom: auto;
+      transform: none;
+      background-position: right top;
+    }
+  }
+}
+
+.banner-inner__heading {
+  margin: 0 0 20px;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+    margin-bottom: 37px;
+  }
+}
+
+.banner-inner--blacklist {
+  .banner-inner__container {
+    padding-bottom: 260px;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 0;
+    }
+  }
+
+
+  @include media-breakpoint-down(xl) {
+    .banner-inner__text-wrapper ul {
+      padding-left: 0;
+    }
+  }
+
+  .banner-inner__container::before {
+    height: 220px;
+    background-image: url("../../img/new_main_page/banner-inner/black-list-mobile.png");
+    background-size: 220px 220px;
+
+    @include media-breakpoint-up(lg) {
+      top: 10%;
+      height: 100%;
+      background-position: center top;
+    }
+
+    @include media-breakpoint-up(xl) {
+      background-image: url("../../img/new_main_page/banner-inner/black-list.png");
+      background-size: 339px 339px;
+      background-position: right top;
+    }
+  }
+}
