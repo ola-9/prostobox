@@ -1,3 +1,9 @@
+.product-order {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 79px;
+  }
+}
+
 .product-order__wrapper {
   position: relative;
   border-radius: 20px;
@@ -64,6 +70,10 @@
 }
 
 .product-order__heading {
+
+  & span {
+    text-transform: uppercase;
+  }
 
   @include media-breakpoint-up(lg) {
     margin: 0 0 40px 0;

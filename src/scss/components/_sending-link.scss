@@ -45,6 +45,10 @@
 .sending-link__from-wrapper {
   max-width: 488px;
   margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    margin:0;
+  }
 }
 
 .sending-link__input {
@@ -89,7 +93,6 @@
 
   @include media-breakpoint-up(lg) {
     margin-left: 20px;
-
   }
 }
 
