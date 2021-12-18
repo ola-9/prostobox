@@ -1,0 +1,108 @@
+.sending-link {
+  background-color: $black-1;
+  border-radius: 20px;
+  padding: 20px;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    padding: 47px 102px 47px 102px;
+    justify-content: space-between;
+  }
+}
+
+.sending-link__heading {
+  margin: 0;
+  color: $white;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 391px;
+    margin: 0;
+    text-align: start;
+  }
+}
+
+.sending-link__form {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+
+
+  @include media-breakpoint-up(md) {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: row;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+  }
+}
+
+.sending-link__from-wrapper {
+  max-width: 488px;
+  margin: 0 auto;
+}
+
+.sending-link__input {
+  border: 1px solid $white;
+  border-radius: 20px;
+  padding: 14px 28px 14px 28px;
+  background-color: $black-1;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: $white;
+  flex-grow: 1;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: $grey-light;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+}
+
+.sending-link__button {
+  width: 100%;
+  height: 60px;
+  background: url("../../img/new_main_page/buyer/Arrow.svg"), $blue;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px, auto;
+  border-radius: 20px;
+  border: none;
+
+  @include media-breakpoint-up(md) {
+    width: 70px;
+    height: 60px;
+    background-size: auto;
+    margin-left: 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 20px;
+
+  }
+}
+
+.sending-link__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: $grey-light;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+}

@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% set siteName = "Prostobox.com" %}
+{% set isAuthenticated = false %}
+{% set isIndex = true %}
+
+{% block main %}
+
+  <main>
+    <section class="product-order section">
+      <div class="section-xxl">
+        <div class="product-order__wrapper">
+          <div class="container">
+            <div class="product-order__content-wrapper">
+              <ul class="breadcrumbs product-order__breadcrumbs">
+                <li class="breadcrumbs__item">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--active">
+                  Профессиональные БАЙЕРЫ от Простобокса
+                </li>
+              </ul>
+              <h2 class="heading-primary product-order__heading">
+                Профессиональные <span class="blue">БАЙЕРЫ</span> от Простобокса
+              </h2>
+              <p class="product-order__text">
+                Просто отправьте ссылку на интересующий товар, наши штатные байеры&nbsp;все купят и отправят на наш склад в Делавэре.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="sending-link product-order__sending">
+          <p class="sending-link__heading heading-secondary">
+            Отправить ссылку на товар байерам Простобокса:
+          </p>
+          <div class="sending-link__from-wrapper">
+            <form class="sending-link__form" action="">
+              <input class="sending-link__input" type="text" placeholder="Ссылка на товар">
+              <button class="sending-link__button" type="submit"></button>
+            </form>
+            <p class="sending-link__text">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги и политикой конфиденциальности</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+{% endblock %}
