@@ -7,7 +7,7 @@
 {% block main %}
 
   <main>
-    <section class="product-order section">
+    <!--<section class="product-order section">
       <div class="section-xxl">
         <div class="product-order__wrapper">
           <div class="container">
@@ -29,9 +29,28 @@
             </div>
           </div>
         </div>
+      </div>-->
+
+    <section class="banner-inner banner-inner--buyer section mb-4 mb-lg-5">
+      <div class="section-xxl">
+        <div class="banner-inner__wrapper">
+          <div class="container">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+              <li class="breadcrumbs__item breadcrumbs__item--active">Профессиональные байеры от Простобокса</li>
+            </ul>
+            <div class="banner-inner__container">
+              <div class="banner-inner__text-wrapper content">
+                <h1 class="banner-inner__heading heading-primary">Профессиональные <span class="blue">БАЙЕРЫ</span> от Простобокса</h1>
+                <p class="banner-inner__text--buyer">Просто отправьте ссылку на интересующий товар, наши штатные байеры все купят и отправят на наш склад в Делавэре.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="container">
-        <div class="sending-link product-order__sending">
+        <div class="sending-link banner-inner__sending">
           <p class="sending-link__heading heading-secondary">
             Отправить ссылку на товар байерам Простобокса:
           </p>
@@ -117,7 +136,7 @@
     </section>
 
     <section class="how-issue">
-      <div class="container">
+      <div class="container how-issue__container">
         <h2 class="heading-primary how-issue__heading">Как оформить заказ через <span class="blue">байера</span>&nbsp;Простобокса?</h2>
         <ul>
           <li class="how-issue__item how-issue__item--choice">
@@ -146,6 +165,20 @@
             </div>
           </li>
         </ul>
+      </div>
+      <div class="container">
+        <div class="sending-link">
+          <p class="sending-link__heading heading-secondary">
+            Отправить ссылку на товар байерам Простобокса:
+          </p>
+          <div class="sending-link__from-wrapper">
+            <form class="sending-link__form" action="">
+              <input class="sending-link__input" type="text" placeholder="Ссылка на товар">
+              <button class="sending-link__button" type="submit"></button>
+            </form>
+            <p class="sending-link__text">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги и политикой конфиденциальности</p>
+          </div>
+        </div>
       </div>
     </section>
 

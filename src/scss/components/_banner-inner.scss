@@ -44,6 +44,11 @@
   }
 }
 
+.banner-inner__text--buyer {
+  max-width: 667px;
+  letter-spacing: 0.04em;
+}
+
 .banner-inner__container {
   position: relative;
   padding-bottom: 300px;
@@ -120,4 +125,51 @@
       background-position: right top;
     }
   }
+}
+
+.banner-inner--buyer {
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 80px !important;
+  }
+
+  .banner-inner__text-wrapper {
+    @include media-breakpoint-up(lg) {
+      padding-top: 73px;
+      padding-bottom: 135px;
+    }
+  }
+
+  .banner-inner__container {
+    padding-bottom: 350px;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      background-image: url("../../img/new_main_page/buyer/product-order.png");
+      background-size: 100% auto;
+      bottom: 20px;
+      width: 440px;
+      height: 330px;
+
+      @include media-breakpoint-up(lg) {
+        top: 50px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: 682px;
+        height: 624px;
+        top: -85px;
+        right: -155px;
+        background-size: auto auto;
+      }
+    }
+  }
+
+}
+
+.banner-inner__sending {
+  transform: translateY(-29%);
 }
