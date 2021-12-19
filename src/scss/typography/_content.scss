@@ -1,0 +1,58 @@
+.content {
+  p {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0;
+    margin-bottom: 25px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+      line-height: 29px;
+      margin-bottom: 29px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    @include list-reset;
+    padding-left: 16px;
+
+    li {
+      position: relative;
+      font-size: 14px;
+      line-height: 25px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 10px;
+        left: -16px;
+        background-color: $blue;
+        border-radius: 50%;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      li {
+        font-size: 16px;
+        line-height: 29px;
+        margin-bottom: 20px;
+
+        &::before {
+          top: 12px;
+        }
+      }
+    }
+  }
+}

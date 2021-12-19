@@ -1,0 +1,76 @@
+.blacklist__wrapper {
+  padding: 20px;
+  background-color: $white;
+  box-shadow: 0 0 30px 0 rgba($color: $black, $alpha: 0.05);
+  border-radius: 20px;
+
+  @include media-breakpoint-up(md) {
+    padding: 40px;
+  }
+}
+
+.blacklist__list {
+  @include list-reset;
+  padding: 3px;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    padding: 0;
+    border-left: solid 2px transparent;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100'%3E%3Crect x='0' y='0' width='100%25' height='50' rx='20' fill='%23fafafa'/%3E%3Crect x='0' y='50' width='100%25' height='50' rx='20' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-repeat: repeat-y;
+    background-origin: border-box;
+    overflow: hidden;
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    color: $blue;
+    text-decoration: line-through;
+    padding: 12px;
+    padding-top: 13px;
+    border-radius: 20px;
+
+    &:nth-child(2n) {
+      background-color: $grey-extra-light;
+    }
+
+    @include media-breakpoint-up(md) {
+      position: relative;
+      padding-right: 18px;
+      padding-left: 20px;
+      margin-left: -2px;
+
+      &:nth-child(2n) {
+        background-color: transparent;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 17px;
+        width: 2px;
+        height: 15px;
+        background-color: rgba($black, 0.1);
+      }
+    }
+  }
+}
+
+.blacklist__pagination {
+  margin-top: 24px;
+  padding-bottom: 4px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+    padding-bottom: 20px;
+  }
+}
