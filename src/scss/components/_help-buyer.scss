@@ -1,7 +1,10 @@
 .help-buyer {
   position: relative;
+  margin-bottom: 20px;
 
   @include media-breakpoint-up(lg){
+    margin-bottom: 32px;
+
     &::before {
       position: absolute;
       content: "";
