@@ -1,0 +1,181 @@
+.advantage-bayres__wrapper {
+  position: relative;
+  background-color: $white;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 67px;
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      justify-content: start;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    display: flex;
+    content: "";
+    width: 2547px;
+    height: 2412px;
+    background-image: url("../../img/new_main_page/buyer/advantage-bayres-line.svg");
+    left: calc(50% - 1575px);
+    top: -395px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+  }
+}
+
+.advantage-bayres__heading {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px;
+
+  & span:nth-of-type(2) {
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+    text-align: start;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 60px;
+    max-width: 793px;
+  }
+}
+
+.advantage-bayres__item {
+  position: relative;
+
+  padding: 103px 20px 5px 0;
+  margin-bottom: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - 100px);
+    top: -30px;
+    background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: 297px;
+    max-width: 285px;
+    &::before {
+      left: -30px;
+      top: -30px;
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+
+    &:not(:nth-of-type(4n)) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.advantage-bayres__item--course {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/course.png");
+  }
+}
+
+.advantage-bayres__item--quality {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/quality.png");
+  }
+}
+
+.advantage-bayres__item--account {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/account.png");
+  }
+}
+
+.advantage-bayres__item--watch {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/watch.png");
+  }
+}
+
+.advantage-bayres__item--language {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/language.png");
+  }
+}
+
+.advantage-bayres__item--terminal {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/terminal.png");
+  }
+}
+
+.advantage-bayres__item--compass {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/compass.png");
+  }
+}
+
+.advantage-bayres__item--percent {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/percent.png");
+  }
+}
+
+.advantage-bayres__item--ebay {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/ebay.png");
+  }
+}
+
+.advantage-bayres__item--box {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/box.png");
+  }
+}
+
+.advantage-bayres__item--sheet {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/sheet.png");
+  }
+}
+
+.advantage-bayres__text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 29px;
+    text-align: start;
+  }
+}
+
+.advantage-bayres__sending {
+  transform: translateY(-8%);
+
+  @include media-breakpoint-up(md) {
+    transform: translateY(-38%);
+  }
+
+  @include media-breakpoint-up(lg) {
+    transform: translateY(-48%);
+  }
+}

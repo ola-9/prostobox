@@ -1,3 +1,15 @@
+.how-issue {
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 70px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 150px;
+  }
+}
+
 .how-issue ul {
   list-style: none;
   margin: 0;
