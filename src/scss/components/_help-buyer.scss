@@ -79,6 +79,10 @@
   @include media-breakpoint-up(lg){
     padding: 30px;
     margin: 0;
+
+    &::before {
+      background-size: auto auto;
+    }
   }
 }
 

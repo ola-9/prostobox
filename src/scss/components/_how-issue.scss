@@ -1,0 +1,176 @@
+.how-issue ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.how-issue__heading {
+
+  & span {
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 0 0 59px 0;
+  }
+}
+
+.how-issue__item {
+  position: relative;
+  display: flex;
+
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+  }
+}
+
+.how-issue__item--choice {
+
+  &::before {
+    width: 265px;
+    height: 220px;
+    background-image: url("../../img/new_main_page/buyer/choice.png");
+  }
+
+  @include media-breakpoint-up(md) {
+
+    &::before {
+      left: calc(50% - 100px);
+      top: -30px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 72px;
+
+    &::before {
+      left: 502px;
+      top: -30px;
+    }
+  }
+}
+
+.how-issue__item-wrapper--choice {
+  @include media-breakpoint-up(lg) {
+    max-width: 460px;
+  }
+}
+
+.how-issue__item--redemption {
+
+  &::before {
+    width: 175px;
+    height: 210px;
+    background-image: url("../../img/new_main_page/buyer/redemption.png");
+  }
+
+  @include media-breakpoint-up(md) {
+
+    &::before {
+      right: calc(50% - 100px);
+      top: -30px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 111px;
+    justify-content: end;
+
+    &::before {
+      right: 522px;
+      top: -30px;
+    }
+  }
+}
+
+.how-issue__item-wrapper--redemption {
+  @include media-breakpoint-up(lg) {
+    max-width: 488px;
+  }
+}
+
+.how-issue__item--shipment {
+
+  &::before {
+    width: 175px;
+    height: 204px;
+    background-image: url("../../img/new_main_page/buyer/shipment.png");
+  }
+
+  @include media-breakpoint-up(md) {
+
+    &::before {
+      right: calc(50% - 100px);
+      top: -30px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 225px;
+
+    &::before {
+      left: 502px;
+      top: -30px;
+    }
+  }
+}
+
+
+
+.how-issue__item-wrapper--shipment {
+  @include media-breakpoint-up(lg) {
+    max-width: 407px;
+  }
+}
+
+.how-issue__item--pay {
+
+  &::before {
+    width: 175px;
+    height: 204px;
+    background-image: url("../../img/new_main_page/buyer/pay.png");
+  }
+
+  @include media-breakpoint-up(md) {
+
+    &::before {
+      right: calc(50% - 100px);
+      top: -30px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 43px;
+    margin-right: 17px;
+    justify-content: end;
+
+    &::before {
+      left: 502px;
+      top: -30px;
+    }
+  }
+}
+
+.how-issue__item-wrapper--pay {
+  max-width: 472px;
+}
+
+.how-issue__tertiary {
+  margin: 0 0 20px 0;
+}
+
+.how-issue__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
