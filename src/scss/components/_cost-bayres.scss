@@ -1,0 +1,137 @@
+.cost-bayres {
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+    }
+  }
+}
+
+.cost-bayres__heading {
+  max-width: 813px;
+  margin: 0;
+  text-align: center;
+
+  & span {
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(md) {
+    text-align: start;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 190px;
+  }
+}
+
+.cost-bayres__tertiary {
+  margin: 0;
+  letter-spacing: 0.04em;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 220px;
+  }
+}
+
+.cost-bayres__tertiary--vip {
+  @include media-breakpoint-up(lg) {
+    max-width: 140px;
+  }
+}
+
+.cost-bayres__item {
+  position: relative;
+  background-color: $white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 105px;
+    height: 117px;
+    background-size: 100%;
+    top: -81px;
+    left: calc(50% - 50px);
+
+    @include media-breakpoint-up(lg) {
+      top: -160px;
+      left: auto;
+      width: 210px;
+      height: 235px;
+    }
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px 40px 20px;
+    max-width: 387px;
+    min-height: 356px;
+  }
+}
+
+.cost-bayres__item--firecracker {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/firecracker.png");
+  }
+}
+
+.cost-bayres__item--rocket {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/rocket.png");
+  }
+}
+
+.cost-bayres__item--crown {
+  &::before {
+    background-image: url("../../img/new_main_page/buyer/crown.png");
+  }
+}
+
+.cost-bayres__text-percent {
+  @include media-breakpoint-up(lg) {
+    font-family: "Jost", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}
+
+.cost-bayres__text {
+  @include media-breakpoint-up(lg) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+}
+
+.cost-bayres__container {
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 59px;
+  }
+}

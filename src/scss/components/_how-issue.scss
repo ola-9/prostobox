@@ -100,7 +100,7 @@
     width: 125px;
     height: 210px;
     top: -130px;
-    left: calc(50% - 80px);
+    right: calc(50% - 50px);
     background-image: url("../../img/new_main_page/buyer/redemption.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -161,8 +161,6 @@
     margin-bottom: 225px;
 
     &::before {
-      width: 175px;
-      height: 204px;
       left: 502px;
       top: -30px;
     }
@@ -204,7 +202,7 @@
     justify-content: end;
 
     &::before {
-      left: 502px;
+      right: 502px;
       top: -30px;
     }
   }

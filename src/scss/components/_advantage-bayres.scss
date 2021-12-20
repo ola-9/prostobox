@@ -1,9 +1,16 @@
+.advantage-bayres {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 63px;
+  }
+}
+
 .advantage-bayres__wrapper {
   position: relative;
   background-color: $white;
   border-radius: 20px;
   padding-top: 30px;
   padding-bottom: 67px;
+  overflow: hidden;
 
   & ul {
     list-style: none;
@@ -13,7 +20,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       justify-content: start;
     }
   }
@@ -66,7 +73,7 @@
     display: block;
     width: 160px;
     height: 160px;
-    left: calc(50% - 100px);
+    left: calc(50% - 80px);
     top: -30px;
     background-repeat: no-repeat;
   }
@@ -179,3 +186,5 @@
     transform: translateY(-48%);
   }
 }
+
+
