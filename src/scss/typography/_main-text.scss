@@ -1,0 +1,15 @@
+.main-text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 29px;
+  }
+}

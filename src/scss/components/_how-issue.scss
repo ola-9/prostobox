@@ -23,12 +23,18 @@
 }
 
 .how-issue__heading {
+  text-align: center;
 
   & span {
     text-transform: uppercase;
   }
 
+  @include media-breakpoint-up(md) {
+    text-align: start;
+  }
+
   @include media-breakpoint-up(lg) {
+    text-align: start;
     margin: 0 0 59px 0;
   }
 }
@@ -123,6 +129,7 @@
     &::before {
       right: 522px;
       top: -30px;
+      background-size: auto auto;
     }
   }
 }
@@ -163,6 +170,7 @@
     &::before {
       left: 502px;
       top: -30px;
+      background-size: auto auto;
     }
   }
 }
@@ -204,6 +212,7 @@
     &::before {
       right: 502px;
       top: -30px;
+      background-size: auto auto;
     }
   }
 }
