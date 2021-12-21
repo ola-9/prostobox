@@ -6,7 +6,7 @@
   }
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 150px;
+    margin-bottom: 148px;
   }
 }
 
@@ -14,11 +14,16 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  background-image: url("../../img/new_main_page/buyer/how-issue.svg");
+  background-repeat: no-repeat;
+  background-position: left calc(50% - 30px) top -40px;
+
+  @include media-breakpoint-up(md) {
+    background-position: left calc(50% - 30px) top -40px;
+  }
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../../img/new_main_page/buyer/how-issue.svg");
-    background-repeat: no-repeat;
-    background-position: center top 150px;
+    background-position: left calc(50% - 30px) top 130px;
   }
 }
 
@@ -31,7 +36,7 @@
 
   @include media-breakpoint-up(md) {
     text-align: start;
-    
+
   }
 
   @include media-breakpoint-up(lg) {
@@ -49,6 +54,7 @@
     position: absolute;
     display: block;
     content: "";
+    background-size: 100% auto;
   }
 
   @include media-breakpoint-up(md) {
@@ -69,7 +75,6 @@
     left: calc(50% - 80px);
     background-image: url("../../img/new_main_page/buyer/choice.png");
     background-repeat: no-repeat;
-    background-size: 100% auto;
   }
 
   @include media-breakpoint-up(md) {
@@ -86,11 +91,10 @@
     margin-bottom: 72px;
 
     &::before {
-      width: 200px;
+      width: 270px;
       height: 200px;
       left: 502px;
       top: -30px;
-      background-size: auto auto;
     }
   }
 }
@@ -128,9 +132,10 @@
     justify-content: end;
 
     &::before {
-      right: 522px;
+      width: 195px;
+      height: 210px;
+      right: 502px;
       top: -30px;
-      background-size: auto auto;
     }
   }
 }
@@ -169,9 +174,10 @@
     margin-bottom: 225px;
 
     &::before {
+      width: 195px;
+      height: 204px;
       left: 502px;
       top: -30px;
-      background-size: auto auto;
     }
   }
 }
@@ -211,9 +217,10 @@
     justify-content: end;
 
     &::before {
-      right: 502px;
+      width: 195px;
+      height: 204px;
+      right: 490px;
       top: -30px;
-      background-size: auto auto;
     }
   }
 }
@@ -234,11 +241,6 @@
 }
 
 .how-issue__text {
-  margin: 0;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 23px;
-  letter-spacing: 0.04em;
   text-align: center;
 
   &:not(:last-of-type) {
@@ -246,12 +248,10 @@
   }
 
   @include media-breakpoint-up(md) {
-    font-size: 16px;
-    line-height: 29px;
     text-align: start;
   }
 }
 
 .how-issue__container {
-  padding-bottom: 15px;
+  padding-bottom: 17px;
 }

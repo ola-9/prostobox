@@ -44,11 +44,6 @@
   }
 }
 
-.banner-inner__text--buyer {
-  max-width: 667px;
-  letter-spacing: 0.04em;
-}
-
 .banner-inner__container {
   position: relative;
   padding-bottom: 300px;
@@ -128,9 +123,15 @@
 }
 
 .banner-inner--buyer {
+  margin-bottom: 0px !important;
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 80px !important;
+    margin-bottom: 78px !important;
+  }
+
+  .banner-inner__text--buyer {
+    max-width: 667px;
+    letter-spacing: 0.04em;
   }
 
   .banner-inner__text-wrapper {
@@ -168,8 +169,13 @@
     }
   }
 
+  .banner-inner__sending {
+    transform: translateY(-15%);
+
+    @include media-breakpoint-up(lg) {
+      transform: translateY(-29%);
+    }
+  }
 }
 
-.banner-inner__sending {
-  transform: translateY(-29%);
-}
+

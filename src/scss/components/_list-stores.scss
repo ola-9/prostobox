@@ -30,7 +30,7 @@ text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 100px 0 184px 0;
+    padding: 101px 0 184px 0;
   }
 
 }
@@ -39,7 +39,7 @@ text-align: center;
   margin: 0 0 20px 0;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 }
 
@@ -70,12 +70,12 @@ text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
-    padding-right: 373px;
+    padding-right: 372px;
 
     &::before {
       width: 518px;
       height: 562px;
-      right: -87px;
+      right: -85px;
       top: 37px;
       bottom: auto;
       left: auto;
@@ -91,14 +91,15 @@ text-align: center;
 }
 
 .list-stores__item {
-  letter-spacing: 0.04em;
+  letter-spacing: 0.036em;
   display: inline-block;
   font-weight: 400;
   margin-right: 0;
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 22px;
-  padding: 4px 20px;
+  padding: 3px 18px;
+  color: $blue;
   border-radius: 20px;
   background-color: $white;
   border: 1px dashed $blue;
@@ -109,14 +110,13 @@ text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
-    margin-right: 10px;
+    margin-right: 14px;
     margin-bottom: 20px;
   }
 }
 
 .list-stores__text {
-  letter-spacing: 0.04em;
-  color: $grey-dark;
+  letter-spacing: 0.036em;
   margin: 0 0 30px 0;
 
   @include media-breakpoint-up(lg) {
@@ -132,6 +132,6 @@ text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
-    transform: translateY(-59%);
+    transform: translateY(-57%);
   }
 }
