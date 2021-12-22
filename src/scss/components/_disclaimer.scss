@@ -22,8 +22,8 @@
     display: block;
     width: 2731px;
     height: 1217px;
-    left: -1307px;
-    top: -320px;
+    left: -1305px;
+    top: -325px;
     background-image: url("../../img/new_main_page/buyer/disclaimer-line.svg");
     background-repeat: no-repeat;
   }
@@ -40,13 +40,13 @@
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 130px 0 150px 10px;
+    padding: 125px 0 150px 10px;
 
     &::before {
       width: 613px;
       height: 498px;
       left: -614px;
-      top: -44px;
+      top: -47px;
       bottom: auto;
       background-size: auto auto;
     }

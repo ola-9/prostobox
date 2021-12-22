@@ -82,19 +82,17 @@
     &::before {
       width: 250px;
       height: 200px;
-      left: calc(50% - 80px);
       top: -170px;
     }
   }
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 72px;
+    margin-right: 680px;
 
     &::before {
       width: 270px;
-      height: 200px;
-      left: 502px;
-      top: -30px;
+      height: 210px;
     }
   }
 }
@@ -129,13 +127,10 @@
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 111px;
-    justify-content: end;
 
     &::before {
       width: 195px;
       height: 210px;
-      right: 502px;
-      top: -30px;
     }
   }
 }
@@ -176,8 +171,6 @@
     &::before {
       width: 195px;
       height: 204px;
-      left: 502px;
-      top: -30px;
     }
   }
 }
@@ -213,14 +206,11 @@
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 43px;
-    margin-right: 17px;
-    justify-content: end;
+    margin-right: 15px;
 
     &::before {
       width: 195px;
       height: 204px;
-      right: 490px;
-      top: -30px;
     }
   }
 }
@@ -231,8 +221,34 @@
   }
 }
 
+.how-issue__item--left {
+  @include media-breakpoint-up(lg) {
+    margin-right: 630px;
+
+    &::before {
+      left: calc(50% + 217px);
+      top: -30px;
+    }
+  }
+
+}
+
+.how-issue__item--right {
+  @include media-breakpoint-up(lg) {
+    margin-left: 630px;
+    justify-content: end;
+
+    &::before {
+      right: calc(50% + 217px);
+      top: -30px;
+    }
+  }
+
+}
+
 .how-issue__tertiary {
   text-align: center;
+  letter-spacing: -0.005em;
 
   @include media-breakpoint-up(md) {
     text-align: start;

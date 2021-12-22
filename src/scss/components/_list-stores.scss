@@ -30,7 +30,7 @@ text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 101px 0 184px 0;
+    padding: 101px 0 188px 0;
   }
 
 }
@@ -98,7 +98,7 @@ text-align: center;
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 22px;
-  padding: 3px 18px;
+  padding: 3px 19px;
   color: $blue;
   border-radius: 20px;
   background-color: $white;
@@ -132,6 +132,6 @@ text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
-    transform: translateY(-57%);
+    transform: translateY(-59%);
   }
 }

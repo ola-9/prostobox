@@ -123,12 +123,13 @@
 }
 
 .cost-bayres__text-percent {
+  font-family: "Jost", "Arial", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+
   @include media-breakpoint-up(lg) {
-    font-family: "Jost", "Arial", sans-serif;
     font-size: 20px;
     line-height: 26px;
-    font-weight: 700;
-    letter-spacing: 0;
   }
 }
 
