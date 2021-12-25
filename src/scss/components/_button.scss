@@ -119,3 +119,37 @@
     }
   }
 }
+
+.button__button-arrow {
+  min-width: auto;
+  width: 100%;
+  height: 60px;
+  background: url("../../img/new_main_page/buyer/Arrow.svg"), $blue;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px, auto;
+  border-radius: 20px;
+  border: none;
+
+  &::after {
+    background: url("../../img/new_main_page/buyer/Arrow.svg"), $blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px, auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 70px;
+    height: 60px;
+    background-size: auto;
+    margin-left: 20px;
+
+    &::after {
+      background-size: auto;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 20px;
+  }
+}

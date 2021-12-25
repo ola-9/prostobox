@@ -21,11 +21,12 @@
     content: "";
     display: block;
     width: 2731px;
-    height: 1217px;
+    height: 1017px;
     left: -1305px;
-    top: -325px;
+    top: -270px;
     background-image: url("../../img/new_main_page/buyer/disclaimer-line.svg");
     background-repeat: no-repeat;
+    background-position: left 0 top -55px ;
   }
 
   @include media-breakpoint-up(md) {

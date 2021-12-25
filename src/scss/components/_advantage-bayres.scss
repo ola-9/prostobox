@@ -72,20 +72,20 @@
     position: absolute;
     content: "";
     display: block;
-    width: 160px;
-    height: 160px;
-    left: calc(50% - 80px);
-    top: -30px;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    width: 100px;
+    height: 100px;
+    right: calc(50% - 35px);
+    box-shadow: 0 0 30px rgba(0,0,0, 0.05);
+    border-radius: 10px;
+    top: 0;
   }
 
   @include media-breakpoint-up(md) {
     min-height: 297px;
     max-width: 285px;
     &::before {
-      left: -30px;
-      top: -30px;
+      left: -3px;
+      top: -3px;
     }
   }
 
@@ -99,69 +99,78 @@
 
 .advantage-bayres__item--course {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/course.png");
+    background: url("../../img/new_main_page/buyer/course.png"), $white;
   }
 }
 
 .advantage-bayres__item--quality {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/quality.png");
+    background: url("../../img/new_main_page/buyer/quality.png"), $white;
   }
 }
 
 .advantage-bayres__item--account {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/account.png");
+    background: url("../../img/new_main_page/buyer/account.png"), $white;
   }
 }
 
 .advantage-bayres__item--watch {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/watch.png");
+    background: url("../../img/new_main_page/buyer/watch.png"), $white;
   }
 }
 
 .advantage-bayres__item--language {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/language.png");
+    background: url("../../img/new_main_page/buyer/language.png"), $white;
   }
 }
 
 .advantage-bayres__item--terminal {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/terminal.png");
+    background: url("../../img/new_main_page/buyer/terminal.png"), $white;
   }
 }
 
 .advantage-bayres__item--compass {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/compass.png");
+    background: url("../../img/new_main_page/buyer/compass.png"), $white;
   }
 }
 
 .advantage-bayres__item--percent {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/percent.png");
+    background: url("../../img/new_main_page/buyer/percent.png"), $white;
   }
 }
 
 .advantage-bayres__item--ebay {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/ebay.png");
+    background: url("../../img/new_main_page/buyer/ebay.png"), $white;
   }
 }
 
 .advantage-bayres__item--box {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/box.png");
+    background: url("../../img/new_main_page/buyer/box.png"), $white;
   }
 }
 
 .advantage-bayres__item--sheet {
   &::before {
-    background-image: url("../../img/new_main_page/buyer/sheet.png");
+    background: url("../../img/new_main_page/buyer/sheet.png"), $white;
   }
 }
+
+.advantage-bayres__item {
+  &::before {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 88px;
+  }
+}
+
 
 .advantage-bayres__text {
   text-align: center;

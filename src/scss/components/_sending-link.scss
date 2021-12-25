@@ -2,6 +2,7 @@
   background-color: $black-1;
   border-radius: 20px;
   padding: 20px;
+  z-index: 1000;
 
   @include media-breakpoint-up(lg) {
     display: flex;
@@ -53,12 +54,7 @@
 
 .sending-link__input {
   border: 1px solid $white;
-  border-radius: 20px;
-  padding: 14px 28px 14px 28px;
   background-color: $black-1;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
   letter-spacing: 0.04em;
   color: $white;
   flex-grow: 1;
@@ -71,28 +67,6 @@
   @include media-breakpoint-up(lg) {
     margin-bottom: 0;
     flex-grow: 1;
-  }
-}
-
-.sending-link__button {
-  width: 100%;
-  height: 60px;
-  background: url("../../img/new_main_page/buyer/Arrow.svg"), $blue;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30px, auto;
-  border-radius: 20px;
-  border: none;
-
-  @include media-breakpoint-up(md) {
-    width: 70px;
-    height: 60px;
-    background-size: auto;
-    margin-left: 20px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    margin-left: 20px;
   }
 }
 

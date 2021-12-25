@@ -67,17 +67,23 @@
     position: absolute;
     content: "";
     display: block;
-    width: 105px;
-    height: 117px;
-    background-size: 100%;
-    top: -81px;
+    width: 75px;
+    height: 75px;
+    background-size: 66px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -70px;
     left: calc(50% - 50px);
+    box-shadow: 0 0 30px rgba(0,0,0, 0.05);
+    border-radius: 10px;
 
     @include media-breakpoint-up(lg) {
-      top: -160px;
-      left: auto;
-      width: 210px;
-      height: 235px;
+      top: -132px;
+      left: calc(50% - 80px);
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+      background-size: 132px;
     }
   }
 
@@ -107,18 +113,21 @@
 .cost-bayres__item--firecracker {
   &::before {
     background-image: url("../../img/new_main_page/buyer/firecracker.png");
+    background-color: $blue-light-2;
   }
 }
 
 .cost-bayres__item--rocket {
   &::before {
     background-image: url("../../img/new_main_page/buyer/rocket.png");
+    background-color: $purple2;
   }
 }
 
 .cost-bayres__item--crown {
   &::before {
     background-image: url("../../img/new_main_page/buyer/crown.png");
+    background-color: $yellow-2;
   }
 }
 
