@@ -53,16 +53,8 @@
 }
 
 .sending-link__input {
-  border: 1px solid $white;
-  background-color: $black-1;
-  letter-spacing: 0.04em;
-  color: $white;
   flex-grow: 1;
   margin-bottom: 20px;
-
-  &::placeholder {
-    color: $grey-light;
-  }
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 0;
@@ -81,5 +73,12 @@
 
   @include media-breakpoint-up(lg) {
     text-align: left;
+  }
+}
+
+
+.sending-link__button {
+  @include media-breakpoint-up(md) {
+    margin-left: 20px;
   }
 }

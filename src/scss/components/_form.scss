@@ -50,6 +50,15 @@
   }
 }
 
+.form__input--white {
+  border: 1px solid $white;
+  color: $white;
+
+  &::placeholder {
+    color: $grey-light;
+  }
+}
+
 .form__select {
   padding-right: 45px;
   -moz-appearance: none;

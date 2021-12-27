@@ -60,6 +60,9 @@
     right: calc(50% - 35px);
     box-shadow: 0 0 30px rgba(0,0,0, 0.05);
     border-radius: 10px;
+    background-position: center;
+    background-size: 51px 51px;
+    background-repeat: no-repeat;
   }
 
   &::after {
@@ -85,9 +88,6 @@
       height: 135px;
       top: -170px;
       border-radius: 20px;
-      background-position: center;
-      background-size: 51px 51px;
-      background-repeat: no-repeat;
     }
 
     &::after {
