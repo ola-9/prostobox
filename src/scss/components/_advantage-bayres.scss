@@ -1,0 +1,197 @@
+.advantage-bayres {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 68px;
+  }
+}
+
+.advantage-bayres__wrapper {
+  position: relative;
+  background-color: $white;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 67px;
+  overflow: hidden;
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      gap: 20px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      justify-content: start;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    display: flex;
+    content: "";
+    width: 2547px;
+    height: 2412px;
+    background-image: url("../../img/new_main_page/buyer/advantage-bayres-line.svg");
+    left: calc(50% - 1575px);
+    top: -395px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 103px;
+    padding-bottom: 77px;
+  }
+}
+
+.advantage-bayres__heading {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 40px;
+
+  & span:nth-of-type(2) {
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+    text-align: start;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 57px;
+    max-width: 793px;
+  }
+}
+
+.advantage-bayres__item {
+  position: relative;
+
+  padding: 122px 0 5px 0;
+  margin-bottom: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    right: calc(50% - 50px);
+    box-shadow: 0 0 30px rgba(0,0,0, 0.05);
+    border-radius: 10px;
+    top: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: calc((100% - 20px) / 2);
+    &::before {
+      left: -3px;
+      top: -3px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: calc((100% - 20px * 3) / 4);
+  }
+}
+
+.advantage-bayres__item--course {
+  &::before {
+    background: url("../../img/new_main_page/buyer/course.png"), $white;
+  }
+}
+
+.advantage-bayres__item--quality {
+  &::before {
+    background: url("../../img/new_main_page/buyer/quality.png"), $white;
+  }
+}
+
+.advantage-bayres__item--account {
+  &::before {
+    background: url("../../img/new_main_page/buyer/account.png"), $white;
+  }
+}
+
+.advantage-bayres__item--watch {
+  &::before {
+    background: url("../../img/new_main_page/buyer/watch.png"), $white;
+  }
+}
+
+.advantage-bayres__item--language {
+  &::before {
+    background: url("../../img/new_main_page/buyer/language.png"), $white;
+  }
+}
+
+.advantage-bayres__item--terminal {
+  &::before {
+    background: url("../../img/new_main_page/buyer/terminal.png"), $white;
+  }
+}
+
+.advantage-bayres__item--compass {
+  &::before {
+    background: url("../../img/new_main_page/buyer/compass.png"), $white;
+  }
+}
+
+.advantage-bayres__item--percent {
+  &::before {
+    background: url("../../img/new_main_page/buyer/percent.png"), $white;
+  }
+}
+
+.advantage-bayres__item--ebay {
+  &::before {
+    background: url("../../img/new_main_page/buyer/ebay.png"), $white;
+  }
+}
+
+.advantage-bayres__item--box {
+  &::before {
+    background: url("../../img/new_main_page/buyer/box.png"), $white;
+  }
+}
+
+.advantage-bayres__item--sheet {
+  &::before {
+    background: url("../../img/new_main_page/buyer/sheet.png"), $white;
+  }
+}
+
+.advantage-bayres__item {
+  &::before {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 88px;
+  }
+}
+
+
+.advantage-bayres__text {
+  text-align: center;
+  color: $black-1;
+
+  @include media-breakpoint-up(md) {
+    text-align: start;
+  }
+}
+
+.advantage-bayres__sending {
+  transform: translateY(-8%);
+
+  @include media-breakpoint-up(md) {
+    transform: translateY(-38%);
+  }
+
+  @include media-breakpoint-up(lg) {
+    transform: translateY(-46%);
+  }
+}
+
+

@@ -1,0 +1,137 @@
+.list-stores {
+text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: start;
+  }
+
+}
+
+.list-stores__wrapper {
+  position: relative;
+  background-color: $blue-light-1;
+  border-radius: 20px;
+  padding: 20px 0 240px 0;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2373px;
+    height: 1016px;
+    top: -220px;
+    left: calc(50% - 1310px);
+    background-image: url("../../img/new_main_page/buyer/list-stores-line.svg");
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 20px 0 360px 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 101px 0 188px 0;
+  }
+
+}
+
+.list-stores__heading {
+  margin: 0 0 20px 0;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 39px;
+  }
+}
+
+.list-stores__content {
+  position: relative;
+
+  &::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 228px;
+    height: 272px;
+    left: calc(50% - 130px);
+    bottom: -257px;
+    background-image: url("../../img/new_main_page/buyer/list-stores.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  @include media-breakpoint-up(md) {
+
+    &::before {
+      width: 328px;
+      height: 372px;
+      left: calc(50% - 170px);
+      bottom: -347px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 372px;
+
+    &::before {
+      width: 518px;
+      height: 562px;
+      right: -85px;
+      top: 37px;
+      bottom: auto;
+      left: auto;
+      background-size: auto auto;
+    }
+  }
+}
+
+.list-stores__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-stores__item {
+  letter-spacing: 0.036em;
+  display: inline-block;
+  font-weight: 400;
+  margin-right: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 3px 19px;
+  color: $blue;
+  border-radius: 20px;
+  background-color: $white;
+  border: 1px dashed $blue;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+.list-stores__text {
+  letter-spacing: 0.036em;
+  margin: 0 0 30px 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 40px;
+  }
+}
+
+.list-stores__sending {
+  transform: translateY(-8%);
+
+  @include media-breakpoint-up(md) {
+    transform: translateY(-18%);
+  }
+
+  @include media-breakpoint-up(lg) {
+    transform: translateY(-59%);
+  }
+}

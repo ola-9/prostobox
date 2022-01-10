@@ -26,6 +26,7 @@
 @import "typography/heading-primary";
 @import "typography/heading-secondary";
 @import "typography/heading-tertiary";
+@import "typography/text-content";
 @import "typography/link";
 @import "typography/fw";
 
@@ -81,6 +82,15 @@
 @import "components/delivery-options";
 @import "components/section-banner";
 @import "components/blacklist";
+@import "components/product-order";
+@import "components/sending-link";
+@import "components/help-buyer";
+@import "components/how-issue";
+@import "components/advantage-bayres";
+@import "components/cost-bayres";
+@import "components/list-stores";
+@import "components/disclaimer";
+
 // @import "components/notification";
 // @import "components/new-banner";
 // @import "components/place-parcel";
