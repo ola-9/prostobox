@@ -1,4 +1,4 @@
-.cost-bayres {
+.cost-buyers {
   margin-bottom: 30px;
 
   & ul {
@@ -22,7 +22,7 @@
   }
 }
 
-.cost-bayres__heading {
+.cost-buyers__heading {
   max-width: 813px;
   margin: 0;
   text-align: center;
@@ -40,7 +40,7 @@
   }
 }
 
-.cost-bayres__tertiary {
+.cost-buyers__tertiary {
   margin: 0;
   letter-spacing: 0.04em;
 
@@ -49,13 +49,13 @@
   }
 }
 
-.cost-bayres__tertiary--vip {
+.cost-buyers__tertiary--vip {
   @include media-breakpoint-up(lg) {
     max-width: 140px;
   }
 }
 
-.cost-bayres__item {
+.cost-buyers__item {
   position: relative;
   background-color: $white;
   border-radius: 20px;
@@ -110,28 +110,28 @@
   }
 }
 
-.cost-bayres__item--firecracker {
+.cost-buyers__item--firecracker {
   &::before {
     background-image: url("../../img/new_main_page/buyer/firecracker.png");
     background-color: $blue-light-2;
   }
 }
 
-.cost-bayres__item--rocket {
+.cost-buyers__item--rocket {
   &::before {
     background-image: url("../../img/new_main_page/buyer/rocket.png");
     background-color: $purple2;
   }
 }
 
-.cost-bayres__item--crown {
+.cost-buyers__item--crown {
   &::before {
     background-image: url("../../img/new_main_page/buyer/crown.png");
     background-color: $yellow-2;
   }
 }
 
-.cost-bayres__text-percent {
+.cost-buyers__text-percent {
   font-family: "Jost", "Arial", sans-serif;
   font-weight: 700;
   letter-spacing: 0;
@@ -142,7 +142,7 @@
   }
 }
 
-.cost-bayres__text {
+.cost-buyers__text {
   color: $black-1;
   font-size: 14px;
   line-height: 22px;
@@ -155,7 +155,7 @@
   }
 }
 
-.cost-bayres__container {
+.cost-buyers__container {
   margin-bottom: 20px;
 
   @include media-breakpoint-up(lg) {

@@ -1,10 +1,10 @@
-.advantage-bayres {
+.advantage-buyers {
   @include media-breakpoint-up(lg) {
     margin-bottom: 68px;
   }
 }
 
-.advantage-bayres__wrapper {
+.advantage-buyers__wrapper {
   position: relative;
   background-color: $white;
   border-radius: 20px;
@@ -36,7 +36,7 @@
     content: "";
     width: 2547px;
     height: 2412px;
-    background-image: url("../../img/new_main_page/buyer/advantage-bayres-line.svg");
+    background-image: url("../../img/new_main_page/buyer/advantage-buyers-line.svg");
     left: calc(50% - 1575px);
     top: -395px;
   }
@@ -47,7 +47,7 @@
   }
 }
 
-.advantage-bayres__heading {
+.advantage-buyers__heading {
   margin: 0;
   text-align: center;
   margin-bottom: 40px;
@@ -67,7 +67,7 @@
   }
 }
 
-.advantage-bayres__item {
+.advantage-buyers__item {
   position: relative;
 
   padding: 122px 0 5px 0;
@@ -98,73 +98,73 @@
   }
 }
 
-.advantage-bayres__item--course {
+.advantage-buyers__item--course {
   &::before {
     background: url("../../img/new_main_page/buyer/course.png"), $white;
   }
 }
 
-.advantage-bayres__item--quality {
+.advantage-buyers__item--quality {
   &::before {
     background: url("../../img/new_main_page/buyer/quality.png"), $white;
   }
 }
 
-.advantage-bayres__item--account {
+.advantage-buyers__item--account {
   &::before {
     background: url("../../img/new_main_page/buyer/account.png"), $white;
   }
 }
 
-.advantage-bayres__item--watch {
+.advantage-buyers__item--watch {
   &::before {
     background: url("../../img/new_main_page/buyer/watch.png"), $white;
   }
 }
 
-.advantage-bayres__item--language {
+.advantage-buyers__item--language {
   &::before {
     background: url("../../img/new_main_page/buyer/language.png"), $white;
   }
 }
 
-.advantage-bayres__item--terminal {
+.advantage-buyers__item--terminal {
   &::before {
     background: url("../../img/new_main_page/buyer/terminal.png"), $white;
   }
 }
 
-.advantage-bayres__item--compass {
+.advantage-buyers__item--compass {
   &::before {
     background: url("../../img/new_main_page/buyer/compass.png"), $white;
   }
 }
 
-.advantage-bayres__item--percent {
+.advantage-buyers__item--percent {
   &::before {
     background: url("../../img/new_main_page/buyer/percent.png"), $white;
   }
 }
 
-.advantage-bayres__item--ebay {
+.advantage-buyers__item--ebay {
   &::before {
     background: url("../../img/new_main_page/buyer/ebay.png"), $white;
   }
 }
 
-.advantage-bayres__item--box {
+.advantage-buyers__item--box {
   &::before {
     background: url("../../img/new_main_page/buyer/box.png"), $white;
   }
 }
 
-.advantage-bayres__item--sheet {
+.advantage-buyers__item--sheet {
   &::before {
     background: url("../../img/new_main_page/buyer/sheet.png"), $white;
   }
 }
 
-.advantage-bayres__item {
+.advantage-buyers__item {
   &::before {
     background-position: center;
     background-repeat: no-repeat;
@@ -173,7 +173,7 @@
 }
 
 
-.advantage-bayres__text {
+.advantage-buyers__text {
   text-align: center;
   color: $black-1;
 
@@ -182,7 +182,7 @@
   }
 }
 
-.advantage-bayres__sending {
+.advantage-buyers__sending {
   transform: translateY(-8%);
 
   @include media-breakpoint-up(md) {
