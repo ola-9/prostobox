@@ -114,3 +114,16 @@
     right: -30px;
   }
 }
+
+.tariffs__extra-info {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+
+  p {
+    color: $blue;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 29px;
+  }
+}

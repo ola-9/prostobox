@@ -12,6 +12,7 @@
 .calculator__form {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   text-align: center;
 
   @include media-breakpoint-up(md) {
@@ -66,14 +67,19 @@
       margin-bottom: 20px;
     }
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .calculator__features-wrapper {
   @include media-breakpoint-up(xl) {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    padding-top: 33px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-end;
     padding-left: 39px;
   }
 }
@@ -164,4 +170,64 @@
     bottom: auto;
     width: 100%;
   }
+}
+
+
+.calculator__size-btn-hide {
+  display: none;
+}
+
+.calculator__size-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  padding-right: 30px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 29px;
+  color: $blue;
+  cursor: pointer;
+  text-align: left;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l11 7.5L23 1' stroke='%231467FF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+
+
+  &--opened {
+    &::before {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .calculator__size-btn-show {
+      display: none;
+    }
+
+    .calculator__size-btn-hide {
+      display: inline;
+    }
+  }
+}
+
+.calculator__field--sizes-btn + .calculator__field--submit {
+  @include media-breakpoint-up(md) {
+    transform: translateY(calc(-100% - 20px));
+  }
+
 }

@@ -117,6 +117,34 @@
       right: 0;
     }
   }
+
+  &--ems::before {
+    width: 61px;
+    height: 67px;
+    top: -30px;
+    background-image: url("../../img/new_main_page/tariffs/ems.png");
+
+    @include media-breakpoint-up(lg) {
+      width: 81px;
+      height: 89px;
+      top: -54px;
+      right: 0;
+    }
+  }
+
+  &--gabarit::before {
+    width: 99px;
+    height: 103px;
+    top: -30px;
+    background-image: url("../../img/new_main_page/tariffs/gabarit.png");
+
+    @include media-breakpoint-up(lg) {
+      width: 132px;
+      height: 137px;
+      top: -54px;
+      right: 0;
+    }
+  }
 }
 
 .tariff__wrapper {

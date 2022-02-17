@@ -68,6 +68,28 @@
             <input class="form__input" id="price" type="text">
           </div>
 
+          <div class="calculator__field calculator__field--sizes calculator__field--hidden">
+            <label class="form__label">Длина, см</label>
+            <input class="form__input" id="length" type="text">
+          </div>
+
+          <div class="calculator__field calculator__field--sizes calculator__field--hidden">
+            <label class="form__label">Ширина, см</label>
+            <input class="form__input" id="width" type="text">
+          </div>
+
+          <div class="calculator__field calculator__field--sizes calculator__field--hidden">
+            <label class="form__label">Высота, см</label>
+            <input class="form__input" id="height" type="text">
+          </div>
+
+          <div class="calculator__field calculator__field--sizes-btn">
+            <button class="calculator__size-btn js-calc-sizes-btn" type="button">
+              <span class="calculator__size-btn-show">У меня не габаритная посылка</span>
+              <span class="calculator__size-btn-hide">Свернуть</span>
+            </button>
+          </div>
+
           <div class="calculator__field calculator__field--submit">
             <button class="calculator__submit button">Рассчитать доставку</button>
           </div>
@@ -197,6 +219,44 @@
               </li>
             </ul>
           </li>
+          <li class="tariffs__item tariff tariff--ems swiper-slide js-tariff-item" data-tariff-id="6">
+            <span class="tariff__label">Тариф</span>
+            <h3 class="tariff__title">Через EMS</h3>
+            <span class="tariff__time">12 - 20 дней</span>
+            <b class="tariff__price">$24,99</b>
+            <ul class="tariff__features">
+              <li class="tariff__features-item">
+                <div class="tariff__features-title-wrapper">
+                  <span class="tariff__features-title">Страховка от утери</span>
+                  <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/new_main_page/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </div>
+                <b class="tariff__features-price">$3</b>
+              </li>
+            </ul>
+          </li>
+          <li class="tariffs__item tariff tariff--gabarit swiper-slide js-tariff-item" data-tariff-id="7">
+            <span class="tariff__label">Тариф</span>
+            <h3 class="tariff__title">Большие посылки</h3>
+            <span class="tariff__time">12 - 20 дней</span>
+            <b class="tariff__price">$24,99</b>
+            <ul class="tariff__features">
+              <li class="tariff__features-item">
+                <div class="tariff__features-title-wrapper">
+                  <span class="tariff__features-title">Страховка от утери</span>
+                  <button class="question-mark" data-tippy-content="Внесите примерную стоимость товаров, чтобы узнать стоимость страховки">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                      <use xlink:href="img/new_main_page/sprite.svg#question-mark"></use>
+                    </svg>
+                  </button>
+                </div>
+                <b class="tariff__features-price">$3</b>
+              </li>
+            </ul>
+          </li>
         </ul>
         <div class="tariffs__slider-nav">
           <ul class="slider-nav">
@@ -208,6 +268,12 @@
             </li>
           </ul>
         </div>
+      </div>
+
+      <div class="tariffs__extra-info">
+        <button class="question-mark question-mark--xl" data-tippy-content="Текст подсказки">
+        </button>
+        <p>Чем отличаются тарифы друг от друга</p>
       </div>
 
       {% if calcWithDescription %}
