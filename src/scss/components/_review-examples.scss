@@ -1,0 +1,15 @@
+.reviews-examples__heading {
+  text-align: center;
+  margin: 0;
+
+  &--video {
+    @include media-breakpoint-up(lg) {
+      font-size: 40px;
+      line-height: 52px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+    width: 65%;
+  }
+}

@@ -1,6 +1,10 @@
 .blue {
   color: $blue;
 
+  &--bold {
+    font-weight: 700;
+  }
+
   &--white-bg {
     position: relative;
     display: inline-block;
@@ -47,4 +51,8 @@
       }
     }
   }
+}
+
+.black {
+  font-weight: 700;
 }

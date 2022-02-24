@@ -1,0 +1,278 @@
+{% extends "layout.html" %}
+
+{% set siteName = "Prostobox.com - Доллары за отзывы о Простобокс" %}
+{% set calcWithDescription = true %}
+
+{% block main %}
+<main>
+  <section class="reviews-general section">
+    <div class="section-xxl">
+      <div class="container reviews-general__top-wrapper">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a href="" #>Главная</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--active">Отзывы из ЛК</li>
+        </ul>
+        <div class="reviews-general__inner-wrapper">
+          <h1 class="heading-primary reviews-general__heading">Доллары за отзывы о Простобокс</h1>
+          <p class="paid-reviews-text reviews-general__text">
+            <span class="black">Хотите получить американские доллары на ваш баланс?</span> Просто разместите отзыв о
+            Простобокс в социальных сетях и на сайтах-отзовиках. И самое крутое для вас - отзывы на разных площадках
+            <span class="blue blue--bold">суммируются</span>!
+          </p>
+          <a class="button reviews-general__button">Оставить отзыв</a>
+        </div>
+        <p class="paid-reviews-text reviews-general__text reviews-general__text--floating">
+          После проверки мы зачислим деньги на ваш баланс у нас. За каждый отзыв вы получите дополнительные доллары.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="paid-reviews paid-reviews__instagram">
+        <h2 class="paid-reviews__heading heading-primary"><span class="blue">$2</span> за отзыв в Instagram!</h2>
+        <p class="paid-reviews__question">
+          Как получить вознаграждение?
+        </p>
+        <p class="paid-reviews__details paid-reviews__details--insta">
+          Чтобы отзыв был полезным и интересным, а вы получили доллары - <span class="black">следуйте</span> этим <span
+            class="black">простым правилам</span>:
+        </p>
+      </div>
+      <ul class="row paid-reviews__list">
+        <li class="col-lg-3 col-md-6 paid-reviews__list-item">
+          Разместите в своём <span class="black">Instagram пост</span> с товарами из вашей посылки.
+        </li>
+        <li class="col-lg-3 col-md-6 paid-reviews__list-item">
+          <span class="black">Фото</span> должно быть светлым и ярким, сделанным при хорошем освещении, четко и без
+          размытий.
+        </li>
+        <li class="col-lg-3 col-md-6 paid-reviews__list-item">
+          В тексте поста - отметьте через упоминание аккаунт Простобокс в Instagram <span
+            class="black">@prostoboxme</span>
+        </li>
+        <li class="col-lg-3 col-md-6 paid-reviews__list-item">
+          <span class="black">Оставьте ссылку</span> на пост здесь
+        </li>
+      </ul>
+      <div class="submit-review">
+        <p class="submit-review__heading">Ссылка на ваш отзыв в Instagram</p>
+        <form class="submit-review__form row">
+          <div class="submit-review__input-wrapper col-lg-8">
+            <input class="submit-review__input" type="text" name="url" id="url"
+              placeholder="Ссылка на ваш отзыв в Instagram">
+            <p class="submit-review__note">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги
+              и политикой конфиденциальности</p>
+          </div>
+          <button type="submit" class="button submit-review__button col-lg-3">Отправить ссылку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="paid-reviews paid-reviews--otzovik">
+        <h2 class="paid-reviews__heading heading-primary"><span class="blue">$3</span> за отзыв на Отзовике</h2>
+        <p class="paid-reviews__question">
+          Довольны доставкой и работой сервиса?
+        </p>
+        <p class="paid-reviews__details">
+          Оставляйте отзывы о службе доставки Простобокс на <span class="black">Отзовике</span>, после публикации
+          присылайте ссылку в форме ниже, и
+          вам зачислят бонус $3 на счет, если отзыв полезный и содержательный.
+        </p>
+      </div>
+      <div class="submit-review">
+        <p class="submit-review__heading">Ссылка на ваш отзыв на Отзовике</p>
+        <form class="submit-review__form row">
+          <div class="submit-review__input-wrapper col-lg-8">
+            <input class="submit-review__input" type="text" name="url" id="url"
+              placeholder="Ссылка на ваш отзыв на Отзовике">
+            <p class="submit-review__note">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги
+              и политикой конфиденциальности</p>
+          </div>
+          <button type="submit" class="button submit-review__button col-lg-3">Отправить ссылку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="paid-reviews paid-reviews--iRecomment">
+        <h2 class="paid-reviews__heading heading-primary"><span class="blue">$3</span> за отзыв на iRecommend</h2>
+        <p class="paid-reviews__question">
+          Довольны доставкой и работой сервиса?
+        </p>
+        <p class="paid-reviews__details">
+          Оставляйте отзывы о Простобокс на <span class="black">iRecommend</span>, также после публикации присылайте
+          ссылку в форме ниже, и вам
+          зачислят бонус $3 на счет.
+        </p>
+      </div>
+      <div class="submit-review">
+        <p class="submit-review__heading">Ссылка на ваш отзыв на iRecommend</p>
+        <form class="submit-review__form row">
+          <div class="submit-review__input-wrapper col-lg-8">
+            <input class="submit-review__input" type="text" name="url" id="url"
+              placeholder="Ссылка на ваш отзыв на iRecommend">
+            <p class="submit-review__note">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги
+              и политикой конфиденциальности</p>
+          </div>
+          <button type="submit" class="button submit-review__button col-lg-3">Отправить ссылку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="paid-reviews paid-reviews--Trustpilot">
+        <h2 class="paid-reviews__heading heading-primary"><span class="blue">$3</span> за отзыв на Trustpilot</h2>
+        <p class="paid-reviews__question">
+          Довольны доставкой и работой сервиса?
+        </p>
+        <p class="paid-reviews__details">
+          Оставляйте отзывы о Простобокс на <span class="black">Trustpilot</span> - присылайте ссылку в форме ниже, и
+          вам зачислят бонус $3 на
+          счет.
+        </p>
+      </div>
+      <div class="submit-review">
+        <p class="submit-review__heading">Ссылка на ваш отзыв на Trustpilot</p>
+        <form class="submit-review__form row">
+          <div class="submit-review__input-wrapper col-lg-8">
+            <input class="submit-review__input" type="text" name="url" id="url"
+              placeholder="Ссылка на ваш отзыв на Trustpilot">
+            <p class="submit-review__note">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги
+              и политикой конфиденциальности</p>
+          </div>
+          <button type="submit" class="button submit-review__button col-lg-3">Отправить ссылку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="paid-reviews paid-reviews--insta-video">
+        <h2 class="paid-reviews__heading heading-primary"><span class="blue">$3</span> за видео-отзыв
+          в Instagram</h2>
+        <p class="paid-reviews__question">
+          Как получить вознаграждение?
+        </p>
+        <p class="paid-reviews__details paid-reviews__details--insta-video">
+          Чтобы отзыв был полезным и интересным, а вы получили доллары - <span class="black">следуйте</span> этим <span
+            class="black">простым правилам</span>:
+        </p>
+      </div>
+      <ul class="row paid-reviews__list">
+        <li class="col-md-4 paid-reviews__list-item paid-reviews__list-item--insta-video">
+          Разместите в своём Instagram <span class="black">видео-пост</span>
+          или <span class="black">reels</span> с распаковкой вашей посылки.
+        </li>
+        <li class="col-md-4 paid-reviews__list-item paid-reviews__list-item--insta-video">
+          <span class="black">Видео</span> должно быть <span class="black">хорошего качества</span>
+          и сделано при хорошем освещении.
+        </li>
+        <li class="col-md-4 paid-reviews__list-item paid-reviews__list-item--insta-video">
+          На видео <span class="black">автор должен рассказывать</span> о распаковке посылки, товарах и работе сервиса.
+        </li>
+        <li class="col-md-4 paid-reviews__list-item paid-reviews__list-item--insta-video">
+          В тексте reels или видео-поста - отметьте через упоминание аккаунт Простобокс в Instagram <span
+            class="black">@prostoboxme</span>
+        </li>
+        <li class="col-md-4 paid-reviews__list-item paid-reviews__list-item--insta-video">
+          <span class="black">Оставьте ссылку</span> на пост здесь
+        </li>
+      </ul>
+      <div class="submit-review">
+        <p class="submit-review__heading">Ссылка на ваш отзыв в Instagram</p>
+        <form class="submit-review__form row">
+          <div class="submit-review__input-wrapper col-lg-8">
+            <input class="submit-review__input" type="text" name="url" id="url"
+              placeholder="Ссылка на ваш отзыв в Instagram">
+            <p class="submit-review__note">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги
+              и политикой конфиденциальности</p>
+          </div>
+          <button type="submit" class="button submit-review__button col-lg-3">Отправить ссылку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="paid-reviews paid-reviews--youtube">
+        <h2 class="paid-reviews__heading paid-reviews__heading--youtube heading-primary">Максимальный бонус <span
+            class="blue">$5</span>
+          за видео-распаковку на You Tube</h2>
+        <p class="paid-reviews__question paid-reviews__question--youtube">
+          Как получить вознаграждение?
+        </p>
+        <ul class="paid-reviews__list row">
+          <li class="paid-reviews__list-item paid-reviews__list-item--youtube-video col-md-4">
+            Разместите на своем
+            <span class="black">You Tube канале</span> видео с распаковкой вашей посылки.
+          </li>
+          <li class="paid-reviews__list-item paid-reviews__list-item--youtube-video col-md-4">
+            <span class="black">Видео</span> должно быть <span class="black">хорошего качества</span>
+            и сделано при хорошем освещении.
+          </li>
+          <li class="paid-reviews__list-item paid-reviews__list-item--youtube-video col-md-4">
+            На видео <span class="black">автор должен рассказывать</span> о распаковке посылки, товарах и работе
+            сервиса.
+          </li>
+          <li class="paid-reviews__list-item paid-reviews__list-item--youtube-video col-md-4">
+            Видео должно быть опубликовано для <span class="black">всеобщего доступа</span>
+            на You Tube.
+          </li>
+          <li class="paid-reviews__list-item paid-reviews__list-item--youtube-video col-md-4">
+            <span class="black">Оставьте ссылку</span> на пост здесь
+          </li>
+        </ul>
+      </div>
+      <div class="submit-review submit-review--youtube">
+        <p class="submit-review__heading">Ссылка на ваш отзыв в You Tube</p>
+        <form class="submit-review__form row">
+          <div class="submit-review__input-wrapper col-lg-8">
+            <input class="submit-review__input" type="text" name="url" id="url"
+              placeholder="Ссылка на ваш отзыв в You Tube">
+            <p class="submit-review__note">Нажимая на кнопку вы подтверждаете согласие с правилами предоставления услуги
+              и политикой конфиденциальности</p>
+          </div>
+          <button type="submit" class="button submit-review__button col-lg-3">Отправить ссылку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="reviews-examples">
+        <h2 class="heading-primary reviews-examples__heading">Примеры <span class="blue">качественных</span> отзывов:
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="reviews-examples">
+        <h2 class="heading-primary reviews-examples__heading reviews-examples__heading--video">Видео отзывы</h2>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="reviews-subscribe">
+        <h2 class="heading-primary reviews-subscribe__heading">Желаем отличных покупок!</h2>
+        <p class="reviews-subscribe__insta">
+          Подскажем где и что покупать в&nbspнашем Instagram<br>
+          <a href="#">@prostoboxme</a>
+        </p>
+        <p class="reviews-subscribe__note">
+          Там все <span class="black">самые крутые</span> скидки, бренды и магазины!
+        </p>
+        <a class="button">Подписаться</a>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
