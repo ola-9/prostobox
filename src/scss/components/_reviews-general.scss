@@ -1,3 +1,22 @@
+.reviews-general {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 407px;
+    height: 213px;
+    top: 10px;
+    transform: translateX(-50%);
+    left: calc(50% + 10px);
+    background-image: url("../../img/new_main_page/paid-reviews/review-general-line-mob.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 1;
+  }
+}
+
 .reviews-general__top-wrapper {
   text-align: center;
   padding-bottom: 275px;
@@ -8,24 +27,35 @@
 
   &::after {
     content: "";
+    position: absolute;
     display: block;
     width: 334px;
     height: 251px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    // transform: translateX(-50%);
-    background-image: url("../../img/reviews-general.png");
-    background-position: center;
+    bottom: 30px;
+    transform: translateX(-50%);
+    left: calc(50% + 10px);
+    background-image: url("../../img/new_main_page/paid-reviews/reviews-general.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    // z-index: -1;
+    background-size: 100%;
+    // z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+      width: 718px;
+      height: 718px;
+      transform: none;
+    }
   }
 
   @include media-breakpoint-up(lg) {
     text-align: left;
     padding-bottom: 88px;
     margin-bottom: 100px;
+    // padding-right: 586px;
+  }
+}
+
+.reviews-general__inner-wrapper {
+  @include media-breakpoint-up(lg) {
     padding-right: 586px;
   }
 }
@@ -47,15 +77,22 @@
   &--floating {
     background-color: $white;
     border-radius: 20px;
-    max-width: 294px;
+    min-width: 294px;
     position: absolute;
     margin-bottom: 0;
-    top: 92%;
+    transform: translateX(-50%);
+    left: calc(50% + 10px);
+    bottom: -45px;
+    z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+      min-width: none;
+      max-width: 424px;
+      bottom: 0;
+    }
   }
 
   @include media-breakpoint-up(lg) {
-    font-size: 14px;
-    line-height: 29px;
     margin-bottom: 40px;
   }
 }

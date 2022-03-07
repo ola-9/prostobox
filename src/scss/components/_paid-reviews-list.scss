@@ -1,0 +1,113 @@
+.paid-reviews-list {
+  @include list-reset;
+  padding-left: 120px;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  margin-bottom: 83px;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 0;
+    margin-bottom: 100px;
+    justify-content: flex-end;
+  }
+}
+
+.paid-reviews-list__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // &--insta-video {
+  //   @include media-breakpoint-up(lg) {
+  //     padding-right: 97px;
+  //   }
+  // }
+
+  // &--youtube-video {
+  //   @include media-breakpoint-up(lg) {
+  //     padding-right: 145px;
+  //   }
+  // }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 29px;
+    padding-top: 215px;
+  }
+}
+
+.paid-reviews-list__item-desc {
+  margin: 0;
+}
+
+.paid-reviews-list__item--insta-video {
+  @include media-breakpoint-up(lg) {
+    padding-right: 97px;
+  }
+}
+
+.paid-reviews-list__item--youtube-video {
+  @include media-breakpoint-up(lg) {
+    padding-right: 145px;
+  }
+}
+
+.paid-reviews__details--insta {
+  @include media-breakpoint-up(lg) {
+    width: 60%;
+  }
+}
+
+.paid-reviews__details--insta-video {
+  @include media-breakpoint-up(lg) {
+    width: 60%;
+  }
+}
+
+.paid-reviews-list__item-desc {
+  position: relative;
+  // margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 75px;
+    height: 75px;
+    top: 5px;
+    left: 5px;
+    // transform: translateX(-50%);
+    // left: calc(50% + 10px);
+    // background-image: url("../../img/new_main_page/paid-reviews/insta-1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &--step1 {
+    &::before {
+      background-image: url("../../img/new_main_page/paid-reviews/insta-1.png");
+    }
+  }
+
+  &--step2 {
+    &::before {
+      background-image: url("../../img/new_main_page/paid-reviews/insta-2.png");
+    }
+  }
+
+  &--step3 {
+    &::before {
+      background-image: url("../../img/new_main_page/paid-reviews/insta-3.png");
+    }
+  }
+
+  &--step4 {
+    &::before {
+      background-image: url("../../img/new_main_page/paid-reviews/insta-4.png");
+    }
+  }
+}
